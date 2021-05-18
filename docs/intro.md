@@ -2,34 +2,13 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome to Forem's developer documentation 🌱
 
-Let's discover **Docusaurus in less than 5 minutes**.
+On this site you'll find instructions to setup a [local instance of
+Forem][installation], documentation on the [architecture of
+Forem][architecture], [how to contribute][contributing], and many other useful
+documents.
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+This documentation site is the product of a number of volunteer contributors
+working alongside the Forem Core Team, special thanks to all those who have
+contributed to the documentation.
