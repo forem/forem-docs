@@ -74,7 +74,7 @@ with Podman. You can install it by following these
 
         - You do not need "real" keys for basic development. Some features
           require certain keys, so you may be able to add them as you go.
-        - The [backend guide](/backend) will show you how to get free API keys
+        - The [backend guide][#backend] will show you how to get free API keys
           for additional services that may be required to run certain parts of
           the app.
         - Obtain the development variable and apply the key you wish to

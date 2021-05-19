@@ -5,7 +5,7 @@ sidebar_position: 1
 # Welcome to Forem's developer documentation 🌱
 
 On this site you'll find instructions to setup a [local instance of
-Forem][installation], documentation on the [architecture of
+Forem](/installation), documentation on the [architecture of
 Forem][architecture], [how to contribute][contributing], and many other useful
 documents.
 
