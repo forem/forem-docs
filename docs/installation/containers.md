@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Containers
 
-Installing Forem using Containers
+**Installing Forem using Containers**
 
 If you encounter any errors with our Container setup, please kindly
 [report any issues](https://github.com/forem/forem/issues/new/choose)!

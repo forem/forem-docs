@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Linux
 
-Installing Forem on Linux
+**Installing Forem on Linux**
 
 ## Installing prerequisites
 

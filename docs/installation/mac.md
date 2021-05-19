@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # MacOS
 
-Installing Forem on macOS
+**Installing Forem on macOS**
 
 ## Installing prerequisites
 

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Windows
 
-Installing Forem on Windows 10
+**Installing Forem on Windows 10**
 
 ## Installing prerequisites
 
