@@ -32,16 +32,16 @@ Account.
 
 1. [Create a Service ID](https://developer.apple.com/account/resources/identifiers/list/serviceId)
 
-![Create Service ID](https://user-images.githubusercontent.com/6045239/92610177-a5cc9e00-f274-11ea-9f63-20d8356d0bee.png)
+![Create Service ID](/img/docs/backend/service-id.png)
 
 2. Name the Service and finalize the registration
 
-![Naming Service ID](https://user-images.githubusercontent.com/6045239/92610168-a36a4400-f274-11ea-8f79-7516c0c6c9c3.png)
+![Naming Service ID](/img/docs/backend/service-registration.png)
 
 3. Configure Domains and Subdomains & the callback URL. This example uses
    [ngrok](https://ngrok.io) for HTTPS support.
 
-![Callback URLS](https://user-images.githubusercontent.com/6045239/92610184-a8c78e80-f274-11ea-9439-a98c6b627567.png)
+![Callback URLS](/img/docs/backend/callback-url.png)
 
 ### Key Configuration
 
@@ -49,11 +49,11 @@ Account.
    Enable the "Sign in with Apple" option and configure it so it's associated
    with the corresponding App ID
 
-![Register a new Key](https://user-images.githubusercontent.com/6045239/92611125-b3ceee80-f275-11ea-9c00-e1b5ca2f9af0.png)
+![Register a new Key](/img/docs/backend/key-registration.png)
 
 2. Download the Key
 
-![Download the Key](https://user-images.githubusercontent.com/6045239/92611466-0f00e100-f276-11ea-912d-f8a74b6dfb04.png)
+![Download the Key](/img/docs/backend/key-download.png)
 
 ## Configuring the Rails Application
 
@@ -61,12 +61,12 @@ Now with both the Service ID and Key you'll need to enable Apple Authentication
 and pass in the credentials in the admin dashboard
 `/admin/customization/config`.
 
-![Admin Authentication Configuration Dashboard](https://user-images.githubusercontent.com/6045239/92613383-25a83780-f278-11ea-94a7-b710da544c9d.png)
+![Admin Authentication Configuration Dashboard](/img/docs/backend/admin-auth.png)
 
 Add the corresponding configuration data. Make sure the PEM key you downloaded
 has explicit linebreaks (`\n`), don't forget the one at the very end of it.
 
-![Apple config](https://user-images.githubusercontent.com/6045239/92614087-e0d0d080-f278-11ea-8d20-45148e1a6b59.png)
+![Apple config](/img/docs/backend/appleadmin-config.png)
 
 Save the changes and restart your server for these values to take effect.
 
@@ -76,7 +76,7 @@ Apple uses what they call Private Email Relay Service to hide user's emails. For
 this to work first
 [create a new email source](https://developer.apple.com/account/resources/services/list).
 
-![Email configuration](https://user-images.githubusercontent.com/6045239/92612469-22607c00-f277-11ea-918d-697cf4a18b15.png)
+![Email configuration](/img/docs/backend/email-source.png)
 
 Emails sent need to be authenticated and the configuration depends on the
 different providers available:
