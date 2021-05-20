@@ -4,7 +4,7 @@ sidebar_position: 15
 
 # Scheduled Jobs
 
-As in the [Technical Overview](/technical-overview), We use
+As in the [Technical Overview](../technical-overview/stack), We use
 [Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler) for
 scheduled jobs. As the name suggests, this is for regularly recurring tasks that
 need to be run every day, week, month, year, decade, and century.

@@ -20,8 +20,8 @@ environments. Examples:
 - `STRIPE_SECRET_KEY`
 
 Settings managed via your ENV can be found in
-[Configuring Environment Variables](/getting-started/config-env)) and viewed at
-`/admin/customization/config` (see [the Admin guide](/admin)):
+[Configuring Environment Variables](../getting-started/config-env)) and viewed at
+`/admin/customization/config` (see [the Admin guide](../admin-guide/admin-search)):
 
 ![Screenshot of env variable admin interface](/img/docs/backend/siteconfig.png)
 
@@ -37,7 +37,7 @@ Examples:
 These settings can be accessed via the
 [`SiteConfig`](https://github.com/forem/forem/blob/master/app/models/site_config.rb)
 object and various models in the `Settings::` namespace and viewed / modified
-via `/admin/customization/config` (see [the Admin guide](/admin)).
+via `/admin/customization/config` (see [the Admin guide](../admin-guide/admin-search)).
 
 ![Screenshot of site configuration admin interface](https://user-images.githubusercontent.com/47985/73627238-6276d500-467e-11ea-8724-afb703f056bc.png)
 
@@ -78,4 +78,4 @@ secret in it, then we fallback to fetching the secret from the
 One advantage of using Vault with Forem is that it allows you to update your
 secrets easily through the application rather than having to mess with ENV
 files. If you would like to try out Vault, follow our
-[installation guide for setting it up locally](/installation/vault).
+[installation guide for setting it up locally](../installation/vault).
