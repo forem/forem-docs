@@ -48,7 +48,7 @@ Forem requires PostgreSQL version 11 or higher.
    username you are currently logged in as.
 
 There are more than one ways to setup PostgreSQL. For additional configuration,
-check out our [PostgreSQL setup guide](/installation/postgresql) or the official
+check out our [PostgreSQL setup guide](postgresql.md) or the official
 [PostgreSQL](https://www.postgresql.org/) site for further information.
 
 ### ImageMagick
@@ -80,7 +80,7 @@ to setup Redis.
      use and provides a fake default for any missing keys.
    - If you use a remote computer as dev env, you need to set `APP_DOMAIN`
      variable to the remote computer's domain name.
-   - The [backend guide](/backend) will show you how to get free API keys for
+   - The [backend guide](../backend/authentication) will show you how to get free API keys for
      additional services that may be required to run certain parts of the app.
    - For any key that you wish to enter/replace:
 

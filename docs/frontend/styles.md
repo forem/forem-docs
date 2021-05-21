@@ -22,7 +22,7 @@ SASS is compiled and served using
 assets in Rails.
 
 For more about branding, theming or design in general in regards to Forem, refer
-to the [Design Guide](/design) documentation.
+to the [Design Guide](../design-guide/branding) documentation.
 
 ## Crayons
 

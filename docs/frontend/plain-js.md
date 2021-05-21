@@ -12,7 +12,7 @@ JavaScript (mostly ES5+) being served using
 assets.
 
 Webpacker manages the other one,
-[which you can read more about in this guide](/frontend/webpacker).
+[which you can read more about in this guide](webpacker.md).
 
 This source code is not transpiled, only packaged and minified, and will be
 limited to whatever flavor of JavaScript can run on the user's web browser.

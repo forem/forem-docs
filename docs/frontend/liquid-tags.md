@@ -115,7 +115,7 @@ https://github.com/forem/forem/pull/3801
 
 To only allow users with specific roles to use a liquid tag, you need to define
 a `VALID_ROLES` constant on the liquid tag itself. It needs to be an `Array` of
-valid roles. For [single resource roles](/admin), it needs to be an `Array` with
+valid roles. For [single resource roles](../admin/admin-guide), it needs to be an `Array` with
 the role and the resource. Here's an example:
 
 ```ruby

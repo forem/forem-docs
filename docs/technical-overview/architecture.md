@@ -35,7 +35,7 @@ We have also experimented with different techniques involving inline CSS
 
 ### We attempt to reduce our bundle size
 
-We use [PreactJS](/frontend/preact), a lightweight alternative to ReactJS, and we try to reduce our bundle size with [dynamic imports](/frontend/dynamic-imports).
+We use [PreactJS](../frontend/preact), a lightweight alternative to ReactJS, and we try to reduce our bundle size with [dynamic imports](../frontend/dynamic-imports).
 
 ### Worst technical debt
 
@@ -53,7 +53,7 @@ Currently, the top post on the home feed, which must have a cover image, is shar
 
 ### Inter-page navigation
 
-Forem uses a variation of "instant click", via [InstantClick](/frontend/instant-click), which swaps out page content instead of making full-page requests. This approach is similar to the one used by the Rails gem `Turbolinks`, but our approach is more lightweight. The library is modified to work specifically with this Rails app and does not swap out reused elements like the navigation bar or the footer. The code for this functionality is viewable in `app/assets/javascripts/base.js.erb`.
+Forem uses a variation of "instant click", via [InstantClick](../frontend/instant-click), which swaps out page content instead of making full-page requests. This approach is similar to the one used by the Rails gem `Turbolinks`, but our approach is more lightweight. The library is modified to work specifically with this Rails app and does not swap out reused elements like the navigation bar or the footer. The code for this functionality is viewable in `app/assets/javascripts/base.js.erb`.
 
 There are a few caveats regarding this approach. Using our approach means a non-trivial amount of functionality is reloaded on page change. A similar amount of reloading occurs when using `window.InstantClick.on('change', someFunction)`. This results in code that looks something like this:
 
@@ -140,7 +140,7 @@ Notes are an internal tool admins can use to leave information about things. Exa
 
 ### Pages
 
-`Pages` in the [admin dashboard](/admin/) represent static pages to be served on the site. Admins are in full control to create and customize them to their needs using markdown or custom HTML. Pages are configured with a `slug` and they will be served on either the `/page/slug` or `/slug` path.
+`Pages` in the [admin dashboard](../admin/admin-guide) represent static pages to be served on the site. Admins are in full control to create and customize them to their needs using markdown or custom HTML. Pages are configured with a `slug` and they will be served on either the `/page/slug` or `/slug` path.
 
 In order to ease development of custom HTML Pages in local environments the rake task `pages:sync` is available. It will listen to changes made to a local HTML file and sync its contents to an existing Page in the database with the matching `slug`.
 

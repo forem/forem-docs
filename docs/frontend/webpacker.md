@@ -7,7 +7,7 @@ sidebar_position: 2
 Forem has two JavaScript codebases.
 
 One contains plain JavaScript,
-[which you can read more about in this guide](/frontend/plain-js).
+[which you can read more about in this guide](plain-js.md).
 
 The other one is managed by [Webpacker](https://github.com/rails/webpacker), and
 it's located inside `/app/javascript`, written using ES6+.

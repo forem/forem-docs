@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Admin Search
 
 For admin views that need to take advantage of searching and filtering, we've

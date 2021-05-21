@@ -9,7 +9,7 @@ sidebar_position: 10
 ## How do I log in after starting up Forem for the first time?
 
 Seeding the database create an admin user (see
-[Database](/getting-started/db/#default-admin-user)) with the following
+[Database](./getting-started/database/#default-admin-user)) with the following
 credentials:
 
 ```
@@ -18,7 +18,7 @@ password: password
 ```
 
 Once logged in as this admin user, you can turn on any authentication methods
-you'd like (see [Authentication](/backend/authentication/))
+you'd like (see [Authentication](./backend/authentication/))
 
 ## How do I build my local copy of the Ruby source code documentation?
 
