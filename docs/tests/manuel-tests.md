@@ -12,7 +12,7 @@ feature, it's useful to check:
 - Is the UI optimised for a mobile layout?
 - Does the feature behave consistently across desktop and mobile browsers?
 - Is the feature accessible? (See the
-  [Accessibility testing docs](/tests/accessibility-tests))
+  [Accessibility testing docs](accessibility-tests.md))
 
 ## Tips for testing on mobile
 

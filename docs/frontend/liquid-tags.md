@@ -132,7 +132,7 @@ the `admin` role or with a role of `:restricted_liquid_tag` and a specified
 resource of `LiquidTags::UserSubscriptionTag`.
 
 `LiquidTags::UserSubscriptionTag` is a resource model so we that can play nicely
-with the [Rolify][rolify] gem. See [/admin](./admin/admin-guide) for more information.
+with the [Rolify][rolify] gem. See [/admin](../admin/admin-guide) for more information.
 
 **REMINDER: if you do not define a `VALID_ROLES` constant, the liquid tag will
 be usable by all users by default.**
