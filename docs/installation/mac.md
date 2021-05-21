@@ -126,7 +126,7 @@ redis-cli ping
 **Error:** `User does not have CONNECT privilege.`
 
 **_Solution:_** Complete the steps outlined in the
-[PostgreSQL setup guide](/installation/postgresql).
+[PostgreSQL setup guide](postgresql.md).
 
 ---
 

@@ -45,10 +45,7 @@ Specs.
 
 Request specs test the actions on a controller across the entire stack,
 effectively acting as Integration Tests. You can read more about request specs
-in our documentation on [Integration Tests][integration_tests].
+in our documentation on [Integration Tests](integration-tests.md).
 
-You can read the official guide [Testing Rails Applications][rails_guides] to
+You can read the official guide [Testing Rails Applications](https://guides.rubyonrails.org/testing.html) to
 learn more.
-
-[integration_tests]: /tests/integration-tests/
-[rails_guides]: https://guides.rubyonrails.org/testing.html

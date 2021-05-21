@@ -14,7 +14,7 @@ their removal.
 ## Creating a new feature flag
 
 To create a new feature flag, we use
-[data update scripts](/backend/data-update-scripts) so that they can be made
+[data update scripts](../backend/data-update-scripts) so that they can be made
 available over the entire Forem fleet, for example:
 
 ```shell
@@ -68,7 +68,7 @@ To enable such a feature:
 
 - Log in to the Forem
 - Go to `/admin/feature_flags` (it requires the
-  [`tech_admin` role](/backend/roles))
+  [`tech_admin` role](../backend/roles))
 - Click on the flag you want to enable and press "Fully Enable".
 
 ![A screenshot of the Admin Feature Flag Panel](/img/docs/admin_feature_flags.png)

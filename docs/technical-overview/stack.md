@@ -26,7 +26,7 @@ For the Forem tech stack we use:
 - [_CounterCulture_](https://github.com/magnusvk/counter_culture) to keep track of association counts (counter caches)
 - [_Rolify_](https://github.com/RolifyCommunity/rolify) for role management
 - [_Pundit_](https://github.com/varvet/pundit) for authorization to proxy traffic
-- [Preact](https://preactjs.com/) for some of the frontend. See [the Frontend Guide](/frontend) for more info
+- [Preact](https://preactjs.com/) for some of the frontend. See [the Frontend Guide](../frontend/preact) for more info
 - [_Pusher_](https://pusher.com) for realtime communication between the application and users' browsers
 - [_GitDocs_](https://github.com/timberio/gitdocs) for beautiful and SEO-friendly documentation
 - [Git](https://git-scm.com/) for version control

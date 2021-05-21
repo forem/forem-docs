@@ -8,7 +8,7 @@ An integration test is a test that measures the interaction of multiple systems
 or parts of your application.
 
 An integration test may seem similar to an [acceptance
-test](/tests/acceptance-tests). The main difference is that an acceptance test
+test](acceptance-tests.md). The main difference is that an acceptance test
 is from the perspective of the end-user, while an integration test is from the
 perspective of the developer.
 
