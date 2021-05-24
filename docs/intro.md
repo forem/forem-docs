@@ -2,7 +2,8 @@
 sidebar_position: 1
 ---
 
-# Welcome to Forem's developer documentation 🌱
+# Introduction 👋
+## Welcome to Forem's developer documentation 🌱
 
 On this site you'll find instructions to setup a [local instance of
 Forem](./installation/mac), documentation on the [architecture of
