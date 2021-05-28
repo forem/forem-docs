@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Forem Docs',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Forem\'s engineering docs on how to contribute',
   url: 'https://forem-docs.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
