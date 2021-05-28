@@ -1,19 +1,19 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Forem Docs',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Forem\'s engineering docs on how to contribute',
   url: 'https://forem-docs.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'forem', // Usually your GitHub org/user name.
+  projectName: 'forem-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Home',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Forem',
         src: 'img/logo.svg',
       },
       items: [
@@ -41,34 +41,34 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'forem.dev',
+              href: 'https://forem.dev',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'DEV',
+              href: 'https://dev.to',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Social',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Twitter',
+              href: 'https://twitter.com/forem',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'dev.to Twitter',
+              href: 'https://twitter.com/thepracticaldev',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Forem, Inc.`,
     },
   },
   presets: [
