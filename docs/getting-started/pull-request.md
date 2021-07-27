@@ -18,7 +18,7 @@ sidebar_position: 8
   the issue number.
   [More info here](https://github.com/blog/1506-closing-issues-via-pull-requests).
 - Please fill out the PR Template when making a PR.
-- Please leave a comment tagging reviewers and do not assign in Assignees section.
+- Use **Reviewers** section to request for reviews.
 - All commits in a pull request will be squashed when merged, but when your PR
   is approved and passes our CI, it will eventually be live on production!
 
