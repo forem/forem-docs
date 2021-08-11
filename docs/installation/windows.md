@@ -1,10 +1,8 @@
 ---
-sidebar_position: 2
+title: Windows
 ---
 
-# Windows
-
-**Installing Forem on Windows 10**
+# Installing Forem on Windows 10
 
 ## Installing prerequisites
 
@@ -153,7 +151,7 @@ password for PostgreSQL:
    PostgreSQL by executing the command `\quit`.
 
 For additional configuration options, check our
-[PostgreSQL setup guide](postgresql.md).
+[PostgreSQL setup guide](/installation/postgresql).
 
 ### ImageMagick
 
@@ -208,7 +206,7 @@ WSL.
      use and provides a fake default for any missing keys.
    - If you use a remote computer as dev env, you need to set `APP_DOMAIN`
      variable to the remote computer's domain name.
-   - The [backend guide](../backend/authentication) will show you how to get free API keys for
+   - The [backend guide](/backend) will show you how to get free API keys for
      additional services that may be required to run certain parts of the app.
    - For any key that you wish to enter/replace:
 
@@ -289,3 +287,11 @@ There are currently two work-arounds.
 
 > If you encountered any errors that you subsequently resolved, **please
 > consider updating this section** with your errors and their solutions.
+
+### WSL2 and End to End Tests
+
+In order to run Cypress Test Runner, a few extra setup steps are required to run GUIs
+natively inside of WSL2.
+
+[This guide](https://nickymeuleman.netlify.app/blog/gui-on-wsl2-cypress) explains
+how to use graphical user interfaces like Cypress inside WSL2.
