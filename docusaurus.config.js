@@ -11,9 +11,9 @@ module.exports = {
   projectName: 'forem-docs', // Usually your repo name.
   themeConfig: {
     algolia: {
-      apiKey: process.env.ALGOLIA_SEARCH_KEY,
-      appId: process.env.ALGOLIA_APP_ID,
-      indexName: process.env.ALGOLIA_INDEX_NAME,
+      apiKey: process.env.ALGOLIA_SEARCH_KEY || 'development',
+      appId: process.env.ALGOLIA_APP_ID || 'development',
+      indexName: process.env.ALGOLIA_INDEX_NAME || 'development',
     },
     navbar: {
       title: 'Home',
