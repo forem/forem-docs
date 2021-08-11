@@ -28,6 +28,11 @@ module.exports = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          to: '/api',
+          position: 'left',
+          label: 'API',
+        },
       ],
     },
     footer: {
@@ -40,6 +45,10 @@ module.exports = {
               label: 'Introduction',
               to: '/docs/intro',
             },
+            {
+              label: 'API Docs',
+              to: '/api'
+            }
           ],
         },
         {
@@ -97,5 +106,14 @@ module.exports = {
         },
       },
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [{
+          spec: 'api_v0.yml',
+          routePath: '/api/'
+        }]
+      }
+    ]
   ],
 };
