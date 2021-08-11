@@ -15,7 +15,7 @@ doing it in a console, we would use a DataUpdateScript.
 ## How it works
 
 First off, we added a
-[DataUpdateScript model](https://github.com/forem/forem/blob/master/app/models/data_update_script.rb)
+[DataUpdateScript model](https://github.com/forem/forem/blob/main/app/models/data_update_script.rb)
 to Rails and a corresponding database table. This table is what we use to keep
 track of what scripts have been run and which ones have not/still need to be.
 

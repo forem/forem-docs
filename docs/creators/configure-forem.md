@@ -17,7 +17,7 @@ Forem link to your community._
 Once your Forem instance is set up for the first time, you will most likely see
 the following banner:
 
-![Banner showing outstanding site configuration](/img/docs/creators/creators-banner.png)
+![Banner prompting for configuring mandatory settings](/img/docs/creators/creators-banner.png)
 
 This banner indicates that the Forem configuration process hasn't been completed
 yet.
@@ -61,7 +61,7 @@ Currently, the configuration page is split into 3 sections. They are as follows:
 - A **Get Started section** that contains all required fields. These are the
   fields that are required to be filled out, in order to get your Forem in a
   usable state.
-- An **All Site Configuration section** that contains all the possible variables
+- An **All Settings section** that contains all the possible variables
   that you can configure on the site. This section is broken down into sub
   sections, whereby each subsection will contain a description of what it does,
   and then list the fields that are available for configuration. Each field will
@@ -71,7 +71,7 @@ Currently, the configuration page is split into 3 sections. They are as follows:
   instance is hosted by Forem, please get in touch with customer support to
   change any of these variables.
 
-![The Site Configuration Sections](/img/docs/creators/creators-config.png)
+![The Settings Sections](/img/docs/creators/creators-settings.png)
 
 All required fields are marked as such. In addition, you will notice that we
 have set some defaults for certain fields, you may amend them as you see
@@ -79,8 +79,7 @@ relevant for your Forem.
 
 ## Updating your configurations
 
-In order to update any of the variables within the Get Started and All Site
-Configuration sections, you will set the new value and then navigate to the end
+In order to update any of the variables within the Get Started and All Settings sections, you will set the new value and then navigate to the end
 of the section where you will verify that you would like to make the change by
 typing the following sentence:
 
