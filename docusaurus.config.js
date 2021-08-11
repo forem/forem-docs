@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Forem Docs',
   tagline: 'Forem\'s engineering docs on how to contribute',
-  url: 'https://forem-docs.netlify.app',
+  url: 'https://developers.forem.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -11,9 +11,9 @@ module.exports = {
   projectName: 'forem-docs', // Usually your repo name.
   themeConfig: {
     algolia: {
-      apiKey: process.env.ALGOLIA_SEARCH_KEY,
-      appId: process.env.ALGOLIA_APP_ID,
-      indexName: process.env.ALGOLIA_INDEX_NAME,
+      apiKey: process.env.ALGOLIA_SEARCH_KEY || 'development',
+      appId: process.env.ALGOLIA_APP_ID || 'development',
+      indexName: process.env.ALGOLIA_INDEX_NAME || 'development',
     },
     navbar: {
       title: 'Home',
@@ -28,6 +28,11 @@ module.exports = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          to: '/api',
+          position: 'left',
+          label: 'API',
+        },
       ],
     },
     footer: {
@@ -40,6 +45,10 @@ module.exports = {
               label: 'Introduction',
               to: '/docs/intro',
             },
+            {
+              label: 'API Docs',
+              to: '/api'
+            }
           ],
         },
         {
@@ -97,5 +106,14 @@ module.exports = {
         },
       },
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [{
+          spec: 'api_v0.yml',
+          routePath: '/api/'
+        }]
+      }
+    ]
   ],
 };
