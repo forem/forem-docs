@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Forem Docs',
   tagline: 'Forem\'s engineering docs on how to contribute',
-  url: 'https://forem-docs.netlify.app',
+  url: 'https://developers.forem.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
