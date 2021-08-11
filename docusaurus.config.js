@@ -111,7 +111,6 @@ module.exports = {
       {
         specs: [{
           spec: 'api_v0.yml',
-          routePath: '/api/'
         }]
       }
     ]
