@@ -76,7 +76,7 @@ will open and you are now ready to run end to end tests.
 While the test runner is open, any new or updated tests will be dynamically
 reflected in the UI.
 
-![A screenshot of the Cypress test runner](/cypress-test-runner.png)
+![A screenshot of the Cypress test runner](/img/docs/tests/cypress-test-runner.png)
 
 ## E2E Tests on CI/CD
 
