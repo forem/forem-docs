@@ -1,0 +1,4 @@
+[[redirects]]
+from = "https://docs.forem.com/*"
+to = "https://developers.forem.com/:splat"
+status = 301
