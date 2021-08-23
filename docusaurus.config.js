@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Forem Docs',
-  tagline: 'Forem\'s engineering docs on how to contribute',
+  tagline: 'Forem\'s developer documentation',
   url: 'https://developers.forem.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -33,6 +33,12 @@ module.exports = {
           position: 'left',
           label: 'API',
         },
+        {
+          title: 'GitHub',
+          href: 'https://github.com/forem/forem',
+          label: 'GitHub',
+          position: 'right',
+        }
       ],
     },
     footer: {
