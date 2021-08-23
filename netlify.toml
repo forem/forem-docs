@@ -1,4 +1,5 @@
 [[redirects]]
-  from = "https://docs.forem.com/*"
-  to = "https://developers.forem.com/:splat"
-  status = 301
+from = "https://docs.forem.com/*"
+to = "https://developers.forem.com/:splat"
+status = 301
+force = true
