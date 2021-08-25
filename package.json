@@ -11,12 +11,14 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "api-docs:lint": "spectral lint -F hint -v docs/api_v0.yml"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.4",
     "@docusaurus/preset-classic": "^2.0.0-beta.4",
     "@mdx-js/react": "^1.6.21",
+    "@stoplight/spectral": "^5.9.2",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
     "docusaurus2-dotenv": "^1.4.0",
