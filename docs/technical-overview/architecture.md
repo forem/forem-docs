@@ -106,7 +106,7 @@ Some tags behave as "flare," highlighting certain articles when viewed from the 
 
 ### Listings
 
-Listings are classified ads. They are similar to posts in some ways, but with ore limitations. They are designed to be categorized into market areas. They also make use of tags.
+Listings are classified ads. They are similar to posts in some ways, but with more limitations. They are designed to be categorized into market areas. They also make use of tags.
 
 ### Credits
 
@@ -129,10 +129,6 @@ Follows can have a "score" which indicates how much a user wants to see the elem
 ### Roles
 
 Through the "rolify" gem, users can have roles like "admin", etc. A role can also be associated with a model or a model instance. Such as "moderator of javascript tag"
-
-### Organization
-
-An organization is a collection of users who can author under one umbrella. An organization could be a company or perhaps just a publication on-site.
 
 ### Notes
 
