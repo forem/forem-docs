@@ -80,8 +80,6 @@ Because we may silently insert `?i=i` on the frontend to indicate internal nav, 
 
 ### Articles (or posts)
 
-](#articles-(or-posts))
-
 Articles are the primary form of user generated content in the application. An Article has many comments and taggings through the acts-as-taggable gem, belongs to a single user (and possibly an organization), and is the core unit of content.
 
 ### Collections (or series)
