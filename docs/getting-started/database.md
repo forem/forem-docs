@@ -12,7 +12,7 @@ application, we have built-in tools to help us.
 
 Make sure you've already installed all the dependencies
 ```
-gem install
+bundle install
 yarn install
 ```
 
