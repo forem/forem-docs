@@ -2,35 +2,7 @@
 sidebar_position: 3
 ---
 
-# Preparing the Database
-
-Note: If you've already run `bin/setup`, this will have already been done for
-you.
-
-The next step is to create and prepare the database. Because Forem is a Rails
-application, we have built-in tools to help us.
-
-Make sure you've already installed all the dependencies
-```
-bundle install
-yarn install
-```
-
-We can use Rails to create our database, load the schema, and add some seed
-data:
-
-```shell
-rails db:setup
-```
-
-`db:setup` actually runs the following rake commands in order so alternatively,
-you could run each of these to produce the same result:
-
-```shell
-rails db:create
-rails db:schema:load
-rails db:seed
-```
+# Additional Database options
 
 ## Seed Data
 
