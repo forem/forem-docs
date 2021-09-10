@@ -9,7 +9,7 @@ sidebar_position: 10
 ## How do I log in after starting up Forem for the first time?
 
 Seeding the database create an admin user (see
-[Database](./getting-started/database/#default-admin-user)) with the following
+[Database](/backend/database/#default-admin-user)) with the following
 credentials:
 
 ```

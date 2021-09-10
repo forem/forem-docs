@@ -7,7 +7,7 @@ slug: /
 ## Welcome to Forem's developer documentation 🌱
 
 On this site you'll find instructions to setup a [local instance of
-Forem](./installation/mac), documentation on the [architecture of
+Forem](./getting-started/installation/mac), documentation on the [architecture of
 Forem](./technical-overview/architecture/), [how to contribute](./contributing-guide/docs), and many other useful
 documents.
 

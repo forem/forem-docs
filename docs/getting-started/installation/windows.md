@@ -151,7 +151,7 @@ password for PostgreSQL:
    PostgreSQL by executing the command `\quit`.
 
 For additional configuration options, check our
-[PostgreSQL setup guide](/installation/postgresql).
+[PostgreSQL setup guide](/getting-started/installation/postgresql).
 
 ### ImageMagick
 
