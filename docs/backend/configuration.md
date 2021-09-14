@@ -20,7 +20,7 @@ environments. Examples:
 - `STRIPE_SECRET_KEY`
 
 Settings managed via your ENV can be found in
-[Configuring Environment Variables](../getting-started/config-env)) and viewed at
+[installation section of your operating system](/getting-started/installation/mac#installing-forem)) and viewed at
 `/admin/customization/config` (see [the Admin guide](../admin/admin-guide)):
 
 ![Screenshot of env variable admin interface](/img/docs/backend/siteconfig.png)
@@ -78,4 +78,4 @@ secret in it, then we fallback to fetching the secret from the
 One advantage of using Vault with Forem is that it allows you to update your
 secrets easily through the application rather than having to mess with ENV
 files. If you would like to try out Vault, follow our
-[installation guide for setting it up locally](../installation/vault).
+[installation guide for setting it up locally](/getting-started/installation/vault).

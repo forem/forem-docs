@@ -1,5 +1,6 @@
 ---
 title: Apple Authentication
+sidebar_position: 6
 ---
 
 # Sign in with Apple Authentication
