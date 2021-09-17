@@ -51,14 +51,15 @@ Now with both the Service ID and Key you'll need to enable Apple Authentication
 and pass in the credentials in the admin dashboard
 `/admin/customization/config`.
 
-![Admin Authentication Configuration Dashboard](https://user-images.githubusercontent.com/6045239/92613383-25a83780-f278-11ea-94a7-b710da544c9d.png)
+![Admin Authentication Configuration Dashboard](https://user-images.githubusercontent.com/6045239/133795693-56573842-387c-46e6-8326-d64808d571cd.png)
 
-Add the corresponding configuration data. Make sure the PEM key you downloaded
-has explicit linebreaks (`\n`), don't forget the one at the very end of it.
+Fill in each of the configuration fields.
 
-![Apple config](https://user-images.githubusercontent.com/6045239/92614087-e0d0d080-f278-11ea-8d20-45148e1a6b59.png)
+Make sure the PEM key is copied exactly the way it appears in the file you downloaded from the Apple Developer portal, including newlines. If this isn't done correctly users will encounter an `Invalid curve name` error. **Make sure a newline is added at the very end of the Apple PEM field**.
 
-Save the changes and restart your server for these values to take effect.
+![Apple config](https://user-images.githubusercontent.com/6045239/133795521-246ede88-15f0-45d1-a060-5e7d29e77568.png)
+
+Save the changes and you're ready.
 
 ## Email configuration
 
