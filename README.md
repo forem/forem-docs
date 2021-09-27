@@ -2,6 +2,10 @@
 
 Welcome to Forem's developer documentation! The docs are built using [Docusaurus 2](https://docusaurus.io/), a React and Markdown based documentation website generator.
 
+Our developer docs are meant to be used as a way to find instructions to setup a local instance of Forem, documentation on the architecture of Forem, how to contribute, and many other useful documents.
+
+If you have launched a Forem community of your own and are looking for documentation on how to manage that community, please see our [Admin Docs](https://admin.forem.com/)
+
 ## Technical Overview
 
 Most of the configuration here is not too different from the basic `preset-classic` of Docusaurus. The main folders are:
