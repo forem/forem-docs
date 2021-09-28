@@ -47,5 +47,9 @@ Additional information:
 
 - The Forem local development instance ships with one user, the admin account. The email for the user is `admin@forem.local` and the password is `password`.
 - More about Gitpod in this article on dev.to about [Gitpod and Forem (previously DEV)](https://dev.to/ben/spin-up-a-local-instance-of-dev-in-the-cloud-with-gitpod-it-s-incredibly-simple-pij).
-- Although other methods of authentication are available, only email will work. To use other forms of authentication, they need to be configured. Visit the [Authentication](/backend/authentication) section to configure social logins.
-- Instead of manually building a Gitpod URL, consider installing the [Gitpod browser extension](https://www.gitpod.io/docs/browser-extension/).
+- Although other methods of authentication are available, only email will work.
+
+![Gitpod Forem login page](/img/docs/gitpod/gitpod-forem-login-page.png)
+
+To use other forms of authentication, they need to be configured. Visit the [Authentication](/backend/authentication) section to configure social logins.
+- Instead of manually building a Gitpod URL and pasting it in the browser's address bar, consider installing the [Gitpod browser extension](https://www.gitpod.io/docs/browser-extension/).
