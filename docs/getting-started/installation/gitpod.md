@@ -64,8 +64,10 @@ The first time you use the GitHub CLI in Gitpod for any remote commands, like `g
 
 ![GitHub CLI login prompt](/img/docs/gitpod/gitpod-github-cli-login.png)
 
-Follow the instructions from the GitHub CLI to finish logging in.
+It is recommended to login to GitHub via SSH.
 
 ![GitHub CLI login via SSH](/img/docs/gitpod/gitpod-github-cli-login-ssh.png)
+
+Follow the instructions from the GitHub CLI to finish logging in. The browser login to Github will open in the Gitpod preview browser window and fail to load. Copy the URL from the Gitpod browser preview window and paste it in a browser tab address bar instead to complete the authentication to GitHub.
 
 For more information on how to use the GitHub CLI, see the official [GitHub CLI documentation](https://cli.github.com/manual/index).
