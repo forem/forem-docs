@@ -53,3 +53,21 @@ Additional information:
 
 To use other forms of authentication, they need to be configured. Visit the [Authentication](/backend/authentication) section to configure social logins.
 - Instead of manually building a Gitpod URL and pasting it in the browser's address bar, consider installing the [Gitpod browser extension](https://www.gitpod.io/docs/browser-extension/).
+
+## GitHub CLI
+
+Forem’s Gitpod configuration ships with the GitHub CLI. You can create a pull request right from the command line by running the following command: `gh pr create`. 🤯
+
+![GitHub CLI creating a pull request](/img/docs/gitpod/gitpod-github-cli-creat-pr.png)
+
+The first time you use the GitHub CLI in Gitpod for any remote commands, like `gh pr create`, you will need to authenticate to GitHub via the GitHub CLI, i.e. `gh auth login`.
+
+![GitHub CLI login prompt](/img/docs/gitpod/gitpod-github-cli-login.png)
+
+It is recommended to login to GitHub via SSH.
+
+![GitHub CLI login via SSH](/img/docs/gitpod/gitpod-github-cli-login-ssh.png)
+
+Follow the instructions from the GitHub CLI to finish logging in. The browser login to Github will open in the Gitpod preview browser window and fail to load. Copy the URL from the Gitpod browser preview window and paste it in a browser tab address bar instead to complete the authentication to GitHub.
+
+For more information on how to use the GitHub CLI, see the official [GitHub CLI documentation](https://cli.github.com/manual/index).
