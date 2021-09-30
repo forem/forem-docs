@@ -47,7 +47,10 @@ For additional configuration options, check our
 Forem uses [ImageMagick](https://imagemagick.org/) to manipulate images on
 upload.
 
-You can install ImageMagick with `brew install imagemagick`.
+You can install ImageMagick by issuing the following command: 
+```shell
+brew install imagemagick
+```
 
 ### Redis
 
