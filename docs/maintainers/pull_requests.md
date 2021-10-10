@@ -62,6 +62,9 @@ merging them. This is easily (and safely) achieved using the GitHub UI.
 
 All required checks such as CI and Code Climate should be green.
 
+Core team members are responsible for merging their own pull requests and pull
+requests issued by those outside the core team.
+
 Once a PR is merged, it might need to be deployed. Deployment is a team
 responsibility, and everyone on the core team should be comfortable deploying
 code. For more information, read the
