@@ -86,7 +86,7 @@ You can learn more about our internal RFC process and how we use forem.dev
 
 1. [Fork the project](https://docs.forem.com/getting-started/forking/) and clone
    it to your local machine. Follow the
-   [installation guide](https://docs.forem.com/installation/)!
+   [installation guide](https://developers.forem.com/getting-started/installation/mac)!
 2. Create a branch with your GitHub username and the ID of the
    [issue](https://github.com/forem/forem/issues), for example:
    `git checkout -b USERNAME/some-new-feature-1234`
