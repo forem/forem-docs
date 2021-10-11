@@ -118,6 +118,8 @@ components:
         Authentication for some endpoints, like write operations on the
         Articles API require a DEV API key.
 
+        All authenticated endpoints are CORS disabled, the API key is intended for non-browser scripts.
+
         ### Getting an API key
 
         To obtain one, please follow these steps:
