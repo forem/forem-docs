@@ -112,7 +112,7 @@ discussion._
 ### Please include tests
 
 Some areas of the project could use updated tests, and new features should
-always include test coverage.
+always include test coverage. Feel free to read our testing section for guides, such as the [front end tests page](https://developers.forem.com/tests/frontend-tests).
 
 ### Code quality
 
