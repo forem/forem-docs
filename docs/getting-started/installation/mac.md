@@ -47,7 +47,7 @@ For additional configuration options, check our
 Forem uses [ImageMagick](https://imagemagick.org/) to manipulate images on
 upload.
 
-You can install ImageMagick by issuing the following command: 
+You can install ImageMagick by issuing the following command:
 ```shell
 brew install imagemagick
 ```
@@ -74,6 +74,17 @@ You can test if it's up and running by issuing the following command:
 ```shell
 redis-cli ping
 ```
+
+### NPM
+
+Forem requires a specific version of Node Package Manager (NPM).  You can use Node Version Management (NVM) to help you manage your NPM setup. (see [NVM vs. NPM vs. Yarn](https://github.com/ndlib/marble-blueprints/pull/327)).
+
+```shell
+brew install nvm
+nvm install --lts
+```
+
+You can also manage your NPM with [asdf](https://nodecli.com/nodejs-asdf).
 
 ## Installing Forem
 
