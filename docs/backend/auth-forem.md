@@ -10,9 +10,9 @@ Forem allows you to authenticate using the [Forem Passport](https://passport.for
 Better integration with the `/admin` dashboard is currently under development but in the mean time you will be able to enable the Forem Authentication provider with the following steps:
 
 1. Create an account in https://passport.forem.com
-2. Send an email to [hello@forem.com](mailto:hello+passport@forem.com) requesting access to the Creator Tools
-3. Request the `Key` and `Secret` credentials for your Forem instance in the Creator tools
-4. Enable the Forem Authentication provider with these values
+2. Send an email to [hello+passport@forem.com](mailto:hello+passport@forem.com) requesting access to the Creator Tools
+3. Use the [Forem Creator Tools](https://passport.forem.com/oauth/applications) to add your site to get the `Key` and `Secret` credentials.
+4. Enable the Forem Authentication provider in the admin dashboard
 
 
 ![Forem Creator Tools](https://user-images.githubusercontent.com/6045239/139337919-348a7c1d-e1ab-4ab9-a1c6-492ec475cfa0.png)
