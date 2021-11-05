@@ -96,7 +96,10 @@ You can also manage your NPM with [asdf](https://nodecli.com/nodejs-asdf).
 
 3. Install bundler with `gem install bundler`
 
-   - If you are using a Mac with an M1 CPU using Ruby compiled for ARM, you may need to force the platform that Bundler uses to `ruby` in order to build some of the C extensions used by Forem's dependencies. To do that, you can either set `BUNDLE_FORCE_RUBY_PLATFORM=true` in the shell environment or run `bundle config set force_ruby_platform true` to set that in Bundler globally.
+   - **Note:** If you are using a Mac with an M1 CPU that uses Ruby compiled for ARM, you may need to force the platform that Bundler uses to `ruby`. This will allow you to build the C extensions used by Forem's dependencies. 
+To force the platform to use `ruby`, you can either: 
+     - set `BUNDLE_FORCE_RUBY_PLATFORM=true` in the shell environment 
+     - run `bundle config set force_ruby_platform true` to set `ruby` in Bundler globally 
 
 4. Set up your environment variables/secrets
 
