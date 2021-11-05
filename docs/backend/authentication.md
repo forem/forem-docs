@@ -10,6 +10,7 @@ and [OmniAuth](https://github.com/omniauth/omniauth).
 On Forem you can authenticate through Facebook, GitHub, Twitter or Apple. Please check out
 the respective guides on how to authenticate:
 
+- [Forem authentication](auth-forem)
 - [Apple authentication](auth-apple)
 - [Facebook authentication](auth-facebook)
 - [Github authentication](auth-github)
