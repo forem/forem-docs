@@ -95,6 +95,9 @@ You can also manage your NPM with [asdf](https://nodecli.com/nodejs-asdf).
    - e.g. with SSH: `git clone git@github.com:<your-username>/forem.git`
 
 3. Install bundler with `gem install bundler`
+
+   - If you are using a Mac with an M1 CPU using Ruby compiled for ARM, you may need to force the platform that Bundler uses to `ruby` in order to build some of the C extensions used by Forem's dependencies. To do that, you can either set `BUNDLE_FORCE_RUBY_PLATFORM=true` in the shell environment or run `bundle config set force_ruby_platform true` to set that in Bundler globally.
+
 4. Set up your environment variables/secrets
 
    - Take a look at `.env_sample` to see all the `ENV` variables we use and the
