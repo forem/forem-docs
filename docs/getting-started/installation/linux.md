@@ -32,8 +32,8 @@ There are two ways to install Yarn.
 - [DigitalOcean's detailed tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04)
   describes how to install
   [Node version Manager](https://github.com/creationix/nvm). By installing NVM
-  you can select a Node version (we recommend either LTS or current); the guide
-  will also explain how to install NPM. This way you'll have Node, NPM, and then
+  you can select a Node version, use `14` (matches Forem's .nvmrc and package.json files);
+  the guide will also explain how to install NPM. This way you'll have Node, NPM, and then
   you can run `npm install -g yarn` to install Yarn.
 
 ### PostgreSQL
