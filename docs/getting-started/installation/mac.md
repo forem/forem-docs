@@ -81,7 +81,7 @@ Forem requires a specific version of Node Package Manager (NPM).  You can use No
 
 ```shell
 brew install nvm
-nvm install --lts
+nvm install $(cat .nvmrc)
 ```
 
 You can also manage your NPM with [asdf](https://nodecli.com/nodejs-asdf).
