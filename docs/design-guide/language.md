@@ -37,11 +37,3 @@ A signed up account is generically referred to as a "user", but contextually we'
 ## Listing
 
 The marketplace/classified-listing concept within a forem is called `/listings` and a single unit is a listing. Listings have categories for segmentation as well as tags, like posts do.
-
-## Connect
-
-Connect is the area of the site for synchronous conversation, closed group chat and/or video or audio conversation. It's generally not as site-wide or public, though they _can_ be public in some contexts.
-
-## Connect Channel
-
-A single unit of chat is called a "channel".

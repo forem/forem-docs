@@ -27,7 +27,6 @@ For the Forem tech stack we use:
 - [_Rolify_](https://github.com/RolifyCommunity/rolify) for role management
 - [_Pundit_](https://github.com/varvet/pundit) for authorization to proxy traffic
 - [Preact](https://preactjs.com/) for some of the frontend. See [the Frontend Guide](../frontend/preact) for more info
-- [_Pusher_](https://pusher.com) for realtime communication between the application and users' browsers
 - [_Docusaurus_](https://docusaurus.io/) for beautiful and SEO-friendly documentation
 - [Git](https://git-scm.com/) for version control
 - [GitHub](https://github.com/) for hosting the source code and issue tracking
