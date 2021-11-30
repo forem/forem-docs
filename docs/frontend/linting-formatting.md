@@ -10,7 +10,7 @@ handles linting, but eslint rules related to code formatting, they get handled
 by prettier. For the most part, out of the box rules provided by the
 configurations that are extended are used but there are some tweaks.
 
-Forem also has some objects that live in the global scope, e.g. Pusher. The
+Forem also has some objects that live in the global scope, e.g. InstantClick. The
 eslint globals section of the eslint configuration is what enables these to be
 reported as existing when eslint runs.
 
@@ -18,7 +18,6 @@ reported as existing when eslint runs.
 globals: {
   InstantClick: false,
   filterXSS: false,
-  Pusher: false,
 }
 ```
 
