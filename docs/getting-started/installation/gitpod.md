@@ -7,7 +7,7 @@ sidebar_position: 5
 If you prefer working on a cloud IDE, you can spin up your own instance of Forem
 in the cloud, using [GitPod](https://gitpod.io).
 
-1. Fork the Forem respository. Navigate to https://github.com/forem/forem and click on the Fork button.
+1. Fork the Forem repository. Navigate to https://github.com/forem/forem and click on the Fork button.
 
 ![Repository Fork button](/img/docs/gitpod/fork-button.png)
 
