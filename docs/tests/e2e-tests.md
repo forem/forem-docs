@@ -157,7 +157,7 @@ We favor `findByRole` queries where possible because:
   be returned by the above selector.
 - It can help highlight issues with accessible names. For example, if
   `cy.findByRole('link', { name: 'Profile' })` returns 10 links for different
-  profiles, we can readily identify an accessiblity issue where screen reader
+  profiles, we can readily identify an accessibility issue where screen reader
   users would not be able to differentiate between the links.
 
 #### Scoping selectors
