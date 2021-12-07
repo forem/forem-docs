@@ -226,7 +226,7 @@ WSL.
 1. After ensuring that the PostgreSQL server and the Redis server are running,
    run `bin/setup`.
 
-   > The `bin/setup` script is responsible for installing a varienty of
+   > The `bin/setup` script is responsible for installing a variety of
    > dependencies. One can find it inside the `bin` folder by the name of
    > `setup`.
    >
