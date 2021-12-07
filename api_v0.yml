@@ -2785,7 +2785,7 @@ paths:
         upcoming events and more.
 
         The user creating the listing or the organization on which behalf the user
-        is creating for need to have enough creadits for this operation to be
+        is creating for need to have enough credits for this operation to be
         successful. The server will prioritize the organization's credits over
         the user's credits.
 
