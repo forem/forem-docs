@@ -3088,7 +3088,7 @@ paths:
         - $ref: '#/components/parameters/perPageParam30to100'
       responses:
         "200":
-          description: The reading list with a overwiew of the article
+          description: The reading list with a overview of the article
           content:
             application/json:
               schema:
