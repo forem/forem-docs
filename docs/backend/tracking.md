@@ -28,7 +28,7 @@ skip_before_action :track_ahoy_visit
 
 We currently only create visits on the server-side when they are required to be
 created by events. Visits can be re-enabled for specific controller actions if
-necessary, but this should be done so _with explict care_.
+necessary, but this should be done so _with explicit care_.
 
 We do not collect any personal user data when tracking visits. Our collected
 data is limited to the user's `id`. Each user has a unique `visitor_token`,
@@ -63,7 +63,7 @@ end
 ```
 
 Event tracking can be enabled for specific controller actions, but should be
-done so _with explict care_.
+done so _with explicit care_.
 
 ## Messages
 

@@ -4,7 +4,7 @@ sidebar_position: 12
 
 # Internationalization (i18n)
 
-## What is internationlization (i18n)?
+## What is internationalization (i18n)?
 
 To over simplify the concept a bit, internalization (i18n for short) is the
 process of making the platform more user-friendly in various languages for

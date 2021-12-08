@@ -38,7 +38,7 @@ Start the app by running `./bin/startup`, if it's not already running.
 
 ## Start over / discard all your changes
 
-Sometimes it is neccesarry to start over from the beginning or reset the current
+Sometimes it is necessary to start over from the beginning or reset the current
 workspace to the state of the upstream branch. Use the helper
 `./scripts/clean_fork.sh` to set your fork to the exact same state as the
 upstream main branch.
