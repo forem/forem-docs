@@ -227,5 +227,21 @@ doesn't work, install PostgreSQL with Homebrew instead:
 
 ---
 
+**Error:**
+
+```shell
+node-pre-gyp ERR! stack Error: Failed to execute '/Users/yourusername/.nvm/versions/node/v14.17.6/bin/node /Users/yourusername/.nvm/versions/node/v14.17.6/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/Users/yourusername/Code/forem/node_modules/canvas/build/Release/canvas.node --module_name=canvas --module_path=/Users/yourusername/Code/forem/node_modules/canvas/build/Release --napi_version=8 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v83 --python=/opt/homebrew/opt/python@3.9/bin/python3' (1)
+```
+
+**_Solution:_**
+
+On an M1 Mac, this is due to there [not being a prebuilt release for the `node-canvas` JavaScript package](https://github.com/Automattic/node-canvas/releases). You can get it to build itself from source if you install the following packages via the `arm64` version of Homebrew:
+
+```shell
+brew install pkg-config cairo pango libpng jpeg giflib librsvg
+```
+
+---
+
 > If you encountered any errors that you subsequently resolved, **please
 > consider updating this section** with your errors and their solutions.
