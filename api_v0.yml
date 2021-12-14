@@ -133,22 +133,6 @@ components:
             ![generated DEV API Key](https://user-images.githubusercontent.com/146201/64421367-af3f8b00-d0a1-11e9-9831-73d3bdfdff66.png)
       name: api-key
       in: header
-    oauth2:
-      type: oauth2
-      description: |
-        OAuth2 authentication.
-
-        OAuth2 authentication is still in private alpha.
-      flows:
-        authorizationCode:
-          authorizationUrl: https://dev.to/oauth/authorize
-          tokenUrl: https://dev.to/oauth/token
-          refreshUrl: https://dev.to/oauth/token
-          scopes: {}
-        clientCredentials:
-          tokenUrl: https://dev.to/oauth/token
-          refreshUrl: https://dev.to/oauth/token
-          scopes: {}
 
   schemas:
     APIError:
@@ -2079,7 +2063,6 @@ paths:
                 format: int32
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -2267,7 +2250,6 @@ paths:
                 format: int32
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -2368,7 +2350,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -2417,7 +2398,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -2466,7 +2446,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -2517,7 +2496,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -3106,7 +3084,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -3483,7 +3460,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -3613,7 +3589,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -3678,7 +3653,6 @@ paths:
                   $ref: "#/components/examples/ErrorUnprocessableEntity"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -3737,7 +3711,6 @@ paths:
                   $ref: "#/components/examples/ErrorNotFound"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
@@ -3774,7 +3747,6 @@ paths:
                   $ref: "#/components/examples/ErrorNotFound"
       security:
         - api_key: []
-        - oauth2: []
       x-codeSamples:
         - lang: Shell
           label: curl
