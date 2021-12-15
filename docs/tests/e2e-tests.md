@@ -141,7 +141,7 @@ commands to find elements in tests.
 The most robust way to do this is to find by role and accessible name, e.g.:
 
 ```js
-cy.findByRole('button', { name: 'Log in' });
+cy.findByRole("button", { name: "Log in" });
 ```
 
 We favor `findByRole` queries where possible because:
@@ -173,7 +173,7 @@ example, the below code will find the article link contained within the `<main>`
 element, ignoring any similar links the header, etc:
 
 ```js
-cy.findByRole('main').findByRole('link', { name: 'My article' });
+cy.findByRole("main").findByRole("link", { name: "My article" });
 ```
 
 This is particularly useful if you only need to find a single element in the
@@ -189,9 +189,9 @@ For example, the below code will find the "profile preview" card, and then scope
 all queries to that card alone, ignoring any other content on the page:
 
 ```js
-cy.findByTestId('profile-preview-card').within(() => {
-  cy.findByRole('link', { name: 'User profile' });
-  cy.findByRole('button', { name: 'Follow' });
+cy.findByTestId("profile-preview-card").within(() => {
+  cy.findByRole("link", { name: "User profile" });
+  cy.findByRole("button", { name: "Follow" });
 });
 ```
 
@@ -238,18 +238,18 @@ See the examples below of how to make these route changes more robust.
 #### 🚫 Before: Route changes, but we find the `main` element on the previous page
 
 ```js
-cy.findByRole('main').findByRole('link', { name: 'Test article' }).click();
+cy.findByRole("main").findByRole("link", { name: "Test article" }).click();
 // After clicking the link we can _sometimes_ accidentally get a reference to the 'main' element on the page we just left
-cy.findByRole('main').findByRole('button', { name: 'Share post' });
+cy.findByRole("main").findByRole("button", { name: "Share post" });
 // Cypress fails to find the 'Share post' button inside the previous page's `main` element, and the test fails
 ```
 
 #### ✅ After: Route changes, and we find a unique element before proceeding
 
 ```js
-cy.findByRole('main').findByRole('link', { name: 'Test article' }).click();
+cy.findByRole("main").findByRole("link", { name: "Test article" }).click();
 // The 'Share post' button doesn't exist on the page we just left, so Cypress will wait for it to be shown on the new page
-cy.findByRole('button', { name: 'Share post' });
+cy.findByRole("button", { name: "Share post" });
 ```
 
 ### 2. Interactive elements must be initialized before clicking
@@ -260,27 +260,27 @@ an automated test environment it is possible to click a button before its click
 handler has been attached.
 
 For this reason, it's important to double check how a feature's click handlers
-are initialized and, if necessary, make sure Cypress waits for the button to be
-ready to click.
+are initialized and, if necessary, use the `pipe` command from [`cypress-pipe`](https://github.com/NicholasBoll/cypress-pipe) to retry a click action until the expected state is achieved. See [this Cypress blog post on "When can the test click?"](https://www.cypress.io/blog/2019/01/22/when-can-the-test-click/).
 
-See the examples below of how to make this kind of button interaction more
-robust.
+**Please note this should only be used on rare occasions where the click handler is added asynchronously. Use `pipe` as a last resort.**
 
-#### 🚫 Before: We click a button without waiting for initialization
+#### 🚫 Before: We click a button before the click handler has been initialized in the JS
 
 ```js
-cy.findByRole('main').findByRole('link', { name: 'Test User Profile' }).click();
 // We immediately try to click a button that's initialized asynchronously in JS. Sometimes the test will fail as the click handler is not yet attached.
-cy.findByRole('button', { name: 'Follow' }).click();
+cy.findByRole("button", { name: "Expand dropdown menu" }).click();
 ```
 
-#### ✅ After: We wait for a data attribute that indicates the initialization has completed
+#### ✅ After: We use `pipe` to retry the command until the button is in the correct state
 
 ```js
-cy.findByRole('main').findByRole('link', { name: 'Test User Profile' }).click();
-// A data attribute is added to initialized follow buttons, and Cypress waits until this is present on the page
-cy.get('[data-click-initialized]');
-cy.findByRole('button', { name: 'Follow' }).click();
+// The pipe command should be passed a named function to allow it to show up in logs properly
+const click = ($el) => $el.click();
+
+// The click will be retried until the button correctly updates its state
+cy.findByRole("button", { name: "Expand dropdown menu" })
+  .pipe(click)
+  .should("have.attr", "aria-expanded", "true");
 ```
 
 ### 3. Lingering network requests interfere with test setup or new user login
@@ -308,12 +308,12 @@ This issue is best avoided by:
 ```js
 beforeEach(() => {
   cy.testSetup();
-  cy.fixture('users/articleEditorV2User.json').as('user');
+  cy.fixture("users/articleEditorV2User.json").as("user");
 
-  cy.get('@user').then(() => {
+  cy.get("@user").then(() => {
     cy.loginUser(user).then(() => {
       // The `visit` command does not take user-related network requests into account. If a test runs quickly, the responses may bleed into the next test setup
-      cy.visit('/dashboard');
+      cy.visit("/dashboard");
     });
   });
 });
@@ -324,11 +324,11 @@ beforeEach(() => {
 ```js
 beforeEach(() => {
   cy.testSetup();
-  cy.fixture('users/articleEditorV2User.json').as('user');
+  cy.fixture("users/articleEditorV2User.json").as("user");
 
-  cy.get('@user').then(() => {
+  cy.get("@user").then(() => {
     // The custom command logs in the user and visits the page, ensuring that user-related network requests are awaited
-    cy.loginAndVisit(user, '/dashboard');
+    cy.loginAndVisit(user, "/dashboard");
   });
 });
 ```
