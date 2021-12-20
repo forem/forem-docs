@@ -14,6 +14,8 @@ info:
 
     All endpoints that don't require authentication are CORS enabled.
 
+    All requests must send a user-agent header.
+
     Dates and date times, unless otherwise specified, must be in
     the [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
 
