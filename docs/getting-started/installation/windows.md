@@ -212,6 +212,9 @@ WSL.
 
      1. Create `.env` by copying from the provided template (ie. with bash:
         `cp .env_sample .env`). This is a personal file that is ignored in git.
+        If you don't need to override any environment variables, continue with
+        the next step as our setup script will automatically create a default
+        `.env` file.
      1. Obtain the development variable and apply the key you wish to
         enter/replace. ie:
 

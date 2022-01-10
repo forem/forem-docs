@@ -105,6 +105,9 @@ To force the platform to use `ruby`, you can either:
 
    - Take a look at `.env_sample` to see all the `ENV` variables we use and the
      fake default provided for any missing keys.
+     If you don't need to override any environment variables, continue with
+     the next step as our setup script will automatically create a default
+     `.env` file.
    - If you use a remote computer as dev env, you need to set `APP_DOMAIN`
      variable to the remote computer's domain name.
    - The [backend guide](/backend/authentication) will show you how to get free API keys for
