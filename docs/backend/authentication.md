@@ -14,6 +14,7 @@ the respective guides on how to authenticate:
 - [Apple authentication](auth-apple)
 - [Facebook authentication](auth-facebook)
 - [Github authentication](auth-github)
+- [Google authentication](auth-google)
 - [Twitter authentication](auth-twitter)
 
 We may add other authentication providers in the future. Please check back
