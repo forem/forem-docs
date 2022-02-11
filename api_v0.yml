@@ -3478,6 +3478,19 @@ paths:
             examples:
               admin-user-create-email-name:
                 $ref: "#/components/examples/AdminUserCreateEmailName"
+      responses:
+        "200":
+          description: THe invitation was created
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+              examples:
+                error-unauthorized:
+                  $ref: "#/components/examples/ErrorUnauthorized"
+
       x-codeSamples:
         - lang: Shell
           label: curl (invite user with email only)
