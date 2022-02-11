@@ -1105,6 +1105,18 @@ components:
           description: Profile image (640x640)
           format: url
 
+    AdminUserCreate:
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+          format: name
+
   examples:
     ErrorBadRequest:
       value:
@@ -1709,7 +1721,6 @@ components:
         tech_stack: Ruby
         tag_line:
         story:
-        profile_image: https://res.cloudinary.com/...jpeg
 
 tags:
   - name: articles
@@ -3441,3 +3452,43 @@ paths:
           label: curl (all video articles)
           source: |
             curl https://dev.to/api/videos
+
+  /admin/users:
+    post:
+      operationId: postAdminUsersCreate
+      summary: Invites a user to the Forem instannce
+      description: |
+        This endpoint allows the client to trigger an invitation to the
+        provided email address.
+
+        It requires a token from a user with `super-admin` privileges.
+      tags:
+        - admin
+        - users
+      requestBody:
+        description: Details of the user to be invited
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdminUserCreate"
+      responses:
+        "200":
+          description: The invitation was created (no response body)
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIError"
+              examples:
+                error-unauthorized:
+                  $ref: "#/components/examples/ErrorUnauthorized"
+      x-codeSamples:
+        - lang: Shell
+          label: curl (invite user)
+          source: |
+            curl -X POST -H "Content-Type: application/json" \
+              -H "api-key: API_KEY" \
+              -d '{"email": "test@example.com", "name": "Firstname Lastname"}' \
+              https://dev.to/api/admin/users
+
