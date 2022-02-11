@@ -1721,10 +1721,6 @@ components:
         tech_stack: Ruby
         tag_line:
         story:
-    AdminUserCreateEmailName:
-      value:
-        - email: test@example.com
-          name: Firstname Lastname
 
 tags:
   - name: articles
@@ -3475,9 +3471,6 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/AdminUserCreate"
-            examples:
-              admin-user-create-email-name:
-                $ref: "#/components/examples/AdminUserCreateEmailName"
       responses:
         "200":
           description: THe invitation was created
@@ -3490,13 +3483,12 @@ paths:
               examples:
                 error-unauthorized:
                   $ref: "#/components/examples/ErrorUnauthorized"
-
       x-codeSamples:
         - lang: Shell
-          label: curl (invite user with email only)
+          label: curl (invite user via API)
           source: |
             curl -X POST -H "Content-Type: application/json" \
               -H "api-key: API_KEY" \
-              -d '{"email": "test@example.com"}' \
+              -d '{"email": "test@example.com", "name": "Firstname Lastname"}' \
               https://dev.to/api/admin/users
 
