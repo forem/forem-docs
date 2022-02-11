@@ -3473,7 +3473,7 @@ paths:
               $ref: "#/components/schemas/AdminUserCreate"
       responses:
         "200":
-          description: The invitation was created
+          description: The invitation was created (no response body)
         "401":
           description: Unauthorized
           content:
