@@ -3473,7 +3473,7 @@ paths:
               $ref: "#/components/schemas/AdminUserCreate"
       responses:
         "200":
-          description: THe invitation was created
+          description: The invitation was created
         "401":
           description: Unauthorized
           content:
@@ -3485,7 +3485,7 @@ paths:
                   $ref: "#/components/examples/ErrorUnauthorized"
       x-codeSamples:
         - lang: Shell
-          label: curl (invite user via API)
+          label: curl (invite user)
           source: |
             curl -X POST -H "Content-Type: application/json" \
               -H "api-key: API_KEY" \
