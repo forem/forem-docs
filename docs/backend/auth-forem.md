@@ -15,4 +15,4 @@ Better integration with the `/admin` dashboard is currently under development bu
    - The instance logo will take a few moments to sync
 4. Enable the Forem Authentication provider in your Forem admin dashboard
 
-![Forem Creator Tools](https://user-images.githubusercontent.com/6045239/139337919-348a7c1d-e1ab-4ab9-a1c6-492ec475cfa0.png)
+![Forem Creator Tools](https://user-images.githubusercontent.com/6045239/154768196-b9a2012d-1af0-404b-bb69-61d3c6606991.png)
