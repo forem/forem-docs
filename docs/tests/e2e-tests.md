@@ -333,6 +333,32 @@ beforeEach(() => {
 });
 ```
 
+### 4. Visting a page _very_ briefly can cause expected elements to be null in async code
+
+Cypress can visit a page and execute an action (e.g. click a link to another page), _far_ faster than a human user can. Doing so can cause unexpected failures in some of our asynchronously run JavaScript.
+
+For example, we visit a post only to find and click the "Edit" button, taking us to a new page. When the post page is shown, some async work is triggered to check if the current user is subscribed to comments, and update the comment subscription component. This is triggered async, after the "Edit" button is shown on the page. During the Cypress test run, the "Edit" button is found and clicked so quickly that the JavaScript has not yet updated the comment subscription component. When the JS _does_ attempt to update the component using `document.getElementById('comment-subscription')`, we're already on a new page and the expected container is not in the DOM. If this case is not handled in the code, an unhandled error may occur and cause the test to fail.
+
+In "normal" app usage, it's pretty unlikely a user would be able to trigger the same (and even if they did, the error would be unlikely to affect their user experience). However, in this case, remedying the test means making our app code more robust by checking an element exists before completing any operations on it.
+
+#### 🚫 Before: Async app code assumes element always exists on page
+
+```js
+const container = document.getElementById("comment-subscription");
+// When container is null, an error is thrown on next line
+const { articleId } = container.dataset;
+```
+
+#### ✅ After: Async app code verifies element exists before acting on it
+
+```js
+const container = document.getElementById("comment-subscription");
+if (container) {
+  const { articleId } = container.dataset;
+  // Any other steps to be completed
+}
+```
+
 ## Additional Resources
 
 - [Cypress documentation](https://docs.cypress.io)
