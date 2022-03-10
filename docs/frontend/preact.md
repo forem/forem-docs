@@ -17,7 +17,7 @@ Preact components get loaded via webpacker's helper function
 
 Our approach to Preact follows the [Islands Architecture](https://jasonformat.com/islands-architecture/) pattern: we render as much as we can server-side, and then use Preact to enhance the parts of that server-rendered page that require richer interactivity. Preact is used to either render new content into a placeholder container in the HTML, or (preferably) to replace a server-rendered piece of UI with one that offers a richer experience.
 
-## Example: Preact `<ColorPicker />`
+### Example: Preact `<ColorPicker />`
 
 We have a Preact `<ColorPicker />` component which offers both a popover color picker, and a plain text input for a color. When we use this component, we first render a plain text input server-side. This text input is fully functional, and if no JavaScript is loaded, a user can still complete the hex code of their choice. When the page loads, we asynchronously find these plain text inputs and dynamically replace them with the richer Preact experience.
 
