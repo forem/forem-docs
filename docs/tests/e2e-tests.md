@@ -333,7 +333,7 @@ beforeEach(() => {
 });
 ```
 
-### 4. Visting a page _very_ briefly can cause expected elements to be null in async code
+### 4. Visiting a page _very_ briefly can cause expected elements to be null in async code
 
 Cypress can visit a page and execute an action (e.g. click a link to another page), _far_ faster than a human user can. Doing so can cause unexpected failures in some of our asynchronously run JavaScript.
 
