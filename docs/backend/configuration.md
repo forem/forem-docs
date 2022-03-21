@@ -25,6 +25,8 @@ Settings managed via your ENV can be found in
 
 ![Screenshot of env variable admin interface](/img/docs/backend/siteconfig.png)
 
+Tests always load the sample environment (and ignore the .env file). If you need to customize tests, add the environment variables to a file named .env.test.local. This prevents your development secrets from being present during test execution.
+
 ## rails-settings-cached
 
 We use this gem for managing settings used within the app's business logic.

@@ -42,9 +42,6 @@ connection string.
 
 ```shell
 export DATABASE_URL=postgresql://USERNAME:PASSWORD@localhost
-
-# Optional: If your test database is in a different url, be sure to set this.
-export DATABASE_URL_TEST=postgresql://USERNAME:PASSWORD@localhost
 ```
 
 1. Replace `USERNAME` with your database username, `PASSWORD` with your database
@@ -57,6 +54,13 @@ NOTE: due to how Rails merges `database.yml` and `DATABASE_URL` it's recommended
 not to add the database name in the connection string. This will default to your
 development database name also during tests, which will effectively empty the
 development DB each time tests are run.
+
+Because the test environment is loaded separately, if you are running tests and need to provide a postgresql url, set the `DATABASE_TEST_URL` variable in a file named .env.test.local
+
+```shell
+# Optional: If your test database is in a different url, be sure to set this.
+export DATABASE_URL_TEST=postgresql://USERNAME:PASSWORD@localhost
+```
 
 ## Connection Pooling
 

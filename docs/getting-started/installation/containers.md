@@ -74,6 +74,9 @@ with Podman. You can install it by following these
 
         - You do not need "real" keys for basic development. Some features
           require certain keys, so you may be able to add them as you go.
+		  The test environment is isolated from changes to the .env file, if
+		  you want to set variables in both test and development, use a file
+		  named .env.local, or modify .env.test.local and .env.development.local.
         - The [backend guide](../../backend/configuration) will show you how to get free API keys
           for additional services that may be required to run certain parts of
           the app.

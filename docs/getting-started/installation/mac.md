@@ -96,10 +96,10 @@ You can also manage your NPM with [asdf](https://nodecli.com/nodejs-asdf).
 
 3. Install bundler with `gem install bundler`
 
-   - **Note:** If you are using a Mac with an M1 CPU that uses Ruby compiled for ARM, you may need to force the platform that Bundler uses to `ruby`. This will allow you to build the C extensions used by Forem's dependencies. 
-To force the platform to use `ruby`, you can either: 
-     - set `BUNDLE_FORCE_RUBY_PLATFORM=true` in the shell environment 
-     - run `bundle config set force_ruby_platform true` to set `ruby` in Bundler globally 
+   - **Note:** If you are using a Mac with an M1 CPU that uses Ruby compiled for ARM, you may need to force the platform that Bundler uses to `ruby`. This will allow you to build the C extensions used by Forem's dependencies.
+To force the platform to use `ruby`, you can either:
+     - set `BUNDLE_FORCE_RUBY_PLATFORM=true` in the shell environment
+     - run `bundle config set force_ruby_platform true` to set `ruby` in Bundler globally
 
 4. Set up your environment variables/secrets
 
@@ -126,7 +126,10 @@ To force the platform to use `ruby`, you can either:
      ```
 
    - You do not need "real" keys for basic development. Some features require
-     certain keys, so you may be able to add them as you go.
+     certain keys, so you may be able to add them as you go. The test environment
+	 is isolated from changes to the .env file, if you want to set variables in both
+	 test and development, use a file named .env.local, or modify .env.test.local
+	 and .env.development.local.
 
 5. Run `bin/setup`
 

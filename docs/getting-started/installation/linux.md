@@ -99,7 +99,10 @@ to setup Redis.
      ```
 
    - You do not need "real" keys for basic development. Some features require
-     certain keys, so you may be able to add them as you go.
+     certain keys, so you may be able to add them as you go. The test environment
+	 is isolated from changes to the .env file, if you want to set variables in both
+	 test and development, use a file named .env.local, or modify .env.test.local
+	 and .env.development.local.
 
 1. Run `bin/setup`
 
