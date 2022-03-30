@@ -37,7 +37,7 @@ At Forem, we enable the usage of either Fastly or Nginx. When we bust the edge c
 
 The next time someone requests that _response document_ the server will reassemble it (from the various constituent parts).
 
-You can see [our Edge Busting strategy here](https://github.com/forem/forem/blob/3ddda918cb40f8bfb7fa8ad7dae5736717872bc8/app/services/edge_cache/bust.rb).
+You can see [our Edge Busting strategy here](https://github.com/forem/forem/blob/main/app/services/edge_cache/bust.rb).
 
 ### Rails Caching
 
