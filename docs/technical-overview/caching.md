@@ -67,4 +67,4 @@ This [pull request](https://github.com/forem/forem/pull/17052) looked to fix the
 
 ## Way-finding in the Era of Caching
 
-To properly troubleshoot a caching issue, a recommendation for is to request a screenshot and an arrow pointing to the specific thing that isn’t updating. This will help track down in the code which caching strategy might be in play.
+To properly troubleshoot a caching issue, a recommendation is to request a screenshot and an arrow pointing to the specific thing that isn’t updating. This will help track down in the code which caching strategy might be in play.
