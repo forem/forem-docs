@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ### We are a Ruby on Rails app
 
-Ruby on Rails is a web framework heavy on conventions over configuration. All else equal, we should try to follow Rails convention. We are currently on version 6.x.x.
+Ruby on Rails is a web framework heavy on conventions over configuration. All else equal, we should try to follow Rails convention. We are currently on version 7.x.x.
 
 ### We cache many content pages on the edge
 
