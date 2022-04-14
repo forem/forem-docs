@@ -15,8 +15,8 @@ operating system:
    - [Homebrew](https://brew.sh/): if you use Homebrew you can easily install
      PostgreSQL with `brew install postgresql`
 1. Linux (Ubuntu)
-   - [Ubuntu `14.04`](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04)
-   - [Ubuntu `16.04 and higher`](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
+   - [Ubuntu `18.04`](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
+   - [Ubuntu `20.04`](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04)
 1. [Windows](https://www.postgresql.org/download/windows/)
 
 _You can find all installation options for a variety of operating systems
