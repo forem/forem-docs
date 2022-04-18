@@ -15,8 +15,8 @@
     "api-docs:lint": "spectral lint -F hint -v docs/api_v0.yml"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.4",
-    "@docusaurus/preset-classic": "^2.0.0-beta.4",
+    "@docusaurus/core": "^2.0.0-beta.18",
+    "@docusaurus/preset-classic": "^2.0.0-beta.18",
     "@mdx-js/react": "^1.6.21",
     "@stoplight/spectral": "^5.9.2",
     "@svgr/webpack": "^5.5.0",
@@ -25,7 +25,7 @@
     "file-loader": "^6.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "redocusaurus": "^0.5.1",
+    "redocusaurus": "^1.0.2",
     "url-loader": "^4.1.1"
   },
   "browserslist": {
