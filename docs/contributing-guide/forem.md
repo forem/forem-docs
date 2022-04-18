@@ -30,14 +30,6 @@ internal tasks that will be completed by a Forem
 
 - [good first issue](https://github.com/forem/forem/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+)
   issues are meant for newer developers.
-- [difficulty: easy](https://github.com/forem/forem/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+easy%22)
-  issues are usually confined to isolated areas of existing code.
-- [difficulty: medium](https://github.com/forem/forem/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+medium%22)
-  issues sometimes entail new features and might affect a significant area of
-  the codebase, but aren't overly complex.
-- [difficulty: hard](https://github.com/forem/forem/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+hard%22)
-  issues are typically far-reaching, and might need architecture decisions
-  during implementation. This label might also denote highly complex issues.
 
 PRs without an associated issue may still be merged, but the core team will
 focus on changes that solve existing issues. We strongly encourage creating an
