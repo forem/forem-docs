@@ -162,6 +162,9 @@ don't plan to merge the code._
 All community pull requests are reviewed by our core team.
 
 - All contributors must sign the CLA.
+  - You will be asked from [CLAassistant](https://github.com/CLAassistant). You
+    can confirm the signing status and signed content at
+    https://cla-assistant.io/forem/forem.
 - All required checks are expected to pass on each PR.
   - In the case of flaky or unrelated test failures, a core team member will
     restart CI.
