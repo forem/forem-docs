@@ -3164,7 +3164,7 @@ paths:
         - $ref: '#/components/parameters/perPageParam30to1000'
       responses:
         "200":
-          description: A list of users belonging to the organization
+          description: A list of articles belonging to the organization
           content:
             application/json:
               schema:
