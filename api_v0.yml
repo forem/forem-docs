@@ -3148,7 +3148,7 @@ paths:
       description: |
         This endpoint allows the client to retrieve a list of Articles belonging to the organization
 
-        It supports pagination, each page will contain `30` listing by default.
+        It supports pagination, each page will contain `30` articles by default.
       tags:
         - organizations
       parameters:
@@ -3164,7 +3164,7 @@ paths:
         - $ref: '#/components/parameters/perPageParam30to1000'
       responses:
         "200":
-          description: A list of users belonging to the organization
+          description: A list of articles belonging to the organization
           content:
             application/json:
               schema:
