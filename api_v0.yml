@@ -3148,7 +3148,7 @@ paths:
       description: |
         This endpoint allows the client to retrieve a list of Articles belonging to the organization
 
-        It supports pagination, each page will contain `30` listing by default.
+        It supports pagination, each page will contain `30` articles by default.
       tags:
         - organizations
       parameters:
