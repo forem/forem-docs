@@ -28,7 +28,7 @@ Currently, we have three styles:
 - `compact` :: a more minimal feed style
 - `rich` :: always displays the cover image in the feed
 
-Over time, we'll continue t improve and expand our feed style options.
+Over time, we'll continue to improve and expand our feed style options.
 
 See the [Settings::UserExperience code](https://github.com/forem/forem/blob/main/app/models/settings/user_experience.rb) for the current state styles.
 
