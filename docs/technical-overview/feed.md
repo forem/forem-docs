@@ -12,16 +12,30 @@ The core nature of "the feed" is that it needs to evolve and be flexible. We wil
 
 However, we are in the fairly naive early days of the feed, so primarily it is a matter of flexibility and experimentation.
 
+There are three conceptual "feeds":
+
+- Relevant :: articles that are most relevant to the user's stated preferences
+- Latest :: the most recent list of articles
+- Top :: a mix of high quality and much discussed articles within a given time frame
+
 ### Feed style
 
 Each Forem can have a feed style set by the admin of that community (originally implemented [in a PR from mid-2020](https://github.com/forem/forem/pull/8721)).
 
-Currently, we have two styles: `rich` and `basic`. Where `rich` always displays the cover image in the feed, `basic` hides it from the feed view.
+Currently, we have three styles:
 
-Over time, we'll improve and expand our feed style options.
+- `basic` :: hide the cover image from the feed view
+- `compact` :: a more minimal feed style
+- `rich` :: always displays the cover image in the feed
+
+Over time, we'll continue t improve and expand our feed style options.
+
+See the [Settings::UserExperience code](https://github.com/forem/forem/blob/main/app/models/settings/user_experience.rb) for the current state styles.
 
 ### Feed strategy
 
 Each Forem can have a feed strategy set by the admin of that community (originally implemented [in a late-2020 PR](https://github.com/forem/forem/pull/10245)). Currently, we have two strategies: `basic` and `large_forem_experimental`. The "experimental" component dictates that there is some split testing, but generally these are just cues for an underlying algorithm which can change liberally.
 
-The feed endpoint is driven by the `feeds_controller` and the content is found in objects such as `Articles::Feeds::Basic`. We should lean toward adaptability and versatility in the long run here, even if we are just at the beginning of this transparent journey.
+The feed endpoint is driven by the `feeds_controller` and the content is found in objects such as `Articles::Feeds::Basic` and `Articles::Feeds::VariantQuery`. We should lean toward adaptability and versatility in the long run here, even if we are just at the beginning of this transparent journey.
+
+Learn more about the experimental feed and our split testing in the [code's feeds README](https://github.com/forem/forem/blob/main/app/models/articles/feeds/README.md).
