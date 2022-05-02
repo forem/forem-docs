@@ -3463,7 +3463,6 @@ paths:
 
         It requires a token from a user with `super-admin` privileges.
       tags:
-        - admin
         - users
       requestBody:
         description: Details of the user to be invited
