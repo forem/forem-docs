@@ -16,23 +16,23 @@ Like Forem, this site is open source and the code is [hosted on GitHub][docs].
 If you find any incorrect information, or a even a typo, we'd love to see a pull
 request. Follow these steps to get the documentation site running locally.
 
-Forem's documentation is built with [GitDocs NodeJS library][gitdocs].
+Forem's documentation is built with [Docusaurus][docusaurus].
 
-Once installed, you should run `yarn gitdocs serve` from the root of the `forem`
-project or from the `/docs` directory.
+Once installed, you should run `yarn start` in the root of the `forem-docs`.
 
 ```shell
-yarn gitdocs serve
+yarn start
 ```
 
 This will start a server where you can browse the documentation:
-<http://localhost:8000/>
+<http://localhost:3000/>
 
-If you add new pages or rename existing pages, you'll need to restart the server
-for those changes to take effect.
+If you add new pages or rename existing pages, those changes will be to take
+effect shortly, so you don't need to restart the server.
 
-Since our documentation is built on GitDocs, which is built on Netlify, you can
-use the generated deploy preview link to check out your documentation changes.
+Since our documentation is built on Docusaurus, which is built on Netlify, you
+can use the generated deploy preview link to check out your documentation
+changes.
 Once you make a PR, click on "Show all checks" and find the "deploy/netlify"
 row. If your deploy preview is ready, you can click on "Details" to see the
 preview. Please note that the deploy preview only reflects any documentation
@@ -43,8 +43,8 @@ changes you make (and not any changes elsewhere in the app).
 The docs are a collection of [Markdown files][markdown] that also utilize
 [FrontMatter][frontmatter].
 
-For more information on how to use GitDocs read the [GitDocs
-guide][gitdocs_guide].
+For more information on how to use Docusaurus, read the [Docusaurus
+docs][docusaurusdocs].
 
 # Regarding language & style
 
@@ -72,8 +72,8 @@ For more information on effective technical writing, check out
 [writethedocs.org][writethedocs].
 
 [docs]: https://github.com/forem/forem-docs
-[gitdocs]: https://www.npmjs.com/package/gitdocs/
+[docusaurus]: https://docusaurus.io/
 [markdown]: https://en.wikipedia.org/wiki/Markdown
 [frontmatter]: https://jekyllrb.com/docs/front-matter/
-[gitdocs_guide]: https://gitdocs.netlify.com/
+[docusaurusdocs]: https://docusaurus.io/docs
 [writethedocs]: https://www.writethedocs.org/guide/
