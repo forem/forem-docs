@@ -4,6 +4,12 @@ sidebar_position: 5
 
 # Dynamic Imports
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 [Dynamic imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import/#Dynamic_Imports)
 are supported in all major browsers except for Edge
 ([EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML) version) and Internet

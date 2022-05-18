@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Authentication
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Authentication is handled by [Devise](https://github.com/plataformatec/devise)
 and [OmniAuth](https://github.com/omniauth/omniauth).
 

@@ -4,6 +4,12 @@ sidebar_position: 6
 
 # Keeping Your Fork in Sync
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Now that you have a fork of Forem's source code, there is work you will need to
 do to keep it updated.
 

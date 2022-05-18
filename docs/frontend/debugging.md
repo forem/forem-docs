@@ -4,6 +4,12 @@ sidebar_position: 9
 
 # Debugging
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## In Browser
 
 Browsers ship with their own developer tools. These are amazing tools to help

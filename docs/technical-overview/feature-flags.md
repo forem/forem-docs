@@ -4,6 +4,12 @@ sidebar_position: 6
 
 # Feature flags
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We sometimes employ feature flags to develop features that aren't fully formed
 at the moment of deployment. They can also be employed to roll out features in
 production incrementally.

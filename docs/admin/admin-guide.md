@@ -4,6 +4,13 @@ sidebar_position: 1
 
 # Admin Guide
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
+
 The Forem application contains a rudimentary administration dashboard that lives
 behind the admin route.
 

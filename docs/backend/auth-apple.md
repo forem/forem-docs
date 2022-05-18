@@ -5,6 +5,12 @@ sidebar_position: 7
 
 # Sign in with Apple Authentication
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Forem allows you to authenticate using
 [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/). In order
 to use this authentication method you'll need to be enrolled to the

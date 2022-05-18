@@ -4,6 +4,12 @@ sidebar_position: 10
 
 # Emails
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 **Setting up email**
 
 If you would like to enable transactional email using services like SendGrid or

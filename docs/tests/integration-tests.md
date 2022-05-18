@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Integration Tests
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 An integration test is a test that measures the interaction of multiple systems
 or parts of your application.
 

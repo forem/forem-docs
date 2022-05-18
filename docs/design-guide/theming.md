@@ -4,6 +4,12 @@ sidebar_position: 3
 
 # Theming Guidelines
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Forem supports different themes, such as Default, Night, Pink.
 
 You can switch the theme at <http://localhost:3000/settings/ux> in the "Style

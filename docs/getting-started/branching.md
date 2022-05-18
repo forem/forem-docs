@@ -4,6 +4,12 @@ sidebar_position: 3
 
 # Creating a Branch
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 **Creating a feature/bug branch**
 
 When you are working on a bug, feature, or improvement, you will need to create

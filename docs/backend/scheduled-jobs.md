@@ -4,6 +4,12 @@ sidebar_position: 16
 
 # Scheduled Jobs
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 As in the [Technical Overview](../technical-overview/stack), We use
 [Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler) for
 scheduled jobs. As the name suggests, this is for regularly recurring tasks that

@@ -4,6 +4,12 @@ sidebar_position: 4
 
 # InstantClick
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Like the [InstantClick](http://instantclick.io/) tag line says, “InstantClick is
 a JavaScript library that dramatically speeds up your website, making navigation
 effectively instant in most cases.”.

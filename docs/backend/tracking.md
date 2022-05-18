@@ -4,6 +4,12 @@ sidebar_position: 19
 
 # Tracking
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Visits & Events
 
 For first-party analytics, we use the

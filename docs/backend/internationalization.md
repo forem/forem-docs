@@ -4,6 +4,12 @@ sidebar_position: 12
 
 # Internationalization (i18n)
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## What is internationalization (i18n)?
 
 To over simplify the concept a bit, internalization (i18n for short) is the

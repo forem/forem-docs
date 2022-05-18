@@ -4,6 +4,12 @@ sidebar_position: 0
 
 # Additional Database options
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Seed Data
 
 By default, the amount of articles and users generated is quite tiny so that

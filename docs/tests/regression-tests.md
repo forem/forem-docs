@@ -4,6 +4,12 @@ sidebar_position: 8
 
 # Regression Testing
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Regression testing is a technique for detecting breaking changes over time in a
 codebase.
 

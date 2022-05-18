@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Acceptance Tests
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Acceptance tests are tests from the perspective of the end-user.
 
 In the Rails world, we sometimes refer to these as Feature or System tests. A

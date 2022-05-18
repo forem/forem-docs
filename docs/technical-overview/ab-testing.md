@@ -4,6 +4,12 @@ sidebar_position: 5
 
 # A/B testing
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We use the [Field Test](https://github.com/ankane/field_test) gem for conducting
 simple A/B tests.
 

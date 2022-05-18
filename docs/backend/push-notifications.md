@@ -4,6 +4,12 @@ sidebar_position: 18
 
 # Push Notifications
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 **Delivery**
 Forem instances rely on [Rpush](https://github.com/rpush/rpush) to deliver push notifications. This decision was heavily influenced by the desire to provide as much flexibility as possible to Creators. In order to do this, Forem instances can register and configure a `ConsumerApp`.
 

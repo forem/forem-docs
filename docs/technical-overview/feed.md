@@ -4,6 +4,12 @@ sidebar_position: 3
 
 # Feed
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## "The feed"
 
 The Forem feed is perhaps _the_ core functionality of the service. It's an adaptation of a concept popularized by other social platforms in the past two decades, and it is something we need to develop with care in a way that empowers individual communities and users.

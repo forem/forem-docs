@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Branding Guidelines
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Forem Theme
 
 Forem's design inspiration is meant to be a throwback. In personality and

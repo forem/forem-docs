@@ -4,6 +4,12 @@ sidebar_position: 4
 
 # Compatibility
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 To go along with effective administration and putting user security and
 well-being first, for a Forem to be most useful, it maximizes its technical
 compatibility.

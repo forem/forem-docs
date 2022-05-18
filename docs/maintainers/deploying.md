@@ -12,6 +12,12 @@ rollback or push a fix for any deployment!
 
 # Deployment and CI/CD Process
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Overview
 
 Forem relies on GitHub and Travis to deploy continuously to Heroku. If a Pull

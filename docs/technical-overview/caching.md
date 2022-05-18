@@ -4,6 +4,12 @@ sidebar_position: 8
 
 # Caching
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 _This has been adapted from [The Three Caches of Forem // Take on Rules](https://takeonrules.com/2022/03/29/the-three-caches-of-forem/)_
 
 

@@ -4,6 +4,12 @@ sidebar_position: 10
 
 # FAQs
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 **Frequently Asked Questions**
 
 ## How do I log in after starting up Forem for the first time?
