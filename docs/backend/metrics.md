@@ -4,6 +4,12 @@ sidebar_position: 17
 
 # Metrics
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Time series data
 
 We track point-in-time data by sending data points to Datadog using

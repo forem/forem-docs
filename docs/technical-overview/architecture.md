@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Architecture
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## A few high-level things to know
 
 ### We are a Ruby on Rails app

@@ -4,6 +4,12 @@ sidebar_position: 20
 
 # Service Objects
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## What are Service Objects
 
 Service objects are Plain Old Ruby Objects (POROs) which encapsulate a whole

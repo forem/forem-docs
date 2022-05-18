@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Audit Log
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 To help maintain accountability for users with elevated permissions the Forem
 application has a special model that records certain actions.
 

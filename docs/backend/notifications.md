@@ -4,6 +4,12 @@ sidebar_position: 15
 
 # Notifications
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Since notifications are run asynchronously, we'll want to make sure jobs are
 running: `bundle exec sidekiq`. If that's not running, you won't receive any
 notifications. You might need to create another account to pass notifications

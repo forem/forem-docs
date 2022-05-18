@@ -4,6 +4,12 @@ sidebar_position: 6
 
 # Google OAuth2 Authentication
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Forem allows you to authenticate using Google OAuth2. To use this authentication method
 in local development, you will need to set up Google client application and retrieve its
 keys. Then you'll need to provide these keys to the Rails application.
@@ -31,7 +37,7 @@ keys. Then you'll need to provide these keys to the Rails application.
 
    ![Naming OAuth Application](/img/docs/backend/google-5.png)
 
-6. Under **Authorized Redirect URIs** add the URI `http://localhost:3000/users/auth/google_oauth2/callback`. Replace the port `3000` 
+6. Under **Authorized Redirect URIs** add the URI `http://localhost:3000/users/auth/google_oauth2/callback`. Replace the port `3000`
    if you  run Forem on another port.
 
    ![Create URI Redirect](/img/docs/backend/google-6.png)

@@ -4,6 +4,12 @@ sidebar_position: 5
 
 # Preparing a Pull Request
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 - Try to keep the pull requests small. A pull request should try its very best
   to address only a single concern.
 - If you plan to do further work after the PR has been submitted, please use the

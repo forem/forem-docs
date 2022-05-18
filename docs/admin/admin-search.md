@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Admin Search
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 For admin views that need to take advantage of searching and filtering, we've
 chosen to use [Ransack][ransack].
 

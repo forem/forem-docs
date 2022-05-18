@@ -4,6 +4,12 @@ sidebar_position: 10
 
 # Code Climate
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We are using [Code Climate](https://codeclimate.com/github/forem/forem) to track
 code quality and coverage.
 

@@ -4,6 +4,12 @@ sidebar_position: 9
 
 # Code coverage
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Rails
 
 Rspec will generate code coverage at the end of the tests.

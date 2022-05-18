@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Contributing to Forem
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We expect contributors to abide by our underlying
 [Code of Conduct](https://dev.to/code-of-conduct). All discussions about this
 project must be respectful and harassment-free.

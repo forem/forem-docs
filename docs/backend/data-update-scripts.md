@@ -4,6 +4,12 @@ sidebar_position: 9
 
 # Data Update Scripts
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## What are Data Update Scripts?
 
 Data Update Scripts were introduced in

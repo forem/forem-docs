@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Stack
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## 🔑 Key App tech/services
 
 For the Forem tech stack we use:

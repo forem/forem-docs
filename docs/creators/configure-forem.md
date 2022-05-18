@@ -4,6 +4,12 @@
 
 ## Overview
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 As a Forem admin, one of the first steps of managing your site will be to tailor
 your content, branding and other important details based on your community
 goals. This is made simple by the configuration page which can be found at

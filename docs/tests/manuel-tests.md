@@ -4,6 +4,12 @@ sidebar_position: 5
 
 # Manual Tests
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We try to automate as much as possible, but particularly for frontend changes it
 is usually necessary to verify work with a manual test. When manually testing a
 feature, it's useful to check:

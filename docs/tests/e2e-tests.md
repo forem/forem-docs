@@ -4,6 +4,12 @@ title: End to End Tests
 
 # End to End Tests
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We use [Cypress](https://www.cypress.io), a JavaScript based framework, for end
 to end (E2E) testing. You can find tests and associated utilities in the
 `cypress` directory:

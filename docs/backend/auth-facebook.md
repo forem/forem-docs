@@ -4,6 +4,12 @@ sidebar_position: 5
 
 # Facebook Authentication
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 Forem allows you to authenticate using Facebook. In order to use this
 authentication method in local development, you will need to setup a Facebook
 App and retrieve its keys. Then you'll need to provide these keys to the Rails

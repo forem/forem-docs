@@ -4,6 +4,12 @@ sidebar_position: 11
 
 # Fastly
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## What is Fastly?
 
 [Fastly](https://www.fastly.com/) is a third party service we use for caching on

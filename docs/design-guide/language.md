@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Language
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 ## Human Language
 
 Forem is built on concepts, and those concepts have names. Here are some language concepts to be aware of and some known "gotchas" where there may be multiple terms currently being used.

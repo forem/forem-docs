@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Starting the Application
 
+:::important
+
+We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
+
+:::
+
 We're a Rails app, and we use [Webpacker][webpacker] to manage some of our
 JavaScript.
 
