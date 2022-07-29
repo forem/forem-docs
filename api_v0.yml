@@ -3188,7 +3188,7 @@ paths:
         - lang: Shell
           label: curl
           source: |
-            curl https://dev.to/api/organizations/ecorp/listings
+            curl https://dev.to/api/organizations/ecorp/articles
 
   /podcast_episodes:
     get:
