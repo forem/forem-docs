@@ -688,6 +688,7 @@ components:
         - type_of
         - created_at
         - id
+        - user_id
         - name
         - path
         - username
@@ -701,6 +702,9 @@ components:
           format: date-time
         id:
           description: Follow id
+          type: integer
+          format: int32
+        user_id:
           type: integer
           format: int32
         name:
@@ -937,6 +941,9 @@ components:
       description: The resource creator
       type: object
       properties:
+        user_id:
+          type: integer
+          format: int32
         name:
           type: string
         username:
