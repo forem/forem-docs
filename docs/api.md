@@ -13,12 +13,12 @@ We’re currently making rapid changes to the product so our docs may be out of 
 
 There are two versions of the API: [version 0](/api/v0) and [version 1](/api/v1).
 
-## Version 0
+## [Version 0](/api/v0)
 
 This is the legacy API. It is deprecated and will be removed in a future release. Clients can continue to use
 it as is, but we recommend using the version 1 API.
 
-## Version 1
+## [Version 1](/api/v1)
 
 This is the current version of the API. It is the recommended way to interact with Forem. Version 1 requires clients
 to use both an `accept` header and a `api-key` header. 
