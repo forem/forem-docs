@@ -11,7 +11,9 @@ We’re currently making rapid changes to the product so our docs may be out of 
 
 :::
 
-There are two versions of the API: [version 0](/api/v0) and [version 1](/api/v1).
+There are two versions of the API: [version 0](/api/v0) and [version 1](/api/v1). All V0 endpoints are available in V1: we will 
+be adding V1 documentation for these endpoints in the future. Right now we recommend calling V0 endpoints with `accept` and 
+`api-key` headers.
 
 ## [Version 0](/api/v0)
 
