@@ -79,6 +79,20 @@ To enable such a feature:
 
 ![A screenshot of the Admin Feature Flag Panel](/img/docs/admin_feature_flags.png)
 
+Note that you made need to add a feature before enabling it.
+
+## Adding a feature flag
+
+To add a feature flag, you must be on the `/admin/feature_flags` page and click "Add Feature".
+
+![A screenshot of the "Add Feature" button](https://user-images.githubusercontent.com/16007075/184420699-4917228c-fad8-49ea-b68b-6b20db972e43.png)
+
+Next, input the name of the feature and follow the instructions on screen, then click "Add Feature".
+
+![Screen Shot 2022-08-12 at 2 25 26 PM](https://user-images.githubusercontent.com/16007075/184421097-54d65918-cff1-4704-97ad-7ed408d988f1.png)
+
+Navigate back to `/admin/feature_flags` to enable your feature.
+
 ## Removing a feature flag
 
 Once the feature has been validated and finalized or discarded, please remember
