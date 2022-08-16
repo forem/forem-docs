@@ -87,7 +87,7 @@ To add a feature flag, you must be on the `/admin/feature_flags` page and click 
 
 ![A screenshot of the "Add Feature" button](https://user-images.githubusercontent.com/16007075/184420699-4917228c-fad8-49ea-b68b-6b20db972e43.png)
 
-Next, input the name of the feature and follow the instructions on screen, then click "Add Feature".
+Next, input the name of the feature and then click "Add Feature".
 
 ![Screen Shot 2022-08-12 at 2 25 26 PM](https://user-images.githubusercontent.com/16007075/184421097-54d65918-cff1-4704-97ad-7ed408d988f1.png)
 
