@@ -15,8 +15,8 @@
     "api-docs:lint": "spectral lint -F hint -v api_v0.yml"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-rc.1",
-    "@docusaurus/preset-classic": "^2.0.0-rc.1",
+    "@docusaurus/core": "^2.0.1",
+    "@docusaurus/preset-classic": "^2.0.1",
     "@mdx-js/react": "^1.6.21",
     "@stoplight/spectral-cli": "^6.3.0",
     "clsx": "^1.1.1",
