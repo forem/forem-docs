@@ -117,7 +117,10 @@ module.exports = {
       {
         specs: [{
           spec: 'api_v0.yml',
-          route: '/api/'
+          route: '/api/v0'
+        }, {
+          spec: 'api_v1.json',
+          route: '/api/v1'
         }]
       }
     ]
