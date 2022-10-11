@@ -122,5 +122,5 @@ The script executes the following steps:
   run the following command:
 
   ```shell
-  docker-compose run rails rails data_updates:run
+  docker-compose run rails bundle exec rails data_updates:run
   ```
