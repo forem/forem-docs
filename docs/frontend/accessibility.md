@@ -57,4 +57,4 @@ Here are some resources:
 - [React Accessibility Docs](https://reactjs.org/docs/accessibility.html) (most
   will apply to Preact)
 - [The Importance of Manual Accessibility Testing](https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing/)
-- [Accessibility Insights extension](https://accessibilityinsights.com)
+- [Accessibility Insights extension](https://accessibilityinsights.io/)
