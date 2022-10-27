@@ -122,7 +122,7 @@ Users can belong to organizations, which have their own profile pages where post
 
 ### Reactions
 
-Hearts, unicorns, and bookmarks. Reactions are the medium for displaying appreciation for content. Bookmarks have the unique functionality of saving an article in the user's reading list.
+Hearts (also referred to as likes) and bookmarks. Reactions are the medium for displaying appreciation for content. Bookmarks have the unique functionality of saving an article in the user's reading list.
 
 ### Follows
 
