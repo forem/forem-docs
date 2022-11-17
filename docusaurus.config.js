@@ -88,7 +88,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Forem, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Forem, Inc.<br><br> This site is powered by <a href="https://www.netlify.com/">Netlify</a> `,
     },
   },
   presets: [
