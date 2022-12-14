@@ -1,22 +1,11 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Integration Tests
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
 An integration test is a test that measures the interaction of multiple systems
-or parts of your application.
-
-An integration test may seem similar to an [acceptance
-test](acceptance-tests.md). The main difference is that an acceptance test
-is from the perspective of the end-user, while an integration test is from the
-perspective of the developer.
+or parts of your application. They are meant to aspects like the requests and responses coming back from the server, data that ahs changed, business objects that has implemented. We’re not looking to testpage interactivity here, thats can be found in the [end to end tests](types/e2e-tests.md).
 
 Integration tests can be found in the directory `spec/requests`.
 

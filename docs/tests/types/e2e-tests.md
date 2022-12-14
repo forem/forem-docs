@@ -1,25 +1,20 @@
 ---
 title: End to End Tests
+sidebar_position: 1
 ---
 
 # End to End Tests
 
-:::important
+We use [Cypress](https://www.cypress.io), a JavaScript based framework, for end to end (E2E) testing. It is from the perspective of the end user and replaces our [Rails Feature Testing](feature-tests.md)
 
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
-We use [Cypress](https://www.cypress.io), a JavaScript based framework, for end
-to end (E2E) testing. You can find tests and associated utilities in the
-`cypress` directory:
-
+You can find tests and associated utilities in the `cypress` directory:
 ```
 cypress
 ├── fixtures (Any hard-coded data, e.g. test users, images)
-├── integration (The actual tests, grouped by user flow)
+├── e2e (The actual tests, grouped by user flow)
 ├── plugins (Cypress plugins)
-└── support (Where custom commands are found and added)
+├── utils (Any abstracted utilities that are common across the tests)
+├── support (Where custom commands are found and added)
 ```
 
 ## Additional tools used

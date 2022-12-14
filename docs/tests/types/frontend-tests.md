@@ -1,14 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Frontend Tests
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
+A Frontend test will test JavaScript code whether it be some logic in a pack file or a Preact component.
 
 The test code is located within the same directory as each component, inside a
 `__tests__` directory.

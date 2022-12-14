@@ -1,14 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Unit and Functional Tests
-
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
 
 A unit test is about testing a single function/method in isolation with all of
 its possible outputs.

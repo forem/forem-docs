@@ -1,14 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 1
 ---
 
 # Accessibility Tests
-
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
 
 Accessibility testing is a form of automated and manual testing that helps us
 identify some of the potential accessibility concerns on Forem. See also, the
