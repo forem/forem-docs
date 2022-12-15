@@ -6,8 +6,8 @@ sidebar_position: 4
 
 ## Code Climate
 
-We are using [Code Climate](https://codeclimate.com/github/forem/forem) to track
-code quality and coverage.
+We are using [Code Climate](https://codeclimate.com/) to track
+code quality and coverage. You can view our instance [here](https://codeclimate.com/github/forem/forem).
 
 Code Climate offers metrics regarding code quality for each individual PR,
 however, it does not calculate these metrics for the entirety of the project. If
@@ -27,6 +27,10 @@ project, but you don't have an issue you're interested in solving, improving the
 Code Climate metrics is a good place to start. We're happy to see PRs that
 refactor existing code to reduce duplication and increase readability, given
 that those refactors are well tested.
+
+## Codecov
+
+We use Codecov to track code coverage. Codecov leaves a comment PR's that indicate the a percentage change in code coverage compared to main. We encourage you to keep the code coverage percentage positive.
 
 ## Rails
 
@@ -106,5 +110,3 @@ yarn test
 Once the tests have completed, the test coverage metric will be visible in the
 terminal window. Please note that jest will fail if test coverage thresholds are
 not met.
-
-

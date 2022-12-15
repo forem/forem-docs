@@ -58,7 +58,6 @@ You can read the official guide
 [Testing Rails Applications](https://guides.rubyonrails.org/testing.html#system-testing)
 to learn more.
 
-
 ## Test Flags
 
 When creating tests using Rspec we have the ability to add flags to those tests

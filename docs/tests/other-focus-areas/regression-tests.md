@@ -17,7 +17,7 @@ Proper Regression testing is one of the most powerful tools in a programmer's
 arsenal for avoiding the bugs that crop up as a project grows in size.
 
 Generally speaking, Regression testing is accomplished by a combination of
-[Acceptance tests](feature-tests) and [Integration tests](integration-tests)
+[Feature tests](feature-tests) and [Integration tests](integration-tests)
 performed on areas where bugs have been found in the past. As it happens,
 software bugs tend to exist in groups; writing tests around buggy code will
 almost always uncover new bugs as code evolves.
