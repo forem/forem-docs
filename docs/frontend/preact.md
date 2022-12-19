@@ -91,3 +91,27 @@ SomeComponentUsingOneTag.propTypes = {
   tag: tagPropTypes.isRequired,
 };
 ```
+
+## Managing State
+
+One thing to note about our usage of Preact is that there are no state management libraries in play, only [component state](https://reactjs.org/docs/faq-state.html). The lack of a state management library is intentional and enforced by the nature of Islands architecture. There is no main root component where global state management can live.
+
+Although there is no state management library in play, data attributes on DOM elements sometimes simulate it, e.g. user data.
+
+For a more complex component state, use the [useReducer hook](https://reactjs.org/docs/hooks-reference.html#usereducer). The [multiselect autocomplete component](https://storybook.forem.com/?path=/story/app-components-multiselectautocomplete--default) [(source code)](https://github.com/forem/forem/blob/0024fe40d6ade998a216216b00f157fa7f49e1c0/app/javascript/crayons/MultiSelectAutocomplete/MultiSelectAutocomplete.jsx) is a great example of this.
+
+ It's a judgment call to use useReducer. If you notice you're juggling many useState hooks, it's time to consider useReducer.
+
+## Cummulative Layout Shift (CLS)
+Render the client-side component's initial markup server-side to avoid cumulative layout shift (CLS) entirely or as best as possible. Preact's virtual dom (VDOM) usage is smart enough to determine if the component needs to rerender markup, even from the initial server-side rendered markup.
+
+## Benefiting from the React Ecosystem
+
+Preact ships with a thin compatibility layer if you're consuming 3rd party components from the React ecosystem. The react and react-dom packages are [already aliased for you in our webpack configuration for the application](https://github.com/forem/forem/blob/b81d8c947972761a8f3c8f82bb594ffd2f701b25/config/webpack/environment.js#L31-L32[) and the [Webpack configuration for Storybook](https://github.com/forem/forem/blob/b81d8c947972761a8f3c8f82bb594ffd2f701b25/app/javascript/.storybook/main.js#L80-L81).
+
+It also allows you to use [functionality that is not in the core of Preact](https://preactjs.com/guide/v10/whats-new/#compat-lives-in-core), e.g. [forwardRef](https://reactjs.org/docs/forwarding-refs.html), [createPortal](https://reactjs.org/docs/portals.html), [memo](https://reactjs.org/docs/react-api.html#reactmemo) etc. To use those though, you need to [explicitly import them](https://github.com/forem/forem/blob/b81d8c947972761a8f3c8f82bb594ffd2f701b25/app/javascript/crayons/MentionAutocompleteTextArea/MentionAutocompleteTextArea.jsx#L3) from 'preact/compat'
+
+Here are some examples of the compatibility layer in use:
+
+- [MentionAutocompleteTextArea](https://github.com/forem/forem/blob/0024fe40d6ade998a216216b00f157fa7f49e1c0/app/javascript/crayons/MentionAutocompleteTextArea/MentionAutocompleteTextArea.jsx#L3) component
+- [Loading the moderation center tooling](https://github.com/forem/forem/blob/0024fe40d6ade998a216216b00f157fa7f49e1c0/app/javascript/modCenter/singleArticle/index.jsx#L3)
