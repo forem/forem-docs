@@ -1,18 +1,55 @@
 ---
+title: Javascript Approaches
 sidebar_position: 2
 ---
 
 # Current Javascript Approaches in the application
 
+The current JavaScript approaches described below are:
+
+- [Initializers & the asset pipeline](javascript-approaches#initializers--the-asset-pipeline)
+- [Packs & Webpacker](javascript-approaches#packs--webpacker)
+- [Preact](javascript-approaches#preact)
+- [Stimulus JS (Legacy)](javascript-approaches#stimulus-js-legacy)
+- [Inline Scripts](javascript-approaches#inline-scripts)
+
+In addition, you can read more about:
+- [Overlaps](javascript-approaches#overlaps)
+- [Challenges](javascript-approaches#challenges)
+
 ## Initializers & the asset pipeline
 
 > app/assets/javascripts/initializers
 
-The asset pipeline is where we have the "legacy" JavaScript. It's legacy in the sense that it's not EcmaScript Modules (ESM). It's a bunch of JS files concatenated together.
+The asset pipeline is where we have the "legacy" JavaScript. It's legacy in the sense that it's not EcmaScript Modules (ESM). It's a bunch of JS files concatenated together being served using [Sprockets](https://github.com/rails/sprockets-rails) which packages static assets.
 
-- Served with Sprockets / as static assets
+This source code is not transpiled, only packaged and minified, and will be limited to whatever flavor of JavaScript can run on the user's web browser.
+
+`app/assets/javascripts/application.js` contains the manifest JavaScript file which is included globally in the primary template, `app/views/layouts/application.html.erb`.
+
+`application.js` automatically includes all JS files via the statement:
+
+```
+//= require_tree .
+```
+
+One JS file in particular, `app/assets/javascripts/initializePage.js`, bootstraps the majority of the functionality. You will notice, within this file, that major sections of the websites are bootstrapped, for example:
+
+```
+initializeBaseTracking();
+initializeCommentsPage();
+initEditorResize();
+initLeaveEditorWarning();
+initializeArticleReactions();
+initNotifications();
+initializeSplitTestTracking();
+```
+
+All the "initializers" are in `/app/assets/javascripts/initializers`.
+
+Some other notes:
 - Available globally
-- `base.js.erb` concatenates all the files together and gives us base.js in production/development environments
+- `base.js.erb` concatenates all the files together and gives us `base.js` in production/development environments
 - `initializePage.js` calls its initializers on every page
 - Initializes interactivity for server-rendered UI
 - e.g. `initializeArticleReactions.js` - fetches reaction counts and adds click listeners. Adds interactivity to buttons in `app/views/articles/_reaction_button.html.erb`.
@@ -31,7 +68,8 @@ When refactoring or adding new functionality that lives in the asset pipeline, s
 
 For example - followButtons.js - initializes functionality of follow buttons rendered in many places. Each view that requires follow button functionality must include the pack.
 
-## A note on code splitting & caching
+** A note on code splitting & caching **
+
 Under the hood, we have Webpacker configured for code splitting. This means if two pack files import the same files/code, a common chunk is created so as to avoid downloading the same file more than once.
 
 It should be noted that a new build being deployed doesn't mean that a user has to re-download all the Javascript code over again the next time they visit. Webpacker (webpack) uses content hashing, so unless the contents of the generated file change, the same file will remain in the browser cache.
@@ -45,7 +83,8 @@ You can see this in the app with the way we handle Preact components - loading t
 - Mostly used for individual components rich with interactivity
 - In some cases Preact "takes over" from a server-rendered, plainer, version of the same (e.g. articleForm.jsx and app/views/articles/_v2_form.html.erb) - try clicking 'Create Post' with JS disabled 😉
 
-## A note on dynamic imports
+** A note on dynamic imports **
+
 Unlike the backend, it's costly downloading frontend assets (HTML, CSS, JS), which is why we should only ever download what we need to render a page in a usable state. From there we can load enhanced interactivity, like the page feed, or modals. The general pattern is only load something when you need it.
 
 This is why you’ll find [dynamic imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports) in our code.
