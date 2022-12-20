@@ -8,7 +8,7 @@ Like the [InstantClick](http://instantclick.io/) tag line says, “InstantClick 
 a JavaScript library that dramatically speeds up your website, making navigation
 effectively instant in most cases.”.
 
-[Read more about InstantClick](https://developers.forem.com/frontend/instant-click)in the developer documentation.
+[Read more about InstantClick](https://developers.forem.com/frontend/instant-click) in the developer documentation.
 
 The way it works is if a user hovers over a hyperlink, chances are their
 intentions are to click on it. InstantClick will start prefetching the page

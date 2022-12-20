@@ -2,7 +2,7 @@
 sidebar_position: 12
 ---
 
-# Tips
+# Additional Info
 
 ## About query selectors
 

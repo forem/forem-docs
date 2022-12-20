@@ -1,14 +1,8 @@
 ---
-sidebar_position: 11
+sidebar_position: 7
 ---
 
 # Accessibility
-
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
 
 To make Forem the most inclusive community platform around, accessibility should
 be considered to enable people with disabilities to create and consume content.
