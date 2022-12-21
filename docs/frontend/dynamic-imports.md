@@ -29,7 +29,7 @@ Here are a couple of examples of dynamic import usage on Forem:
   [homepage](https://github.com/forem/forem/blob/0633d85b6b0e083bb7b21b11642b2b17d3fe9de6/app/javascript/packs/homePage.jsx#L59)
   (followed tags).
 
-Forem uses [webpacker](webpacker.md) (webpack), so what webpack will do is
+Forem uses [webpacker](javascript-approaches/packs.md), so what webpack will do is
 create separate bundles for code that is dynamically imported. So not only do we
 end up loading code only when we need it, we also end up with smaller bundle
 sizes in the frontend.

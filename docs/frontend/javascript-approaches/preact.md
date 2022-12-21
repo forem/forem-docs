@@ -8,7 +8,7 @@ sidebar_position: 3
 [Preact](https://preactjs.com/) is an alternative to React with the same modern
 API.
 
-Preact components are packaged using [Webpacker](webpacker.md) and the
+Preact components are packaged using [Webpacker](packs.md) and the
 Preact code is located in `app/javascript`.
 
 Preact components get loaded via webpacker's helper function
