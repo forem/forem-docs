@@ -83,4 +83,4 @@ If tests require utility modules, create them in a `utilities` folder under the
 test suite.
 
 You can also debug jest in your favorite editor. See the
-[Debugging](../frontend/debugging/) section of the frontend documentation.
+[Debugging](../../frontend/debugging.md) section of the frontend documentation.

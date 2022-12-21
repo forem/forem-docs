@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::important
 
-We no longer actively add feature tests to `/spec/system` since we have added Cypress as a tool for our end-to-end testing. Hence, we are in the process of replicating the current `/spec/system` tests in Cypress and in the future we will only use Rails Feature Tests if for some reason a test cannot be implemented in Cypress due to any limitations. You can read more about our [e2e testing](types/e2e-tests.md).
+We no longer actively add feature tests to `/spec/system` since we have added Cypress as a tool for our end-to-end testing. Hence, we are in the process of replicating the current `/spec/system` tests in Cypress and in the future we will only use Rails Feature Tests if for some reason a test cannot be implemented in Cypress due to any limitations. You can read more about our [e2e testing](../types/e2e-tests.md).
 
 :::
 

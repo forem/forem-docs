@@ -27,7 +27,7 @@ We use
 [cypress-testing-library](https://github.com/testing-library/cypress-testing-library)
 for custom Cypress commands and utilities to improve how we write our tests.
 This package is part of the [Testing Library](https://testing-library.com)
-family that we also use in [front-end tests](/tests/frontend-tests), offering a
+family that we also use in [front-end tests](../types/frontend-tests.md), offering a
 similar API.
 
 ### cypress-rails
