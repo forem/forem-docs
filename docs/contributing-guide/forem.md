@@ -114,14 +114,11 @@ always include test coverage. Feel free to read our testing section for guides, 
 
 ### Code quality
 
-We use [Code Climate](https://codeclimate.com/) to find code smells. If a pull
-request contains code smells, we might recommend a refactor before merging. We
-like readable code, and encourage DRY when it's reasonable!
+We use [Code Cov](https://docs.codecov.com/docs) to  incentivize us to write tests and increase coverage.
 
-More importantly, we avoid
-[wrong abstractions](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction).
-Code quality tools are not perfect, so don't obsess over your Code Climate
-score.
+We deliver the coverage metrics directly into the PR to promote more code coverage, especially in pull requests where new features and bug fixes commonly occur.
+
+ We encourage you to keep the code coverage percentage at 80% and above.
 
 ### Consider accessibility in UI changes
 

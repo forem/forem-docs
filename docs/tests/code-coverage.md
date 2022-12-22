@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Codecov
 
-We use Codecov to track code coverage. Codecov leaves a comment PR's that indicate the a percentage change in code coverage compared to main. We encourage you to keep the code coverage percentage positive.
+We use [Codecov](https://docs.codecov.com/docs) to track code coverage. Codecov leaves a comment PR's that indicate the a percentage change in code coverage compared to main. We encourage you to keep the code coverage percentage at 80% and above.
 
 ## Rails
 
