@@ -11,7 +11,7 @@ production incrementally.
 Feature flags are meant to be **temporary** and part of a rollout plan resulting in
 their removal.
 
-Since we do not expose feature flags to Forem Creators, we have built in the concept of an extension which ties in closely with Feature Flags.
+Since we do not expose feature flags to Forem Creators, we have built in the concept of an extension which ties in closely with Feature Flags. You can view Extensions at `/admin/advanced/extensions`.
 ## Creating a new feature flag
 
 To create a new feature flag, we use
