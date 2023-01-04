@@ -1,8 +1,8 @@
 ---
-sidebar_position: 12
+sidebar_position: 10
 ---
 
-# Tips
+# Additional Info
 
 ## About query selectors
 

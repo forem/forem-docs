@@ -41,7 +41,7 @@ We have also experimented with different techniques involving inline CSS
 
 ### We attempt to reduce our bundle size
 
-We use [PreactJS](../frontend/preact), a lightweight alternative to ReactJS, and we try to reduce our bundle size with [dynamic imports](../frontend/dynamic-imports).
+We use [PreactJS](../frontend/javascript-approaches/preact), a lightweight alternative to ReactJS, and we try to reduce our bundle size with [dynamic imports](../frontend/dynamic-imports).
 
 ### Worst technical debt
 

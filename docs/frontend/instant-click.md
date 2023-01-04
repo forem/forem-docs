@@ -4,15 +4,11 @@ sidebar_position: 4
 
 # InstantClick
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
 Like the [InstantClick](http://instantclick.io/) tag line says, “InstantClick is
 a JavaScript library that dramatically speeds up your website, making navigation
 effectively instant in most cases.”.
+
+[Read more about InstantClick](https://developers.forem.com/frontend/instant-click) in the developer documentation.
 
 The way it works is if a user hovers over a hyperlink, chances are their
 intentions are to click on it. InstantClick will start prefetching the page
@@ -51,3 +47,5 @@ function actions(comment) {
 For more information on this, see the
 [Events and script re-evaluation in InstantClick](http://instantclick.io/scripts)
 documentation.
+
+We have [modified InstantClick for our needs](https://github.com/forem/forem/blob/main/app/assets/javascripts/base.js.erb#L13).

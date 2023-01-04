@@ -1,14 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Linting and Formatting
-
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
 
 The project uses [eslint](https://eslint.org/) with the
 [Prettier plugin](https://github.com/prettier/eslint-plugin-prettier). eslint
