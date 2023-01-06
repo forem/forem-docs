@@ -118,7 +118,7 @@ We use [Code Cov](https://docs.codecov.com/docs) to  incentivize us to write tes
 
 We deliver the coverage metrics directly into the PR to promote more code coverage, especially in pull requests where new features and bug fixes commonly occur.
 
- We encourage you to keep the code coverage percentage at 80% and above.
+ We encourage you to always increase the code coverage with any new feature or bug fix.
 
 ### Consider accessibility in UI changes
 
