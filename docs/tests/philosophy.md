@@ -13,7 +13,7 @@ When adding any new features to the application, we always write tests alongside
 - a single function/method in isolation with its possible inputs and outputs through [unit and functional tests](types/unit-functional-tests.md).
 - JavaScript code whether it be logic in a pack file or a Preact component through [frontend tests](types/frontend-tests.md).
 
-We also encourage [manual](other-focus-areas/manual-tests.md), [accesibility](other-focus-areas/accessibility-tests.md) and [regression](other-focus-areas/regression-tests.md) when the need arises.
+We also encourage [manual](other-focus-areas/manual-tests.md), [accessibility](other-focus-areas/accessibility-tests.md) and [regression](other-focus-areas/regression-tests.md) when the need arises.
 
 We track our code coverage in each new PR using code-cov.
 
