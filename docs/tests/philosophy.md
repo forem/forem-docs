@@ -15,7 +15,7 @@ When adding any new features to the application, we always write tests alongside
 
 We also encourage [manual](other-focus-areas/manual-tests.md), [accessibility](other-focus-areas/accessibility-tests.md) and [regression](other-focus-areas/regression-tests.md) when the need arises.
 
-We track our code coverage in each new PR using code-cov.
+We track our code coverage in each new PR using Codecov.
 
 ## QA
 
