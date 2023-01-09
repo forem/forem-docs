@@ -1,14 +1,12 @@
 ---
-sidebar_position: 9
+sidebar_position: 4
 ---
 
 # Code coverage
 
-:::important
+## Codecov
 
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
+We use [Codecov](https://docs.codecov.com/docs) to track code coverage. Codecov leaves a comment PR's that indicate the a percentage change in code coverage compared to main. We encourage you to keep the code coverage percentage at 80% and above.
 
 ## Rails
 
