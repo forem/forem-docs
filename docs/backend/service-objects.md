@@ -14,7 +14,7 @@ Our services are located in `app/services` with the corresponding specs in
 
 - We prefer to namespace our Service Objects especially when we potentially see the addition of more services under that namespace. This is adviseable rather than cluttering the root folder.
 - We namespace services in a plural form to avoid running into problems with Rails naming conventions. For example `Reactions::` instead of `Reaction::`.
-- To distinguish services from models we often follow the VerbNoun naming convention for services, like `HomePage::FetchArticles` instead of `HomePage::ArticleRetrieval`. However, sometimes the naming of the service may not fit within this convention and if you can provide strong reasons on why you should use a different name then we will leave it to your discretion.
+- To distinguish services from models we often follow the VerbNoun naming convention for services, like `HomePage::FetchArticles` instead of `HomePage::ArticleRetrieval`. However, sometimes the naming of the service may not fit within this convention and if you can rationalize about why you should use a different name then we will leave it to your discretion.
 - We encourage you to keep the namespaces to be the same across services, workers etc.
 
 ## .call Pattern
