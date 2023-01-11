@@ -4,20 +4,30 @@ sidebar_position: 20
 
 # Service Objects
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
-## What are Service Objects
-
 Service objects are Plain Old Ruby Objects (POROs) which encapsulate a whole
-business process/user interaction.
+business process/user interaction. We rely on these objects in our codebase to remove complexity from the Models and Controller.
 
 Our services are located in `app/services` with the corresponding specs in
-`spec/services`. Their main interface is a class level method named `call`, as
-in the following example:
+`spec/services`.
+
+## Naming Conventions for Service Objects
+
+- We prefer to namespace our Service Objects especially when we potentially see the addition of more services under that namespace. This is adviseable rather than cluttering the root folder.
+- We namespace services in a plural form to avoid running into problems with Rails naming conventions. For example `Reactions::` instead of `Reaction::`.
+- To distinguish services from models we often follow the VerbNoun naming convention for services, like `HomePage::FetchArticles` instead of `HomePage::ArticleRetrieval`. However, sometimes the naming of the service may not fit within this convention and if you can rationalize about why you should use a different name then we will leave it to your discretion.
+- We encourage you to keep the namespaces to be the same across services, workers etc.
+
+## .call Pattern
+
+We use the `.call` pattern when creating services. This makes it clear and consistent to identify where our primary logic for the service lies.
+
+For example: We'd prefer `result = ProfileFields::Add.call` vs `result = ProfileFields::Add.result`.
+
+However, as with the naming conventions if you can rationalize about why you should use a custom method name then we will leave it to your discretion.
+
+# Skeleton of a Service Object
+
+Most Services Objects will contain the following skeleton:
 
 ```ruby
 class ImportUsers
@@ -35,15 +45,12 @@ class ImportUsers
 end
 ```
 
-To distinguish services from models we often give them verb names vs noun names,
-e.g. `ImportUsers` instead of `UserImporter`.
-
 ## Generating Service Objects
 
 To make our services more consistent we use a custom Rails generator. Some usage
 examples:
 
-**Generate a non-namespaced service without arguments**
+### Generate a non-namespaced service
 
 `$ rails generate service DoTheThing`
 
@@ -68,30 +75,11 @@ RSpec.describe DoTheThing, type: :service do
 end
 ```
 
-**Generate a non-namespaced service with arguments:**
+If there are arguments for your service you can generate it as follows:
 
-`$ rails generate service DoTheThing arg1 arg2`
+```$ rails generate service DoTheThing arg1 arg2```
 
-```ruby
-# app/services/do_the_thing.rb
-class DoTheThing
-  def self.call(arg1, arg2)
-    new(arg1, arg2).call
-  end
-
-  def initialize(arg1, arg2)
-    @arg1 = arg1
-    @arg2 = arg2
-  end
-
-  def call
-  end
-end
-```
-
-The generated spec is the same as above.
-
-**Generate a namespaced service with arguments**
+### Generate a namespaced service
 
 `$ rails generate service things/dothem arg1 arg2`
 
