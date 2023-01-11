@@ -23,7 +23,7 @@ We use the `.call` pattern when creating services. This makes it clear and consi
 
 For example: We'd prefer `result = ProfileFields::Add.call` vs `result = ProfileFields::Add.result`.
 
-However, as with the naming conventions if you can provide strong reasons on why you should use a custom method name then we will leave it to your discretion.
+However, as with the naming conventions if you can rationalize about why you should use a custom method name then we will leave it to your discretion.
 
 # Skeleton of a Service Object
 
