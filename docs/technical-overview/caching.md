@@ -4,26 +4,18 @@ sidebar_position: 8
 
 # Caching
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
 
 _This has been adapted from [The Three Caches of Forem // Take on Rules](https://takeonrules.com/2022/03/29/the-three-caches-of-forem/)_
 
 
 In the Forem code base, we make extensive use of various caching strategies. And as with any cache, we always run the risk of not invalidating the right caches.
 
-The three caching strategies are:
+You can read more about our response caching strategies here:
+https://dev.to/devteam/caching-at-dev-11el
 
-- Edge Caching
-- Rails Caching
-- Database Caching
+We also dive more into Rails Caching which touches on (Fragment Caching)and Database Caching below.
 
-At a high level, we leverage caches to improve performance. Let’s delve into each strategy. But before we do, let’s introduce a few concepts.
-
-## Response Documents and Fragments
+At a high level, we leverage caches to improve performance. Let’s start of by introducing by detailing what a Response Document and Fragment is.
 
 The <dfn>response document</dfn> is a single file sent from the server in response to a request.
 
@@ -31,21 +23,7 @@ Remember that what you see rendered in your browser is almost always from the co
 
 To build a single _response document_, the server often assembles multiple fragments to form that singular document. In Ruby on Rails this is done with like layouts, views, and partial views.
 
-## Back to Listing the Caching Strategies
-
-Let’s now work from the broader caching strategies to the more narrow ones.
-
-### Edge Caching
-
-Edge caching is about trying to put as many of the _response documents_ as close to the client as possible to reduce latency on content delivery.
-
-At Forem, we enable the usage of either Fastly or Nginx. When we bust the edge cache, we are evicting specific _response documents_.
-
-The next time someone requests that _response document_ the server will reassemble it (from the various constituent parts).
-
-You can see [our Edge Busting strategy here](https://github.com/forem/forem/blob/main/app/services/edge_cache/bust.rb).
-
-### Rails Caching
+## Rails Caching
 
 We use the Rails cache to store all kinds of things, mostly fragments that we use to build the response document.
 
@@ -63,7 +41,7 @@ When an admin makes a site wide change, that prompts to use a new key; so long a
 
 You can learn more about [Caching with Rails](https://guides.rubyonrails.org/caching_with_rails.html) over at the Rails Guides.
 
-### Database Caching
+## Database Caching
 
 The last is database caching. We cache an article’s tag list, user, and organization information (if applicable). These are cached as fields on the articles table. The purpose of these cached attributes is performance. Where possible, we prefer to minimize joins for queries that we frequently perform (e.g. get me a list of articles being a very common query for a Forem).
 
