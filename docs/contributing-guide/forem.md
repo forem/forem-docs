@@ -49,7 +49,7 @@ on the issue.
 project. Forem is an Open Source, community-driven project. Therefore, providing
 and maintaining quality documentation is one of our most important jobs. You can
 find more information in our
-[docs guide](https://docs.forem.com/contributing/docs)!
+[docs guide](https://developers.forem.com/contributing-guide/docs)!
 
 **Refactoring**, which involves improving the code without modifying behavior,
 is a great place to help out! Generally speaking, you can rely on existing tests
