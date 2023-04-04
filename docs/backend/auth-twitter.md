@@ -37,7 +37,7 @@ application.
 
 5. Write down the reasons that you want to use Twitter API. Mention Forem's
    community and describe the issues and tests and things that you want to work
-   on. Copy it, you might use it later ;)
+   on. Copy it, you might use it later. ;)
 
    ![twitter-up-4](/img/docs/backend/twitter-api-reasons.png)
 

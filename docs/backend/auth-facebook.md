@@ -31,21 +31,21 @@ application.
 
    ![Add new app](/img/docs/backend/add-newapp.png)
 
-3. Select **For Everything Else**
+3. Select **For Everything Else**.
 
    ![Select For Everything Else](/img/docs/backend/everything-else.png)
 
 4. Fill in the app display name and contact email, then click on **Create App
-   ID**
+   ID**.
 
    ![Create App Id](/img/docs/backend/create-appid.png)
 
 5. On the **Add a Product** screen, click **Set Up** under the **Facebook
-   Login** section
+   Login** section.
 
    ![Click Set Up on Facebook Login](/img/docs/backend/setup-login.png)
 
-6. Ignore the quickstart options, and click **Settings -> Basic** in the sidebar
+6. Ignore the quickstart options, and click **Settings -> Basic** in the sidebar.
 
    ![Click settings/basic](/img/docs/backend/settings-basic.png)
 
@@ -63,7 +63,7 @@ application.
 ## Configure the Facebook App
 
 1. From the basic settings screen dashboard set your application's domain name
-   in **App Domains** field, and be sure to click **Save Changes**
+   in **App Domains** field, and be sure to click **Save Changes**.
 
    ![Configure the facebook app](/img/docs/backend/config-facebook.png)
 
