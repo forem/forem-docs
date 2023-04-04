@@ -14,7 +14,7 @@ To help maintain accountability for users with elevated permissions the Forem
 application has a special model that records certain actions.
 
 For example, when a user with the `trusted` role creates a negative reaction on
-an article a record is created with certain information about that action.
+an article, a record is created with certain information about that action.
 
 That record (which we call an `AuditLog`) looks something like this:
 
