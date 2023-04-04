@@ -36,5 +36,5 @@ Previews are setup in the directory `spec/mailers/previews`.
 
 To update the contents of emails that the app sends, edit the views under
 `app/views/mailers`. Note that this app uses the
-[`devise_invitable` gem](https://github.com/scambra/devise_invitable) for
+[`devise_invitable`](https://github.com/scambra/devise_invitable) gem for
 invitations. The views for this gem are stored under `app/views/devise/mailer`.
