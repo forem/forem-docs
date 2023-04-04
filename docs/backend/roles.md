@@ -33,7 +33,7 @@ at the console.
 
 ## Example of adding permissions to a user
 
-- open the Rails console
+- open the Rails console.
 
 ```shell
 rails console
