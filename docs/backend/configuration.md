@@ -26,7 +26,7 @@ environments. Examples:
 - `STRIPE_SECRET_KEY`
 
 Settings managed via your ENV can be found in
-[installation section of your operating system](/getting-started/installation/mac#installing-forem)) and viewed at
+[installation section of your operating system](/getting-started/installation/mac#installing-forem) and viewed at
 `/admin/customization/config` (see [the Admin guide](../admin/admin-guide)):
 
 ![Screenshot of env variable admin interface](/img/docs/backend/siteconfig.png)
@@ -44,7 +44,7 @@ Examples:
 
 These settings can be accessed via the
 [`Settings::General`](https://github.com/forem/forem/blob/main/app/models/settings/general.rb)
-object and various models in the `Settings::` namespace and viewed / modified
+object and various models in the `Settings::` namespace and viewed or modified
 via `/admin/customization/config` (see [the Admin guide](../admin/admin-guide)).
 
 ![Screenshot of site configuration admin interface](https://user-images.githubusercontent.com/47985/73627238-6276d500-467e-11ea-8724-afb703f056bc.png)
