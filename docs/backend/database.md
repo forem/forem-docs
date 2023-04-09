@@ -43,8 +43,9 @@ password: password
 ### Other seed modes
 
 To put your local forem into "starter mode", as it would be for a new creator,
-use `MODE=STARTER` skipping the creation of all sample data i.e.
+use `MODE=STARTER` i.e...
 
 ```shell
 MODE=STARTER rails db:setup
 ```
+This mode skips creation of all sample data.
