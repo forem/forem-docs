@@ -24,7 +24,7 @@ of their local DB. For example:
 SEEDS_MULTIPLIER=2 rails db:setup
 ```
 
-will result in creating double the default amount of items in the database.
+Will result in twice the default amount of items being created in the database.
 
 It's currently used only for `articles` and `users`.
 
@@ -48,5 +48,4 @@ use `MODE=STARTER` i.e...
 ```shell
 MODE=STARTER rails db:setup
 ```
-
 This mode skips creation of all sample data.

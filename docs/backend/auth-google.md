@@ -19,21 +19,21 @@ keys. Then you'll need to provide these keys to the Rails application.
 1. [Click this link to create a new OAuth application in your Google console](https://console.cloud.google.com/projectcreate) -
    you will be redirected to sign in to Google account if you have not already.
 
-2. Go to **OAuth Consent Screen** section. Set the **Publishing Status** to **Testing**
+2. Go to **OAuth Consent Screen** section. Set the **Publishing Status** to **Testing**.
 
    ![OAuth Consent Section](/img/docs/backend/google-1.png)
 
    ![Publishing Status](/img/docs/backend/google-2.png)
 
-3. Add your test user email to the **Test Users** section
+3. Add your test user email to the **Test Users** section.
 
    ![Add Test Users](/img/docs/backend/google-3.png)
 
-4. Go to the **Credentials** section and at the top of the screen click **Create Credentials** -> **OAuth Client ID**
+4. Go to the **Credentials** section and at the top of the screen click **Create Credentials** -> **OAuth Client ID**.
 
    ![Adding OAuth Credentials](/img/docs/backend/google-4.png)
 
-5. Select **Web Application** as the **Application Type**, and name it
+5. Select **Web Application** as the **Application Type**, and name it.
 
    ![Naming OAuth Application](/img/docs/backend/google-5.png)
 
@@ -46,23 +46,23 @@ keys. Then you'll need to provide these keys to the Rails application.
 
    ![Client ID and Key](/img/docs/backend/google-7.png)
 
-8. Click  **OAuth Consent Screen** in the sidebar, then click **Edit App** next to your app's name
+8. Click  **OAuth Consent Screen** in the sidebar, then click **Edit App** next to your app's name.
 
    ![Consent Screen](/img/docs/backend/google-9.png)
 
-9. Fill out the information on the resulting **Edit App Registration** screen, then click **Next Step**
+9. Fill out the information on the resulting **Edit App Registration** screen, then click **Next Step**.
 
    ![Editing App Registration](/img/docs/backend/google-10.png)
 
-10. On the next screen, **Scopes**, click **Add or Remove Scopes**
+10. On the next screen, **Scopes**, click **Add or Remove Scopes**.
 
    ![Add Scopes](/img/docs/backend/google-11.png)
 
-11. Click the checkboxes next to the first two unlabeled scopes in the **Updated Selected Scopes** section
+11. Click the checkboxes next to the first two unlabeled scopes in the **Updated Selected Scopes** section.
 
    ![Update Selected Scopes](/img/docs/backend/google-12.png)
 
-12. Complete the rest of the app registration screens
+12. Complete the rest of the app registration screens.
 
 ## Your Forem
 

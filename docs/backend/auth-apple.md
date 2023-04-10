@@ -26,11 +26,11 @@ Account.
 
 ## Service ID Configuration
 
-1. [Create a Service ID](https://developer.apple.com/account/resources/identifiers/list/serviceId)
+1. [Create a Service ID](https://developer.apple.com/account/resources/identifiers/list/serviceId).
 
 ![Create Service ID](https://user-images.githubusercontent.com/6045239/92610177-a5cc9e00-f274-11ea-9f63-20d8356d0bee.png)
 
-2. Name the Service and finalize the registration
+2. Name the Service and finalize the registration.
 
 ![Naming Service ID](https://user-images.githubusercontent.com/6045239/92610168-a36a4400-f274-11ea-8f79-7516c0c6c9c3.png)
 
@@ -43,11 +43,11 @@ Account.
 
 1. [Register a new Key](https://developer.apple.com/account/resources/authkeys/add).
    Enable the "Sign in with Apple" option and configure it so it's associated
-   with the corresponding App ID
+   with the corresponding App ID.
 
 ![Register a new Key](https://user-images.githubusercontent.com/6045239/92611125-b3ceee80-f275-11ea-9c00-e1b5ca2f9af0.png)
 
-2. Download the Key
+2. Download the Key.
 
 ![Download the Key](https://user-images.githubusercontent.com/6045239/92611466-0f00e100-f276-11ea-912d-f8a74b6dfb04.png)
 

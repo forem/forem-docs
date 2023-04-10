@@ -16,7 +16,7 @@ Data Update Scripts were introduced in
 [this PR](https://github.com/forem/forem/pull/6025) and allow us to run any data
 updates we might need. For example, if we added a column to the database and
 then wanted to backfill that column with data, rather than going and manually
-doing it in a console, we would use a DataUpdateScript.
+doing it in a console, we would use a `DataUpdateScript`.
 
 ## How it works
 
@@ -81,7 +81,7 @@ script.
 
 ## In production
 
-DataUpdateScripts are also run automatically when a production deploy goes out.
+`DataUpdateScripts` are also run automatically when a production deploy goes out.
 However, to ensure the new code they need to use has been deployed we use a
 [`DataUpdateWorker`](https://github.com/forem/forem/blob/main/app/workers/data_update_worker.rb)
 via Sidekiq and set it to run 10 minutes after the deploy script has completed.
@@ -93,8 +93,8 @@ via Sidekiq and set it to run 10 minutes after the deploy script has completed.
 From time to time, scripts need to operate on a large amount of rows; in those
 cases we encourage:
 
-- adding explicit logging to the script
-- reversing the order, to start processing the most recent records first
+- adding explicit logging to the script.
+- reversing the order, to start processing the most recent records first.
 
 For example:
 
