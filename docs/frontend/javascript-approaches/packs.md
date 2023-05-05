@@ -3,6 +3,12 @@ title: Pack Files & Webpacker
 sidebar_position: 2
 ---
 
+:::important
+
+Any refactored or new functionality that lives in the asset pipeline, should now be moved to Packs and Webpacker.
+
+:::
+
 # Pack Files & Webpacker
 
 > app/javascript/packs
@@ -67,6 +73,28 @@ More reading:
 - [Storybook and Webpack](https://storybook.js.org/docs/react/configure/webpack)
 - [Enhance Jest configuration with Module Aliases](https://alexjover.com/blog/enhance-jest-configuration-with-module-aliases/)
 - [import-js/eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/tree/main/resolvers/webpack)
+
+
+## Initializers in Webpacker
+
+Initializers, that formally lived within the asset pipeline, now reside in Webpack. 
+
+```
+app/javascript/packs/initializers
+```
+
+Upon an initializer being created, it can then be added to the `baseInitializers.js` file to be initialized upon load, similiar to the `initializePage.js` in the asset pipeline.
+
+```
+initializeCommentDate();
+initializeCommentPreview();
+initializeNotifications();
+initializeTimeFixer();
+initializeDateHelpers();
+
+```
+
+Moving forward all initializer creations should be implemented in this format.
 
 ## Code splitting & caching
 
