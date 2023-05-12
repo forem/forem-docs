@@ -85,6 +85,7 @@ app/javascript/packs/initializers
 
 When creating an initializer, you can add it to  `baseInitializers.js` file which will initialize the code upon load. This is  similar to the way `initializePage.js` behaves in the asset pipeline.
 
+Here are [some examples of initializers that currently exist](https://github.com/forem/forem/blob/main/app/javascript/packs/baseInitializers.js#L11-L15). 
 ```
 initializeCommentDate();
 initializeCommentPreview();
