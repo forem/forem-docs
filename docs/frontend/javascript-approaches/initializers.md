@@ -10,4 +10,4 @@ When refactoring or adding new functionality that lives in the asset pipeline, s
 
 :::
 
-Initializers now reside in Pack files and Webpacker.  See [Pack Files & Webpacker](/frontend/javascript-approaches/packs#initializers-in-webpacker) for more information.
+Initializers reside in Pack files and Webpacker. See [Pack Files & Webpacker](/frontend/javascript-approaches/packs#initializers-in-webpacker) for more information.
