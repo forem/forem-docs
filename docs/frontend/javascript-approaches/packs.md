@@ -83,7 +83,7 @@ Initializers, that formerly lived within the asset pipeline, now reside in Webpa
 app/javascript/packs/initializers
 ```
 
-Upon an initializer being created, it can then be added to the `baseInitializers.js` file to be initialized upon load, similiar to the `initializePage.js` in the asset pipeline.
+When creating an initializer, you can add it to  `baseInitializers.js` file which will initialize the code upon load. This is  similar to the way `initializePage.js` behaves in the asset pipeline.
 
 ```
 initializeCommentDate();
