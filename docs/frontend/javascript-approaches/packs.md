@@ -77,7 +77,7 @@ More reading:
 
 ## Initializers in Webpacker
 
-Initializers, that formally lived within the asset pipeline, now reside in Webpack. 
+Initializers, that formerly lived within the asset pipeline, now reside in Webpack. 
 
 ```
 app/javascript/packs/initializers
