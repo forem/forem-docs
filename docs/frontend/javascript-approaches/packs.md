@@ -5,7 +5,7 @@ sidebar_position: 2
 
 :::important
 
-Any refactored or new functionality that lives in the asset pipeline, should now be moved to Packs and Webpacker.
+Any new functionality that requires an initializer, should now be moved to Packs and Webpacker.
 
 :::
 
@@ -76,6 +76,8 @@ More reading:
 
 
 ## Initializers in Webpacker
+
+In JavaScript, an initializer refers to a block of code that is executed when an object is created or instantiated. It is a special method or function that initializes the state or sets up the initial values of an object. In this codebase, intializers represent a block(s) of functionality and state that ensures that an object/functionality starts with the desired properties, state and/or behaviors.
 
 Initializers, that formerly lived within the asset pipeline, now reside in Webpack. 
 
