@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # Initializers & the asset pipeline
 
-> app/assets/javascripts/initializers
-
 :::important
 
 When refactoring or adding new functionality that lives in the asset pipeline, strongly consider moving it to Packs and Webpacker.
@@ -45,5 +43,3 @@ It's useful to note that some html.erb views reference function names directly, 
 
 
 `base.js.erb` concatenates all the files together and gives us `base.js` in production/development environments.
-
-

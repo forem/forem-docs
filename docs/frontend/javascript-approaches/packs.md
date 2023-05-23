@@ -3,6 +3,12 @@ title: Pack Files & Webpacker
 sidebar_position: 2
 ---
 
+:::important
+
+Any new functionality that requires an initializer, should now be moved to Packs and Webpacker.
+
+:::
+
 # Pack Files & Webpacker
 
 > app/javascript/packs
@@ -67,6 +73,31 @@ More reading:
 - [Storybook and Webpack](https://storybook.js.org/docs/react/configure/webpack)
 - [Enhance Jest configuration with Module Aliases](https://alexjover.com/blog/enhance-jest-configuration-with-module-aliases/)
 - [import-js/eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/tree/main/resolvers/webpack)
+
+
+## Initializers in Webpacker
+
+In JavaScript, an initializer refers to a block of code that is executed when an object is created or instantiated. It is a special method or function that initializes the state or sets up the initial values of an object. In this codebase, intializers represent a block(s) of functionality and state that ensures that an object/functionality starts with the desired properties, state and/or behaviors.
+
+Initializers, that formerly lived within the asset pipeline, now reside in Webpack. 
+
+```
+app/javascript/packs/initializers
+```
+
+When creating an initializer, you can add it to  `baseInitializers.js` file which will initialize the code upon load. This is  similar to the way `initializePage.js` behaves in the asset pipeline.
+
+Here are [some examples of initializers that currently exist](https://github.com/forem/forem/blob/main/app/javascript/packs/baseInitializers.js#L11-L15). 
+```
+initializeCommentDate();
+initializeCommentPreview();
+initializeNotifications();
+initializeTimeFixer();
+initializeDateHelpers();
+
+```
+
+Moving forward all initializer creations should be implemented in this format.
 
 ## Code splitting & caching
 
