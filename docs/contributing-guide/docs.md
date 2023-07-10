@@ -4,12 +4,6 @@ sidebar_position: 1
 
 # Contributing to the Docs
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
 **Contributing to Forem's developer documentation**
 
 Contributions to the documentation are always appreciated! Thank you for making

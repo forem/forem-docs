@@ -4,12 +4,6 @@ sidebar_position: 2
 
 # Contributing to Forem
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
 We expect contributors to abide by our underlying
 [Code of Conduct](https://dev.to/code-of-conduct). All discussions about this
 project must be respectful and harassment-free.
@@ -64,21 +58,9 @@ issue exists, please claim that issue and link it in your PR, otherwise creating
 an issue is the best first step! Be sure to surround bug fixes with ample tests;
 bugs are magnets for other bugs. Write tests around bugs!
 
-**Features** tend to be subjective and might spur some debate. The Forem core
-team uses an internal RFC ("request for comments") process to assess and
-prioritize new features. This process is intended to provide a consistent and
-standardized path for new changes to enter the Forem ecosystem. If you'd like to
-propose a new feature, please visit [forem.dev](https://forem.dev) to start a
+**Features** tend to be subjective and might spur some debate. If you'd like to
+propose a new feature, please visit [Discussions](https://github.com/forem/forem/discussions/categories/feature-requests) to start a
 discussion around a new feature (or chime in on a pre-existing discussion!).
-
-There may be some open issues in our repository that we think evolve into
-impactful features. For such issues, we use the
-[potential RFC](https://github.com/forem/forem/labels/potential%20RFC) label in
-order to highlight the potential feature to the Forem core team members so that
-someone from the team can champion that feature.
-
-You can learn more about our internal RFC process and how we use forem.dev
-[here](https://forem.dev/foremteam/internal-rfc-process-and-forem-dev-discussions-3gl4)
 
 ### How to contribute
 
@@ -106,6 +88,21 @@ core team member will triage incoming issues.
 
 _Please note: core team members may update the title of an issue to reflect the
 discussion._
+
+### Issue claimers’ responsibility
+Once you’ve claimed an issue, you have a responsibility to work on that ticket in a reasonably timely fashion. If you don’t have time to work on it, please unclaim it so someone else may work on it.
+
+If there’s no sign of progress on a particular claimed issue for a week or two, we may ask you to relinquish the issue claim to open it up to other contributors.
+
+If you’ve claimed an issue and it’s taking a long time (weeks) to code, keep everybody updated by posting comments on the issue. If you don’t provide regular updates, and you don’t respond to a request for a progress report, we may open it back up to other contributors.
+
+Any pull requests older than 90 days will be closed. Exceptions can be made for pull requests that have active review comments, or that are awaiting other dependent pull requests. Closed pull requests are easy to recreate, and little work is lost by closing a pull request that subsequently needs to be reopened. We want to limit the total number of pull requests in flight to:
+
+- Maintain a clean project
+- Remove old pull requests that would be difficult to rebase as the underlying code has changed over time
+- Encourage code velocity
+
+As always, more communication is better than less communication! We are all humans trying to work together to improve the community. Always be kind and appreciate the need for tradeoffs. ❤️
 
 ### Please include tests
 
@@ -192,8 +189,3 @@ Force pushing (despite being useful) has some drawbacks. GitHub doesn't always
 keep the review history, which results in lost context for the reviewers.
 
 We squash every PR before merging, so there is no need to force push!
-
-## The bottom line
-
-We are all humans trying to work together to improve the community. Always be
-kind and appreciate the need for tradeoffs. ❤️

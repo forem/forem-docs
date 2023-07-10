@@ -4,12 +4,6 @@ sidebar_position: 3
 
 # Contributing to the API Specification Docs
 
-:::important
-
-We’re currently making rapid changes to the product so our docs may be out of date. If you need help, please email [yo@forem.com](mailto:yo@forem.com).
-
-:::
-
 The v0 and v1 APIs are described with the [OpenAPI 3 specification](https://spec.openapis.org/oas/v3.0.3).
 
 Swagger.io has
