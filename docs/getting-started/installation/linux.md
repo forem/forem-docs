@@ -4,92 +4,91 @@ sidebar_position: 3
 
 # Linux
 
-**Installing Forem on Linux**
+**Installing Forem on Bare-Metal Linux**
 
-## Installing prerequisites
+> As the title implies, this spins up a Forem stack for local development with no use of containerization, virtualization, etc., which comes with tradeoffs: standing the stack up will almost invariably be a slower process as various tools build from source, but attaching debuggers and the like to the resulting Forem application may be easier. If using containers through Docker or Podman isn't a deal-breaker for your usecase, [consider those docs instead](containers.md) for faster stand-up and teardown, and to leave less cruft behind when you're done working.
 
-_These prerequisites assume you're working on a Linux-based operating system,
-but they have only been tested on Ubuntu 18.04._
+_For maintainer sanity reasons, this opinionated and curated instruction set assumes you're cool with the use of [rtx](https://github.com/jdx/rtx) to install specific versions of Ruby, NodeJS, Yarn (a JS package manager), PostgreSQL (a database), and Redis (an in-memory cache) that are tricky (when possible at all) to version-lock system-wide. If `rtx` is for any reason a non-starter for you, you'll want to use your package management solutions of choice to install the tools found in `.rtx.toml`, `.ruby-version`, and `.nvmrc`, at the appropriate versions, and should be comfortable sorting out the dependencies thereof on your own. The instructions were written for Debian 12 (Bookworm), but should be directly usable on Ubuntu, Mint, and other Debian derivatives, and should be adaptable for other distributions._
 
-### Ruby
+## Installing Package Managers
 
-1. If you don't already have a Ruby version manager, we highly recommend
-   [rbenv](https://github.com/rbenv/rbenv). Please follow their
-   [installation guide](https://github.com/rbenv/rbenv#installation).
-1. With the Ruby version manager, install the Ruby version listed on our badge.
-   (ie with rbenv: `rbenv install $(cat .ruby-version)`)
+To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [rtx](https://github.com/jdx/rtx). Follow whatever their current instructions are for installation, and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
 
-For very detailed rbenv installation directions on several distros, please visit
-[DigitalOcean's guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04).
+## Pulling Forem's Code
 
-### Yarn
+Using `apt` (or [alternative means, if desired](https://docs.github.com/en/get-started/quickstart/set-up-git)), we need to install `git` a version control system we use in the development of Forem (with GitHub as our canonical host for the Git repository), and then this section is reasonably straightforward.
+ 
+1. `sudo apt update && sudo apt install -y git`
+2. Fork Forem's repository [using this GitHub link](https://github.com/forem/forem/fork). Forking is optional to read our code, but will be necessary to submit changes to us, so this is a helpful bit of upfront house-keeping.
+3. Clone your forked repository:
 
-There are two ways to install Yarn.
+  - With HTTPS: `git clone https://github.com/<your-username>/forem.git`
+  - With SSH: `git clone git@github.com:<your-username>/forem.git`
+  - Or, use a graphical Git client of your choosing, the selection of which is outside the scope of this document.
 
-- Yarn's official
-  [installation guide](https://yarnpkg.com/en/docs/install#debian-stable)
-  (recommended).
-- [DigitalOcean's detailed tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04)
-  describes how to install
-  [Node version Manager](https://github.com/creationix/nvm). By installing NVM
-  you can select a Node version, use `16` (matches Forem's .nvmrc and package.json files);
-  the guide will also explain how to install NPM. This way you'll have Node, NPM, and then
-  you can run `npm install -g yarn` to install Yarn.
+4. Then, change directories into the clone: `cd forem`
 
-### PostgreSQL
+## Install System-Level Dependencies
 
-Forem requires PostgreSQL version 11 or higher.
+There's a handful of system-level dependencies we can't reliably manage with `rtx`, usually because they're out of that tool's scope. We'll install these with `apt` again, unless you choose to install them in some other way at your own risk:
 
-1. Run
-   `sudo apt update && sudo apt install postgresql postgresql-contrib libpq-dev`.
-1. To test the installation you can run `sudo -u postgres psql` which should
-   open a PostgreSQL prompt. Exit the prompt by running `\q` then run
-   `sudo -u postgres createuser -s $YOUR_USERNAME` where `$YOUR_USERNAME` is the
-   username you are currently logged in as.
+- [ImageMagick](https://imagemagick.org/), used to manipulate images on upload. This one is particularly hairy to DIY an install of, so use your system package manager unless you know exactly why you're choosing not to.
+- A C/C++ compiler, `make`, and so forth. These base development tool bundles go by many names in various distributions: `build-essential` on Debian-alikes, `base-devel` on Arch-alikes, `alpine-sdk`, etc.
+- `pkg-config`, which is used to help find system-wide libraries
+- `libz` and `libssl` (unless you know your distribution uses something else, this means OpenSSL) development headers
+- `curl`, an HTTP (among others) client
+- Various transitive dependencies of [PostgreSQL and its compilation](https://github.com/smashedtoatoms/asdf-postgres#dependencies) not already listed above: 
+    * `libreadline-dev`
+    * `libcurl4-openssl-dev`
+    * `uuid-dev`
+    * `icu-devtools`
 
-There are more than one ways to setup PostgreSQL. For additional configuration,
-check out our [PostgreSQL setup guide](postgresql.md) or the official
-[PostgreSQL](https://www.postgresql.org/) site for further information.
+```sh
+sudo apt update
+sudo apt install -y imagemagick curl build-essential pkg-config libssl-dev libz-dev libreadline-dev libcurl4-openssl-dev uuid-dev icu-devtools
+```
 
-### ImageMagick
+## Installing Version-Locked Tool Dependencies
 
-Forem uses [ImageMagick](https://imagemagick.org/) to manipulate images on
-upload.
+> This is the part where, if you've opted out of `rtx`, you'll need to round up tools on your own. For Ruby, consider setting up `rbenv` using their [installation guide](https://github.com/rbenv/rbenv#installation) and then installing our current Ruby version target with `rbenv install $(cat .ruby-version)`. For NodeJS, consider `nvm` and install our Node version target with `nvm install`. You're on your own for installing [Yarn v1](https://yarnpkg.com/en/docs/install), [PostgreSQL v13](https://www.postgresql.org/) (perhaps via [Postgres.app](https://postgresapp.com/), also see our [auxiliary documentation](postgresql.md)), and [Redis](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/).
 
-Please refer to ImageMagick's
-[instructions](https://imagemagick.org/script/download.php) on how to install
-it.
+Use `rtx install` - this will pull the exact versions we recommend for the tools listed in the block above, which helps to prevent "version drift" - where someone writes code targeting Version A of some tool, but it breaks when run against Version B of that same tool.
 
-### Redis
+If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis.
 
-Forem requires Redis version 6.0 or higher.
+**This step will probably take several minutes**: it's building most of these dependencies from source code. Errors at this point are unlikely, but if they pop up, should be expected to be quite varied: searching for error messages will often lead to helpful solutions, as few to none of these errors are likely to have never been seen (and triaged) before.
 
-We recommend following Digital Ocean's extensive guides
-[How to Install and Secure Redis](https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-secure-redis)
-to setup Redis.
+## Last Bits Of Setup
 
-## Installing Forem
+1. Start the caching server with `redis-server --daemonize yes` (do this every time you work on Forem!)
 
-1. Fork Forem's repository, e.g. <https://github.com/forem/forem/fork>
-1. Clone your forked repository, e.g.
-   `git clone https://github.com/<your-username>/forem.git`
-1. Install bundler with `gem install bundler`
-1. Set up your environment variables/secrets
+2. Start and configure the database (which requires some tinkering to avoid future errors; copy pasting is fine here!)
 
-   - Take a look at `.env_sample`. This file lists all the `ENV` variables we
-     use and provides a fake default for any missing keys.
+  - `pg_ctl start` - do this every time you work on Forem!
+  - `createuser -U postgres -s $(whoami)`, which creates a PostgreSQL user by your system username. This only needs done once.
+  - Now we need to change the default encoding of the database. These steps are copied nearly verbatim from [the Arch Linux wiki](https://wiki.archlinux.org/title/PostgreSQL#Change_default_encoding_of_new_databases_to_UTF-8). Run them one-by-one.
+
+    * `psql -d postgres -c "UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'template1';"`
+    * `psql -d postgres -c "DROP  DATABASE template1;"`
+    * `psql -d postgres -c "CREATE DATABASE template1 WITH TEMPLATE = template0 ENCODING = 'UNICODE';"`
+    * `psql -d postgres -c "UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template1';"`
+
+3. Set up your environment variables/secrets
+
+   - Take a look at `.env_sample` to see all the `ENV` variables we use and the
+     fake default provided for any missing keys.
+     If you don't need to override any environment variables, continue with
+     the next step as our setup script will automatically create a default
+     `.env` file.
    - If you use a remote computer as dev env, you need to set `APP_DOMAIN`
      variable to the remote computer's domain name.
    - The [backend guide](/backend/authentication) will show you how to get free API keys for
      additional services that may be required to run certain parts of the app.
-   - For any key that you wish to enter/replace:
+   - For any key that you wish to enter/replace, follow the steps below.
 
      1. Create `.env` by copying from the provided template (i.e. with bash:
         `cp .env_sample .env`). This is a personal file that is ignored in git.
-        If you don't need to override any environment variables, continue with
-        the next step as our setup script will automatically create a default
-        `.env` file.
-     1. Obtain the development variable and apply the key you wish to
+     2. Obtain the development variable and apply the key you wish to
         enter/replace. i.e.:
 
      ```shell
@@ -104,20 +103,30 @@ to setup Redis.
 	 test and development, use a file named .env.local, or modify .env.test.local
 	 and .env.development.local.
 
-1. Run `bin/setup`
+4. Do final application setup (including the installation of requisite Ruby gems and NodeJS modules) with `./bin/setup`.
 
-### Possible error messages
+## Start Up Your Forem!
 
-While installing, you might run into an error due to the `pg` gem requiring
-PostgreSQL libraries. If so, please run `sudo apt-get install libpq-dev` before
-retrying.
+```sh
+./bin/startup
+```
 
-While installing, you might run into an error due to the `sass-rails` gem
-requiring `sassc`, which requires the `g++` compiler. If so, please run
-`sudo apt-get install g++` before retrying.
+Presuming no errors here, your Forem should be accessible at `http://localhost:3000`.
 
-While installing, if you didn't install `node` or `nvm` manually, you might run
-into an error due to an older system node version being present, which can cause
-issues while `yarn` is installing packages. If so, you'll need to
-[install `nvm`](https://github.com/nvm-sh/nvm#installation-and-update) and then
-run `nvm install node` to get the most recent node version before retrying.
+To run unit tests, first, prepare the database:
+
+```sh
+./bin/rails db:test:prepare RAILS_ENV=test
+```
+
+Then, try running any test, for example:
+
+```sh
+./bin/rspec spec/lib/acts_as_taggable_on
+```
+
+To shut down your Forem stack when you're done tinkering, shut services down in the inverse order of how we started them:
+
+- Press `Ctrl-C` to stop the Forem server process that's currently in the foreground
+- `pg_ctl stop` will shut down the database
+- `redis-cli SHUTDOWN` will stop the caching server
