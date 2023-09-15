@@ -20,11 +20,11 @@ contact the team with our [abuse report form](https://dev.to/report-abuse).
 ### Where to contribute
 
 All [issues](https://github.com/forem/forem/issues) labeled
-[ready for dev](https://github.com/forem/forem/issues?q=is%3Aissue+is%3Aopen+label%3A%22ready+for+dev%22)
+[external contributors welcome](https://github.com/forem/forem/labels/external%20contributors%20welcome)
 and
 [bug](https://github.com/forem/forem/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 are up for grabs. Please note that issues with the
-[Forem team](https://github.com/forem/forem/labels/Forem%20team) label are
+[internal team only](https://github.com/forem/forem/labels/Internal%20team%20only) label are
 internal tasks that will be completed by a Forem
 [core team member](https://github.com/forem/forem/#core-team).
 
