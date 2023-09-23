@@ -108,14 +108,6 @@ Tags are used to organize user generated content. Each tag has a set of rules wh
 
 Some tags behave as "flare," highlighting certain articles when viewed from the index page. Tags that act as "flare" are defined in the `FlareTag` object. In cases of multiple flare tags, the tag displayed is determined by its hierarchy.
 
-### Listings
-
-Listings are classified ads. They are similar to posts in some ways, but with more limitations. They are designed to be categorized into market areas. They also make use of tags.
-
-### Credits
-
-Credits are the currency of the platform which users can use to buy listings. The functionality of credits may be expanded in the future.
-
 ### Organizations
 
 Users can belong to organizations, which have their own profile pages where posts can be published etc. This can be any group endeavor such as a company, an open source project, or any standalone publication on Forem.
