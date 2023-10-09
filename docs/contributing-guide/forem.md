@@ -107,7 +107,7 @@ As always, more communication is better than less communication! We are all huma
 ### Please include tests
 
 Some areas of the project could use updated tests, and new features should
-always include test coverage. Feel free to read our testing section for guides, such as the [front end tests page](https://developers.forem.com/tests/frontend-tests).
+always include test coverage. Feel free to read our testing section for guides, such as the [Frontend Tests](https://developers.forem.com/tests/types/frontend-tests).
 
 ### Code quality
 
