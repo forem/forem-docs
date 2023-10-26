@@ -31,11 +31,11 @@ For additional information on Devcontainer, please checkout [the offical documen
 
 ## Containerized setup with `dip` gem
 
-`dip` gem makes it simple to run docker commands. 
+`dip` gem makes it simple to run docker commands and is the main way we use to interact with `docker-compose.yml`
 
 ### Installation
 
-1. Fork and clone our [Forem repository](https://github.com/forem/forem) into your preferred directory. 
+1. Fork and clone our [Forem repository](https://github.com/forem/forem) into your preferred directory.
 1. Make sure you have Ruby installed and avaliable. You may use the system provided Ruby or you can install it with a version manager such as `Rbenv` or `rtx`.
 1. `gem install dip`
 1. `dip provision` to build images and download dependencies.
