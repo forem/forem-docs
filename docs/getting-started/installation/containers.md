@@ -4,123 +4,41 @@ sidebar_position: 4
 
 # Containers
 
-**Installing Forem using Containers**
+We offer two options for container-based development.
+
+1. VS Code with Devcontainer
+1. Containerized setup with `dip` gem
+
+Due to the way our we setup our `docker-compose.yml`, standard `docker-compose up` command is not support. Please checkout the "Containerized setup with `dip` gem option"
 
 If you encounter any errors with our Container setup, please kindly
 [report any issues](https://github.com/forem/forem/issues/new/choose)!
 
-## Installing prerequisites
+## VS Code with Devcontainer
 
-_These prerequisites assume you're working on an operating system supported by
-Docker or Podman._
+Forem support VS Code's Devcontainer. Devcontainer is a flexible containized development environment with all the required dependencies set up in under 15 minutes on most modern machine.
 
-### Choosing a Container Engine
+### Installation
 
-A container engine is software that runs and manages containers on a computer.
-One of the most widely known Container Engines is Docker, but there are many
-other Container Engines available, such as [Podman](https://podman.io/),
-[CRI-O](https://cri-o.io/), and
-[LXD](https://linuxcontainers.org/lxd/introduction/).
+1. Download and install Docker Desktop from the [Docker's official site](https://www.docker.com/products/docker-desktop/)
+1. Download and install [VS Code](https://code.visualstudio.com/) with the [dev container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+1. Fork and clone our [Forem repository](https://github.com/forem/forem) into your preferred directory. For Window's WSL users, please make sure you place the Forem repository within the linux layer for optimal file loading speed.
+1. Open up the repository with VS Code and you should be prompted with `Rebuild and reopen in container`. If you don't see it, you can find it in the command line palette , `Dev Containers: Rebuild and Reopen in Container`, and you're ready to go!
 
-Forem supports two Container Engines: Docker and Podman.
+For additional information on Devcontainer, please checkout [the offical documentation](https://code.visualstudio.com/docs/devcontainers/containers)
 
-### Docker
+![image](https://github.com/forem/forem/assets/15793250/157a58a4-41f4-4114-bfce-da1380151d8c)
 
-Forem can be setup with Docker and Docker Compose on macOS or Linux systems.
+## Containerized setup with `dip` gem
 
-Docker is available for many different operating systems. You may use Docker as
-your Container Engine on both macOS and Linux workstations. As of right now
-Docker is the only Container Engine for macOS and we recommend you follow the
-[Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/),
-install instructions to get Docker and Docker Compose installed.
+`dip` gem makes it simple to run docker commands and is the main way we use to interact with `docker-compose.yml`
 
-Docker also works well on Linux distributions that have not moved to cgroup v2.
-You can install it by following their
-[Installation per distro](https://docs.docker.com/engine/install/) to get Docker
-and you can install Docker Compose by following these
-[instructions](https://docs.docker.com/compose/install/).
+### Installation
 
-### Podman
+1. Fork and clone our [Forem repository](https://github.com/forem/forem) into your preferred directory.
+1. Make sure you have Ruby installed and avaliable. You may use the system provided Ruby or you can install it with a version manager such as `Rbenv` or `rtx`.
+1. `gem install dip`
+1. `dip provision` to build images and download dependencies.
+1. `dip rails s` to start the server.
 
-Forem can be setup with Podman and Podman Compose on Linux systems.
-
-[Podman](https://podman.io/) is an FOSS project that provides a Container Engine
-that is daemonless which only runs on Linux systems. It can be run as the root
-user or as a non-privileged user. It also provides a Docker-compatible command
-line interface. Podman is available on many different Linux distributions and it
-can be installed by following these
-[instructions](https://podman.io/getting-started/installation).
-
-[Podman Compose](https://github.com/containers/podman-compose) is a an early
-project under development that is implementing docker-compose like experience
-with Podman. You can install it by following these
-[instructions](https://github.com/containers/podman-compose#installation).
-
-## Setting up Forem
-
-1.  Fork Forem's repository, e.g. <https://github.com/forem/forem/fork>
-1.  Clone your forked repository, eg.
-    `git clone https://github.com/<your-username>/forem.git`
-1.  Set up your environment variables/secrets
-
-    1.  Create `.env` by copying from the provided template`.env_sample` (i.e.
-        with bash: `cp .env_sample .env`).
-
-        - `.env` is a personal file that is **ignored in git**.
-        - `.env` lists all the `ENV` variables we use and provides a fake
-          default for any missing keys.
-
-    2.  For any key that you wish to enter/replace:
-
-        - You do not need "real" keys for basic development. Some features
-          require certain keys, so you may be able to add them as you go.
-		  The test environment is isolated from changes to the .env file, if
-		  you want to set variables in both test and development, use a file
-		  named .env.local, or modify .env.test.local and .env.development.local.
-        - The [backend guide](../../backend/configuration) will show you how to get free API keys
-          for additional services that may be required to run certain parts of
-          the app.
-        - Obtain the development variable and apply the key you wish to
-          enter/replace. i.e.:
-
-        ```shell
-        export CLOUDINARY_API_KEY="SOME_REAL_SECURE_KEY_HERE"
-        export CLOUDINARY_API_SECRET="ANOTHER_REAL_SECURE_KEY_HERE"
-        export CLOUDINARY_CLOUD_NAME="A_CLOUDINARY_NAME"
-        ```
-
-## Running Forem with Docker via docker-compose
-
-1. Run `bin/container-setup`
-2. That's it! Navigate to <http://localhost:3000>
-
-The script executes the following steps:
-
-1. `docker-compose build`
-2. `docker-compose up`
-
-## Running Forem with Podman via podman-compose
-
-1. Run `bin/container-setup`
-2. That's it! Navigate to <http://localhost:3000>
-
-The script executes the following steps:
-
-1. `podman-compose build`
-2. `podman-compose up`
-
-## Known Problems & Solutions
-
-### Docker on Mac
-
-- In case `rails server` starts with the following message:
-
-  ```shell
-  Data update scripts need to be run before you can start the application. Please run rails data_updates:run (RuntimeError)
-  ```
-
-  run the following command:
-
-  ```shell
-  docker-compose run rails bundle exec rails data_updates:run
-  ```
+For more commands, run `dip ls`.
