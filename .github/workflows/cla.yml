@@ -16,4 +16,4 @@ permissions:
 
 jobs:
   CLAAssistant:
-    uses: forem/forem/.github/workflows/cla.yml@mac/ci/update-cla
+    - run: yarn
