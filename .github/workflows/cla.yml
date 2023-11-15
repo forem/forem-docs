@@ -1,4 +1,4 @@
-name: "CLA Assistant"
+name: "CLA"
 on:
   issue_comment:
     types: [created]
@@ -15,6 +15,6 @@ permissions:
   statuses: write
 
 jobs:
-  CLAAssistant:
+  check_cla:
     uses: forem/forem/.github/workflows/cla.yml@main
     secrets: inherit
