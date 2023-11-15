@@ -17,3 +17,4 @@ permissions:
 jobs:
   CLAAssistant:
     uses: forem/forem/.github/workflows/cla.yml@main
+    secrets: inherit
