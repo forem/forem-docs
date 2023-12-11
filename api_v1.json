@@ -6,7 +6,7 @@
     "description": "Access Forem articles, users and other resources via API.\n        For a real-world example of Forem in action, check out [DEV](https://www.dev.to).\n        All endpoints can be accessed with the 'api-key' header and a accept header, but\n        some of them are accessible publicly without authentication.\n\n        Dates and date times, unless otherwise specified, must be in\n        the [RFC 3339](https://tools.ietf.org/html/rfc3339) format."
   },
   "paths": {
-    "/api/articles": {
+    "/articles": {
       "post": {
         "summary": "Publish article",
         "tags": ["articles"],
@@ -247,7 +247,7 @@
         }
       }
     },
-    "/api/articles/latest": {
+    "/articles/latest": {
       "get": {
         "summary": "Published articles sorted by published date",
         "security": [],
@@ -404,7 +404,7 @@
         }
       }
     },
-    "/api/articles/{id}": {
+    "/articles/{id}": {
       "get": {
         "summary": "Published article by id",
         "security": [],
@@ -601,7 +601,7 @@
         }
       }
     },
-    "/api/articles/{username}/{slug}": {
+    "/articles/{username}/{slug}": {
       "get": {
         "summary": "Published article by path",
         "security": [],
@@ -697,7 +697,7 @@
         }
       }
     },
-    "/api/articles/me": {
+    "/articles/me": {
       "get": {
         "summary": "User's articles",
         "tags": ["articles", "users"],
@@ -740,7 +740,7 @@
         }
       }
     },
-    "/api/articles/me/published": {
+    "/articles/me/published": {
       "get": {
         "summary": "User's published articles",
         "tags": ["articles", "users"],
@@ -783,7 +783,7 @@
         }
       }
     },
-    "/api/articles/me/unpublished": {
+    "/articles/me/unpublished": {
       "get": {
         "summary": "User's unpublished articles",
         "tags": ["articles", "users"],
@@ -826,7 +826,7 @@
         }
       }
     },
-    "/api/articles/me/all": {
+    "/articles/me/all": {
       "get": {
         "summary": "User's all articles",
         "tags": ["articles", "users"],
@@ -869,7 +869,7 @@
         }
       }
     },
-    "/api/articles/{id}/unpublish": {
+    "/articles/{id}/unpublish": {
       "put": {
         "summary": "Unpublish an article",
         "tags": ["articles"],
@@ -928,7 +928,7 @@
         }
       }
     },
-    "/api/comments": {
+    "/comments": {
       "get": {
         "summary": "Comments",
         "security": [],
@@ -1004,7 +1004,7 @@
         }
       }
     },
-    "/api/comments/{id}": {
+    "/comments/{id}": {
       "get": {
         "summary": "Comment by id",
         "security": [],
@@ -1062,7 +1062,7 @@
         }
       }
     },
-    "/api/display_ads": {
+    "/display_ads": {
       "get": {
         "summary": "display ads",
         "tags": ["display ads"],
@@ -1191,7 +1191,7 @@
         }
       }
     },
-    "/api/display_ads/{id}": {
+    "/display_ads/{id}": {
       "get": {
         "summary": "display ad",
         "tags": ["display ads"],
@@ -1355,7 +1355,7 @@
         }
       }
     },
-    "/api/display_ads/{id}/unpublish": {
+    "/display_ads/{id}/unpublish": {
       "put": {
         "summary": "unpublish",
         "tags": ["display ads"],
@@ -1403,7 +1403,7 @@
         }
       }
     },
-    "/api/follows/tags": {
+    "/follows/tags": {
       "get": {
         "summary": "Followed Tags",
         "tags": ["followed_tags", "tags"],
@@ -1449,7 +1449,7 @@
         }
       }
     },
-    "/api/followers/users": {
+    "/followers/users": {
       "get": {
         "summary": "Followers",
         "tags": ["followers"],
@@ -1551,7 +1551,7 @@
         }
       }
     },
-    "/api/organizations/{username}": {
+    "/organizations/{username}": {
       "get": {
         "summary": "An organization",
         "tags": ["organizations"],
@@ -1612,7 +1612,7 @@
         }
       }
     },
-    "/api/organizations/{username}/users": {
+    "/organizations/{username}/users": {
       "get": {
         "summary": "Organization's users",
         "tags": ["organizations", "users"],
@@ -1691,7 +1691,7 @@
         }
       }
     },
-    "/api/organizations/{username}/articles": {
+    "/organizations/{username}/articles": {
       "get": {
         "summary": "Organization's Articles",
         "tags": ["organizations", "articles"],
@@ -1787,7 +1787,7 @@
         }
       }
     },
-    "/api/pages": {
+    "/pages": {
       "get": {
         "summary": "show details for all pages",
         "security": [],
@@ -1939,7 +1939,7 @@
         }
       }
     },
-    "/api/pages/{id}": {
+    "/pages/{id}": {
       "get": {
         "summary": "show details for a page",
         "security": [],
@@ -2153,7 +2153,7 @@
         }
       }
     },
-    "/api/podcast_episodes": {
+    "/podcast_episodes": {
       "get": {
         "summary": "Podcast Episodes",
         "security": [],
@@ -2221,7 +2221,7 @@
         }
       }
     },
-    "/api/profile_images/{username}": {
+    "/profile_images/{username}": {
       "get": {
         "summary": "A Users or organizations profile image",
         "tags": ["profile images"],
@@ -2273,7 +2273,7 @@
         }
       }
     },
-    "/api/reactions/toggle": {
+    "/reactions/toggle": {
       "post": {
         "summary": "toggle reaction",
         "tags": ["reactions"],
@@ -2342,7 +2342,7 @@
         }
       }
     },
-    "/api/reactions": {
+    "/reactions": {
       "post": {
         "summary": "create reaction",
         "tags": ["reactions"],
@@ -2411,7 +2411,7 @@
         }
       }
     },
-    "/api/readinglist": {
+    "/readinglist": {
       "get": {
         "summary": "Readinglist",
         "tags": ["readinglist"],
@@ -2454,7 +2454,7 @@
         }
       }
     },
-    "/api/tags": {
+    "/tags": {
       "get": {
         "summary": "Tags",
         "tags": ["tags"],
@@ -2506,7 +2506,7 @@
         }
       }
     },
-    "/api/users/me": {
+    "/users/me": {
       "get": {
         "summary": "The authenticated user",
         "tags": ["users"],
@@ -2553,7 +2553,7 @@
         }
       }
     },
-    "/api/users/{id}": {
+    "/users/{id}": {
       "get": {
         "summary": "A User",
         "tags": ["users"],
@@ -2586,7 +2586,7 @@
         }
       }
     },
-    "/api/users/{id}/unpublish": {
+    "/users/{id}/unpublish": {
       "put": {
         "summary": "Unpublish a User's Articles and Comments",
         "tags": ["users"],
@@ -2635,7 +2635,7 @@
         }
       }
     },
-    "/api/users/{id}/suspend": {
+    "/users/{id}/suspend": {
       "put": {
         "summary": "Suspend a User",
         "tags": ["users"],
@@ -2684,7 +2684,7 @@
         }
       }
     },
-    "/api/admin/users": {
+    "/admin/users": {
       "post": {
         "summary": "Invite a User",
         "tags": ["users"],
@@ -2729,7 +2729,7 @@
         }
       }
     },
-    "/api/videos": {
+    "/videos": {
       "get": {
         "summary": "Articles with a video",
         "tags": ["videos", "articles"],
