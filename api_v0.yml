@@ -3469,7 +3469,7 @@ paths:
   /admin/users:
     post:
       operationId: postAdminUsersCreate
-      summary: Invites a user to the Forem instannce
+      summary: Invites a user to the Forem Instance
       description: |
         This endpoint allows the client to trigger an invitation to the
         provided email address.
