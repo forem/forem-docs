@@ -113,4 +113,4 @@ faster _clone_ , deploy , _log_ and less disk usage
 # do a partial clone 
 $ git clone --single-branch --branch main --filter=blob:none  git@github.com:forem/forem.git
 ```
-see [Advanced Git FAQ](./FAQ/git/) for more details and docs.
+see [Advanced Git FAQ](./git/) for more details and docs.
