@@ -103,3 +103,14 @@ to "pay" for listing. Here's how:
 
 ^ This will add 1000 credits to your account. But you know, you can't really buy
 anything with it :D
+
+## How Can I Reduce the Size of My Clones
+`forem` clones are currently 1.5G due to old vendor/cache gem's committed to the
+git repo.  Use the steps below to reduce your clone size by 80% -- meaning
+faster _clone_ , deploy , _log_ and less disk usage
+
+```
+# do a partial clone 
+$ git clone --single-branch --branch main --filter=blob:none  git@github.com:forem/forem.git
+```
+see [Advanced Git FAQ](./git/) for more details and docs.
