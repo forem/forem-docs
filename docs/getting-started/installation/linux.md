@@ -8,11 +8,11 @@ sidebar_position: 3
 
 > As the title implies, this spins up a Forem stack for local development with no use of containerization, virtualization, etc., which comes with tradeoffs: standing the stack up will almost invariably be a slower process as various tools build from source, but attaching debuggers and the like to the resulting Forem application may be easier. If using containers through Docker or Podman isn't a deal-breaker for your usecase, [consider those docs instead](containers.md) for faster stand-up and teardown, and to leave less cruft behind when you're done working.
 
-_For maintainer sanity reasons, this opinionated and curated instruction set assumes you're cool with the use of [rtx](https://github.com/jdx/rtx) to install specific versions of Ruby, NodeJS, Yarn (a JS package manager), PostgreSQL (a database), and Redis (an in-memory cache) that are tricky (when possible at all) to version-lock system-wide. If `rtx` is for any reason a non-starter for you, you'll want to use your package management solutions of choice to install the tools found in `.rtx.toml`, `.ruby-version`, and `.nvmrc`, at the appropriate versions, and should be comfortable sorting out the dependencies thereof on your own. The instructions were written for Debian 12 (Bookworm), but should be directly usable on Ubuntu, Mint, and other Debian derivatives, and should be adaptable for other distributions._
+_For maintainer sanity reasons, this opinionated and curated instruction set assumes you're cool with the use of [mise](https://github.com/jdx/mise) to install specific versions of Ruby, NodeJS, Yarn (a JS package manager), PostgreSQL (a database), and Redis (an in-memory cache) that are tricky (when possible at all) to version-lock system-wide. If `mise` is for any reason a non-starter for you, you'll want to use your package management solutions of choice to install the tools found in `.rtx.toml`, `.ruby-version`, and `.nvmrc`, at the appropriate versions, and should be comfortable sorting out the dependencies thereof on your own. The instructions were written for Debian 12 (Bookworm), but should be directly usable on Ubuntu, Mint, and other Debian derivatives, and should be adaptable for other distributions._
 
 ## Installing Package Managers
 
-To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [rtx](https://github.com/jdx/rtx). Follow whatever their current instructions are for installation, and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
+To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [mise](https://github.com/jdx/mise). Follow whatever their current instructions are for installation, and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
 
 ## Pulling Forem's Code
 
@@ -30,7 +30,7 @@ Using `apt` (or [alternative means, if desired](https://docs.github.com/en/get-s
 
 ## Install System-Level Dependencies
 
-There's a handful of system-level dependencies we can't reliably manage with `rtx`, usually because they're out of that tool's scope. We'll install these with `apt` again, unless you choose to install them in some other way at your own risk:
+There's a handful of system-level dependencies we can't reliably manage with `mise`, usually because they're out of that tool's scope. We'll install these with `apt` again, unless you choose to install them in some other way at your own risk:
 
 - [ImageMagick](https://imagemagick.org/), used to manipulate images on upload. This one is particularly hairy to DIY an install of, so use your system package manager unless you know exactly why you're choosing not to.
 - A C/C++ compiler, `make`, and so forth. These base development tool bundles go by many names in various distributions: `build-essential` on Debian-alikes, `base-devel` on Arch-alikes, `alpine-sdk`, etc.
@@ -50,9 +50,9 @@ sudo apt install -y imagemagick curl build-essential pkg-config libssl-dev libz-
 
 ## Installing Version-Locked Tool Dependencies
 
-> This is the part where, if you've opted out of `rtx`, you'll need to round up tools on your own. For Ruby, consider setting up `rbenv` using their [installation guide](https://github.com/rbenv/rbenv#installation) and then installing our current Ruby version target with `rbenv install $(cat .ruby-version)`. For NodeJS, consider `nvm` and install our Node version target with `nvm install`. You're on your own for installing [Yarn v1](https://yarnpkg.com/en/docs/install), [PostgreSQL v13](https://www.postgresql.org/) (perhaps via [Postgres.app](https://postgresapp.com/), also see our [auxiliary documentation](postgresql.md)), and [Redis](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/).
+> This is the part where, if you've opted out of `mise`, you'll need to round up tools on your own. For Ruby, consider setting up `rbenv` using their [installation guide](https://github.com/rbenv/rbenv#installation) and then installing our current Ruby version target with `rbenv install $(cat .ruby-version)`. For NodeJS, consider `nvm` and install our Node version target with `nvm install`. You're on your own for installing [Yarn v1](https://yarnpkg.com/en/docs/install), [PostgreSQL v13](https://www.postgresql.org/) (perhaps via [Postgres.app](https://postgresapp.com/), also see our [auxiliary documentation](postgresql.md)), and [Redis](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/).
 
-Use `rtx install` - this will pull the exact versions we recommend for the tools listed in the block above, which helps to prevent "version drift" - where someone writes code targeting Version A of some tool, but it breaks when run against Version B of that same tool.
+Use `mise install` - this will pull the exact versions we recommend for the tools listed in the block above, which helps to prevent "version drift" - where someone writes code targeting Version A of some tool, but it breaks when run against Version B of that same tool.
 
 If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis.
 

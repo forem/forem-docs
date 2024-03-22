@@ -8,13 +8,13 @@ sidebar_position: 1
 
 > This spins up a Forem stack for local development with no use of containerization, virtualization, etc., which comes with tradeoffs: standing up the stack will almost invariably be a slower process as various tools build from source, but attaching debuggers and the like to the resulting Forem application will be easier, not to mention the lack of I/O overhead that comes with, for example, running a full Linux VM to run containers in (which, for example, Docker Desktop does). However, more cruft gets left behind when you're done working: you'll have PostgreSQL databases and so forth to clean up. If you'd rather take the containers side of the tradeoffs, [those docs are here](containers.md).
 
-_For maintainer sanity reasons, this opinionated and curated instruction set assumes you're cool with the use of [Homebrew](https://brew.sh) to install certain system-wide dependencies, and  [rtx](https://github.com/jdx/rtx) to install specific versions of Ruby, NodeJS, Yarn (a JS package manager), PostgreSQL (a database), and Redis (an in-memory cache) that are tricky to version-lock system-wide. If these package managers are for any reason a non-starter for you, you'll want to use your package management solutions of choice to install the tools found in `.rtx.toml`, `.ruby-version`, and `.nvmrc`, at the appropriate versions, and should be comfortable sorting out the dependencies thereof on your own._
+_For maintainer sanity reasons, this opinionated and curated instruction set assumes you're cool with the use of [Homebrew](https://brew.sh) to install certain system-wide dependencies, and  [mise](https://github.com/jdx/mise) to install specific versions of Ruby, NodeJS, Yarn (a JS package manager), PostgreSQL (a database), and Redis (an in-memory cache) that are tricky to version-lock system-wide. If these package managers are for any reason a non-starter for you, you'll want to use your package management solutions of choice to install the tools found in `.rtx.toml`, `.ruby-version`, and `.nvmrc`, at the appropriate versions, and should be comfortable sorting out the dependencies thereof on your own._
 
 _This has been tested on Apple Silicon Macs, but should be expected to work without noteworthy modification on Intel Macs. If you find a setup issue on Intel Macs, [file an issue with us](https://github.com/forem/forem/issues)._
 
 ## Installing Package Managers
 
-To start, we need to install (two of the three...) package managers that we'll use later in the guide: [Homebrew](https://brew.sh) and [rtx](https://github.com/jdx/rtx). Follow whatever their current instructions are at those links, and then come back here. Notably for rtx, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
+To start, we need to install (two of the three...) package managers that we'll use later in the guide: [Homebrew](https://brew.sh) and [mise](https://github.com/jdx/mise). Follow whatever their current instructions are at those links, and then come back here. Notably for mise, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
 
 ## Pulling Forem's Code
 
@@ -40,9 +40,9 @@ Homebrew makes this step quick: run `brew bundle`, and assuming it finishes succ
 
 ## Installing Version-Locked Tool Dependencies
 
-> This is the part where, if you've opted out of `rtx`, you'll need to round up tools on your own. For Ruby, consider setting up `rbenv` using their [installation guide](https://github.com/rbenv/rbenv#installation) and then installing our current Ruby version target with `rbenv install $(cat .ruby-version)`. For NodeJS, consider `nvm` and install our Node version target with `nvm install`. You're on your own for installing [Yarn v1](https://yarnpkg.com/en/docs/install), [PostgreSQL v13](https://www.postgresql.org/) (perhaps via [Postgres.app](https://postgresapp.com/), also see our [auxiliary documentation](postgresql.md)), and [Redis](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/).
+> This is the part where, if you've opted out of `mise`, you'll need to round up tools on your own. For Ruby, consider setting up `rbenv` using their [installation guide](https://github.com/rbenv/rbenv#installation) and then installing our current Ruby version target with `rbenv install $(cat .ruby-version)`. For NodeJS, consider `nvm` and install our Node version target with `nvm install`. You're on your own for installing [Yarn v1](https://yarnpkg.com/en/docs/install), [PostgreSQL v13](https://www.postgresql.org/) (perhaps via [Postgres.app](https://postgresapp.com/), also see our [auxiliary documentation](postgresql.md)), and [Redis](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/).
 
-Use `rtx install` - this will pull the exact versions we recommend for the tools listed in the block above, which helps to prevent "version drift" - where someone writes code targeting Version A of some tool, but it breaks when run against Version B of that same tool.
+Use `mise install` - this will pull the exact versions we recommend for the tools listed in the block above, which helps to prevent "version drift" - where someone writes code targeting Version A of some tool, but it breaks when run against Version B of that same tool.
 
 If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis.
 
@@ -123,7 +123,7 @@ To shut down your Forem stack when you're done tinkering, shut services down in 
 
 ### Possible error messages
 
-This section serves as a collection of various things that have gone wrong in the past while setting up Forem on Macs: not all of them are necessarily common anymore, and in particular many of them impact `rbenv`-based setups more than `rtx`-based setups (so far), but they're preserved here just in case.
+This section serves as a collection of various things that have gone wrong in the past while setting up Forem on Macs: not all of them are necessarily common anymore, and in particular many of them impact `rbenv`-based setups more than `mise`-based setups (so far), but they're preserved here just in case.
 
 ---
 
