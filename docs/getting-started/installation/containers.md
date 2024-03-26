@@ -36,7 +36,7 @@ For additional information on Devcontainer, please checkout [the offical documen
 ### Installation
 
 1. Fork and clone our [Forem repository](https://github.com/forem/forem) into your preferred directory.
-1. Make sure you have Ruby installed and avaliable. You may use the system provided Ruby or you can install it with a version manager such as `Rbenv` or `rtx`.
+1. Make sure you have Ruby installed and avaliable. You may use the system provided Ruby or you can install it with a version manager such as `Rbenv` or `mise`.
 1. `gem install dip`
 1. `dip provision` to build images and download dependencies.
 1. `dip rails s` to start the server.
