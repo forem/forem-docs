@@ -30,4 +30,5 @@ The `api-key` header must be set to the API key for the user. This API key can b
 settings page in Forem.
 
 For a detailed guide on using and managing semantic concepts via the API, see [Working with Concepts](/concepts).
+For performing embedding-driven semantic searches on articles and concepts, see [Semantic Search](/semantic-search).
 

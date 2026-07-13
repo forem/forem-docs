@@ -120,6 +120,32 @@ curl -X GET "https://dev.to/api/concepts/123/articles?sort=-score&page=1&per_pag
 
 ---
 
+### 4. Perform a Semantic Fuzzy Search on Concepts
+Allows authenticated clients to search concepts using Forem's semantic embeddings database.
+
+* **Permissions:**
+  - **Super Administrators** can search across all concepts globally in the system.
+  - **Regular users / curators** will only receive results from concepts they have been explicitly granted access to (their **accessible concepts**).
+* **HTTP Method:** `GET`
+* **Path:** `/api/concepts/search`
+* **Query Parameters:**
+  - `q` (string, **required**): The natural language query to match against concept descriptions (e.g., `databases`).
+  - `per_page` (integer, optional): Limit of concepts returned (default is `10`, maximum is `50`).
+  - `threshold` (number, optional): Optional cosine distance threshold (between `0.0` and `2.0`) to filter results.
+
+#### Example Request
+```bash
+curl -X GET "https://dev.to/api/concepts/search?q=databases&per_page=5" \
+     -H "Accept: application/vnd.forem.api-v1+json" \
+     -H "api-key: YOUR_API_KEY"
+```
+
+:::tip Semantic Search Guide
+For a comprehensive guide on embedding-driven searches and details on how cosine distance and similarity scores are calculated in Forem, see the [Semantic Search](/semantic-search) guide.
+:::
+
+---
+
 ## Modifying & Managing Concepts
 
 Depending on your permissions, you can create, modify, backfill, or delete concepts.
