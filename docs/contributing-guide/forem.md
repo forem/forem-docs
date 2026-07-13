@@ -43,7 +43,7 @@ on the issue.
 project. Forem is an Open Source, community-driven project. Therefore, providing
 and maintaining quality documentation is one of our most important jobs. You can
 find more information in our
-[docs guide](https://developers.forem.com/contributing-guide/docs)!
+[docs guide](docs.md)!
 
 **Refactoring**, which involves improving the code without modifying behavior,
 is a great place to help out! Generally speaking, you can rely on existing tests
@@ -66,7 +66,7 @@ discussion around a new feature (or chime in on a pre-existing discussion!).
 
 1. Fork the project and clone
    it to your local machine. Follow the installation guide,
-   [for example, the Mac guide](https://developers.forem.com/getting-started/installation/mac)!
+   [for example, the Mac guide](../getting-started/installation/mac.md)!
 2. Create a branch with your GitHub username and the ID of the
    [issue](https://github.com/forem/forem/issues), for example:
    `git checkout -b USERNAME/some-new-feature-1234`
@@ -74,7 +74,7 @@ discussion around a new feature (or chime in on a pre-existing discussion!).
    [good commit message](https://chris.beams.io/posts/git-commit/):
    `git commit -m 'Add some feature'`
 4. Push to the branch: `git push -u origin USERNAME/some-new-feature-1234`
-5. [Create a pull request](https://docs.forem.com/getting-started/pull-request/)
+5. [Create a pull request](../getting-started/pull-request.md)
    for your branch. 🎉
 
 ## Contribution guidelines
@@ -107,7 +107,7 @@ As always, more communication is better than less communication! We are all huma
 ### Please include tests
 
 Some areas of the project could use updated tests, and new features should
-always include test coverage. Feel free to read our testing section for guides, such as the one for [Frontend Tests](https://developers.forem.com/tests/types/frontend-tests).
+always include test coverage. Feel free to read our testing section for guides, such as the one for [Frontend Tests](../tests/types/frontend-tests.md).
 
 ### Code quality
 
@@ -123,7 +123,7 @@ If the change you're proposing touches a user interface, include accessibility
 in your approach. This includes things like color contrast, keyboard
 accessibility, screen reader labels, and other common requirements. For more
 information, check out the
-[Forem Accessibility docs page](https://docs.forem.com/frontend/accessibility).
+[Forem Accessibility docs page](../frontend/accessibility.md).
 
 ### Please use inclusive language
 
@@ -145,7 +145,7 @@ encourages more thoughtful code!
   [Draft PR](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
   feature.
 - Make sure all tests pass and add additional tests for the code you submit.
-  [More info here](https://docs.forem.com/tests/).
+  [More info here](../tests/philosophy.md).
 - Document your reasoning behind the changes. Explain why you wrote the code in
   the way you did. The code should explain what it does.
 - If there's an existing issue, reference to it by adding something like

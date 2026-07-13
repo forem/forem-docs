@@ -6,8 +6,8 @@ sure that other team members are around to help if something goes wrong.**
 
 Generally, it's a good idea to keep the SRE team in the loop on high risk
 deploys. However, deployments are our collective responsibility, so it's
-important to monitor your deploys. You can see deployment status on
-Travis-ci.com and in the #deployment-pipeline channel on Slack. Be prepared to
+important to monitor your deploys. You can see deployment status in the **Actions**
+tab on GitHub and in the #deployment-pipeline channel on Slack. Be prepared to
 rollback or push a fix for any deployment!
 
 # Deployment and CI/CD Process
@@ -20,44 +20,35 @@ We’re currently making rapid changes to the product so our docs may be out of 
 
 ## Overview
 
-Forem relies on GitHub and Travis to deploy continuously to Heroku. If a Pull
-Request is merged it will automatically be deployed to production once the build
-steps complete successfully. The process currently takes about 20 minutes to
+Forem relies on GitHub Actions to test and deploy continuously to Heroku. If a Pull
+Request is merged, it will automatically be deployed to production once the CD
+workflow completes successfully. The process currently takes about 20 minutes to
 complete and will need a few additional minutes before the change goes live.
 
-## Travis Stages
+## GitHub Actions Workflows
 
-The following stages can be explored in our
-[.travis.yml](https://github.com/forem/forem/blob/main/.travis.yml) and
-[Procfile](https://github.com/forem/forem/blob/main/Procfile). Our Travis CI
-process consists of 2 stages.
+The CI/CD process is managed via GitHub Actions and can be explored in the
+[.github/workflows/](https://github.com/forem/forem/tree/main/.github/workflows)
+directory of the Forem repository. The process consists of two primary workflows:
 
-1. Running our test suite in 3 parallel jobs.
-2. Deploying the application.
+1. **CI (`ci.yml`)**: Triggered on pull requests and merge groups. It runs the automated test suites.
+2. **CD (`cd.yml`)**: Triggered on push to the `main` branch (e.g., when a PR is merged). It handles deployment.
 
-### Stage 1: Running Tests
+### Continuous Integration (CI)
 
-In stage 1, we use [KnapsackPro](https://knapsackpro.com/) to divide our Rspec
-tests evenly between 3 different jobs (virtual machines). This ensures that each
-job takes relatively the same amount of time to run. After running our Rspec
-tests, we then run a series of other checks. These additional checks are split
-up between the different jobs. Here is a list of those additional checks that
-are run.
+Our CI workflow runs a comprehensive test suite across multiple parallel nodes:
 
-- Job 0 is where we run JavaScript tests, Preact tests, and coverage checks.
-- Job 1 is where Travis builds Storybook to ensure its integrity, and where we
-  check for any known vulnerabilities using `bundle-audit`.
-- Job 2 is where Travis fires up a Rails console to ensure the application loads
-  properly.
+- We use [KnapsackPro](https://knapsackpro.com/) to divide our RSpec tests evenly between **15 different parallel nodes**. This ensures that the test suite runs as efficiently and quickly as possible.
+- The CI process pre-compiles assets, spins up PostgreSQL and Redis service containers, and runs JavaScript and Preact tests alongside SimpleCov for test coverage checks.
 
-If all of the jobs pass then we move on to Stage 2 of the Travis CI process.
+If all of the CI checks pass and the PR is approved, it can be merged into `main`.
 
-### Stage 2: Deploying
+### Continuous Delivery (CD)
 
-If the build was kicked off from a pull request being created or updated this
-stage will do nothing. If the branch has been merged into main, then this stage
-will kick off a deploy. The deploy will run in its own job deploying our
-application to Heroku.
+Once code is pushed or merged to the `main` branch, the `cd.yml` workflow is triggered:
+
+- It runs a deployment job on an Ubuntu runner.
+- It installs the Heroku CLI and uses the `akhileshns/heroku-deploy` GitHub Action to push the codebase to Heroku (both staging and production environments).
 
 Prior to deploying the code, Heroku will run database migrations and do some
 final checks (more information on that below) to make sure everything is working

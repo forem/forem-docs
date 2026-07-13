@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Accessibility testing is a form of automated and manual testing that helps us
 identify some of the potential accessibility concerns on Forem. See also, the
-[Forem Frontend Accessibility docs](https://docs.forem.com/frontend/accessibility/).
+[Forem Frontend Accessibility docs](../../frontend/accessibility.md).
 
 Many accessibility (a11y) issues are not obvious to everyone who contributes to
 the Forem project, therefore leaning on tools to help us identify these issues

@@ -74,4 +74,4 @@ requests issued by those outside the core team.
 Once a PR is merged, it might need to be deployed. Deployment is a team
 responsibility, and everyone on the core team should be comfortable deploying
 code. For more information, read the
-[deployment guide](https://docs.forem.com/maintainers/deployment).
+[deployment guide](deploying.md).
