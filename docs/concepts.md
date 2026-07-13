@@ -31,6 +31,22 @@ All requests to the Forem API require the following headers:
 
 ---
 
+## Understanding "Score" in Forem (Concept Score vs. Article Score)
+
+When working with Forem's Concepts API, the term **"score"** is used in two completely distinct contexts. It is critical to differentiate between them to avoid confusion:
+
+1. **Concept Score (Internal Weighting)**
+   * **Where it is used:** Defined inside the concept metadata payload under the `score` field (e.g., `"score": 1.0` in the payload of `POST /api/admin/concepts` or `PATCH /api/concepts/{id}`).
+   * **What it represents:** An arbitrary weighting or priority score assigned to the concept itself by administrators. This score is used **purely for the internal ranking of concepts** (e.g., determining which concept to prioritize when multiple concepts apply to a single feature or UI view).
+   * **Relation to articles:** This has **no relationship** to the quality, popularity, or score of the articles classified under the concept.
+
+2. **Article Score (Article Popularity & Engagement)**
+   * **Where it is used:** Used as a sorting option when querying articles mapped to a concept (e.g., `GET /api/concepts/{id}/articles?sort=-score`).
+   * **What it represents:** The overall engagement and popularity score of individual articles on the platform, calculated dynamically based on pageviews, reactions, comments, and other activity.
+   * **Relation to concepts:** Sorting by `-score` retrieves the most popular/well-received articles that happen to be matched to the concept, prioritizing high-engagement content over pure semantic similarity.
+
+---
+
 ## Accessing Concepts
 
 These endpoints allow you to query, search, and retrieve concepts that you have permission to access.
@@ -83,13 +99,21 @@ Retrieves a paginated list of articles that have been classified under a specifi
 * **Query Parameters:**
   - `page` (integer, optional): Page number for pagination. Default is `1`.
   - `per_page` (integer, optional): Number of articles to return per page. Default is `20`.
-  - `sort` (string, optional): How to order the resulting articles.
+  - `sort` (string, optional): How to order the resulting articles. Supported values:
     - `-similarity` (default): Orders articles by semantic relevance (cosine distance to the concept's anchor embedding), showing the most relevant articles first.
-    - `-published_at`: Orders articles chronologically, showing the most recently published articles first.
+    - `-published_at`: Orders articles chronologically (newest first).
+    - `-score`: Orders articles by their platform popularity/engagement score, returning the most popular articles under this concept first.
 
-#### Example Request
+#### Example Request (Sort by Similarity / Relevance)
 ```bash
 curl -X GET "https://dev.to/api/concepts/123/articles?sort=-similarity&page=1&per_page=20" \
+     -H "Accept: application/vnd.forem.api-v1+json" \
+     -H "api-key: YOUR_API_KEY"
+```
+
+#### Example Request (Sort by Article Score / Popularity)
+```bash
+curl -X GET "https://dev.to/api/concepts/123/articles?sort=-score&page=1&per_page=20" \
      -H "Accept: application/vnd.forem.api-v1+json" \
      -H "api-key: YOUR_API_KEY"
 ```
