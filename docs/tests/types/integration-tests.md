@@ -5,7 +5,7 @@ sidebar_position: 4
 # Integration Tests
 
 An integration test is a test that measures the interaction of multiple systems
-or parts of your application. They are meant to aspects like the requests and responses coming back from the server, data that ahs changed, business objects that has implemented. We’re not looking to testpage interactivity here, thats can be found in the [end to end tests](../types/e2e-tests.md).
+or parts of your application. They are meant to test aspects like the requests and responses coming back from the server, data that has changed and business objects that have been implemented. We’re not looking to test page interactivity here, that can be found in the [end to end tests](../types/e2e-tests.md).
 
 Integration tests can be found in the directory `spec/requests`.
 
