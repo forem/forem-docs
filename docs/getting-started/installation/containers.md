@@ -9,7 +9,7 @@ We offer two options for container-based development.
 1. VS Code with Devcontainer
 1. Containerized setup with `dip` gem
 
-Due to the way our we setup our `docker-compose.yml`, standard `docker-compose up` command is not support. Please checkout the "Containerized setup with `dip` gem option"
+Due to the way we setup our `docker-compose.yml`, standard `docker-compose up` command is not supported. Please checkout the "Containerized setup with `dip` gem option"
 
 If you encounter any errors with our Container setup, please kindly
 [report any issues](https://github.com/forem/forem/issues/new/choose)!
