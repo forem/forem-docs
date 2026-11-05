@@ -20,7 +20,7 @@ To start, we need to install (two of the three...) package managers that we'll u
 
 Using Homebrew (or [alternative means, if desired](https://docs.github.com/en/get-started/quickstart/set-up-git)), we need to install `git` a version control system we use in the development of Forem (with GitHub as our canonical host for the Git repository), and then this section is reasonably straightforward.
  
-> Those with the Xcode Command Line Tools already installed, for example those using AWS EC2 Mac instances in the cloud, will alerady have a working Git install at `/usr/bin/git`. That's fine: let's install Homebrew's version anyway, for consistency, unless you really know what you're doing.
+> Those with the Xcode Command Line Tools already installed, for example those using AWS EC2 Mac instances in the cloud, will already have a working Git install at `/usr/bin/git`. That's fine: let's install Homebrew's version anyway, for consistency, unless you really know what you're doing.
 
 1. `brew install git`
 2. Fork Forem's repository [using this GitHub link](https://github.com/forem/forem/fork). Forking is optional to read our code, but will be necessary to submit changes to us, so this is a helpful bit of upfront house-keeping.
