@@ -22,7 +22,7 @@ Forem supports VS Code's Devcontainer, a containerized development environment w
 
 ### Installation
 
-1. Download and install Docker Desktop from the [Docker's official site](https://www.docker.com/products/docker-desktop/)
+1. Download and install Docker Desktop from the [Docker's official site](https://www.docker.com/products/docker-desktop/), or update it: building the images needs Buildx 0.17 or newer (check with `docker buildx version`). An older Docker Desktop stops with `compose build requires buildx 0.17.0 or later`.
 1. Download and install [VS Code](https://code.visualstudio.com/) with the [dev container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 1. Fork and clone our [Forem repository](https://github.com/forem/forem) into your preferred directory. For Windows WSL users, please make sure you place the Forem repository within the linux layer for optimal file loading speed.
 1. Open up the repository with VS Code and you should be prompted with `Rebuild and reopen in container`. If you don't see it, you can find it in the command line palette , `Dev Containers: Rebuild and Reopen in Container`, and you're ready to go!
