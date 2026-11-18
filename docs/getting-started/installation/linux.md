@@ -60,9 +60,9 @@ Use `mise install` - this will pull the exact versions we recommend for the tool
 MAKEFLAGS="-j$(nproc)" mise install
 ```
 
-`MAKEFLAGS` lets PostgreSQL and Redis compile in parallel, which saves a couple of minutes.  Forem's `.mise.toml` names the `asdf` backends for PostgreSQL and Redis (current `mise` otherwise picks Conda, which has no builds of these versions) and tells `mise` to read `.ruby-version` and `.nvmrc`.  On an older checkout without those settings, `mise install` fails with `No candidates were found`; update your checkout, or run `export MISE_IDIOMATIC_VERSION_FILE_ENABLE_TOOLS=ruby,node` and use `asdf:smashedtoatoms/asdf-postgres` and `asdf:smashedtoatoms/asdf-redis` in `.mise.toml`.
+`MAKEFLAGS` lets PostgreSQL and Redis compile in parallel, which saves a couple of minutes.  The `yarn` that `mise` installs is a v1 launcher; the repository pins its own Yarn (4.x) in `.yarnrc.yml`, so `yarn -v` inside the checkout prints 4.x and that is expected.  Forem's `.mise.toml` names the `asdf` backends for PostgreSQL and Redis (current `mise` otherwise picks Conda, which has no builds of these versions) and tells `mise` to read `.ruby-version` and `.nvmrc`.  On an older checkout without those settings, `mise install` fails with `No candidates were found`; update your checkout, or run `export MISE_IDIOMATIC_VERSION_FILE_ENABLE_TOOLS=ruby,node` and use `asdf:smashedtoatoms/asdf-postgres` and `asdf:smashedtoatoms/asdf-redis` in `.mise.toml`.
 
-If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis.
+If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis (`mise install --yes` answers them for you, for example in a script).  `mise activate` in `~/.bashrc` only works in interactive shells; for scripts or IDE runners also add `eval "$(mise activate bash --shims)"` to `~/.profile`.
 
 **This step can take a few minutes**: PostgreSQL and Redis are built from source (under a minute on a fast machine with `MAKEFLAGS` set). Errors at this point are unlikely, but if they pop up, should be expected to be quite varied: searching for error messages will often lead to helpful solutions, as few to none of these errors are likely to have never been seen (and triaged) before.
 

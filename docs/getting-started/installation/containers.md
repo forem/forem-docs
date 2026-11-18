@@ -60,9 +60,9 @@ For additional information on Devcontainer, please check out [the official docum
 1. `gem install dip`. With the system Ruby on Linux, install it for your user and put its bin directory on your `PATH`:
    `gem install --user-install dip && export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"`
    (add that `export` line to `~/.bashrc` or `~/.profile` so `dip` is found in new terminals)
-1. `dip provision` to build images and download dependencies.
+1. `dip provision` to build images and download dependencies. It builds the development image locally if it cannot pull it, installs gems and packages, and prepares the databases (about 3 minutes on a fast machine).
 1. `dip rails s` to start the server.
-1. `dip rspec spec/models/concept_spec.rb` to run specs (it runs with `RAILS_ENV=test`).
+1. `dip rspec spec/models/concept_spec.rb` to run specs (it runs with `RAILS_ENV=test`; use a second terminal while `dip rails s` is running).
 1. `dip compose down` stops everything; add `--volumes` to reset the databases.
 
 For more commands, run `dip ls`.
