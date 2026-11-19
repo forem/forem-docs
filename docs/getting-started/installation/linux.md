@@ -12,7 +12,16 @@ _For maintainer sanity reasons, this opinionated and curated instruction set ass
 
 ## Installing Package Managers
 
-To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [mise](https://github.com/jdx/mise). Follow whatever their current instructions are for installation, and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
+To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [mise](https://github.com/jdx/mise). On Debian and Ubuntu that is:
+
+```sh
+sudo apt update && sudo apt install -y curl
+curl https://mise.run | sh
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc   # use zsh instead of bash for zsh
+exec "$SHELL"
+```
+
+For anything else, follow [their current instructions](https://mise.jdx.dev/getting-started.html) (the full dependency list is in the next section), and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
 
 ## Pulling Forem's Code
 
@@ -52,11 +61,31 @@ sudo apt install -y imagemagick curl build-essential pkg-config libssl-dev libz-
 
 > This is the part where, if you've opted out of `mise`, you'll need to round up tools on your own. For Ruby, consider setting up `rbenv` using their [installation guide](https://github.com/rbenv/rbenv#installation) and then installing our current Ruby version target with `rbenv install $(cat .ruby-version)`. For NodeJS, consider `nvm` and install our Node version target with `nvm install`. You're on your own for installing [Yarn v1](https://yarnpkg.com/en/docs/install), [PostgreSQL v13](https://www.postgresql.org/) (perhaps via [Postgres.app](https://postgresapp.com/), also see our [auxiliary documentation](postgresql.md)), and [Redis](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/).
 
+Run this and everything after it from inside your `forem` checkout: `mise` picks the PostgreSQL and Redis versions from its `.mise.toml`, so `pg_ctl`, `psql` and `redis-server` are only on your `PATH` there.
+
 Use `mise install` - this will pull the exact versions we recommend for the tools listed in the block above, which helps to prevent "version drift" - where someone writes code targeting Version A of some tool, but it breaks when run against Version B of that same tool.
 
-If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis.
+```sh
+MAKEFLAGS="-j$(nproc)" mise install
+```
 
-**This step will probably take several minutes**: it's building most of these dependencies from source code. Errors at this point are unlikely, but if they pop up, should be expected to be quite varied: searching for error messages will often lead to helpful solutions, as few to none of these errors are likely to have never been seen (and triaged) before.
+`MAKEFLAGS` lets PostgreSQL and Redis compile in parallel, which saves a couple of minutes.  The `yarn` that `mise` installs is a v1 launcher; the repository pins its own Yarn (4.x) in `.yarnrc.yml`, so `yarn -v` inside the checkout prints 4.x and that is expected.  Forem's `.mise.toml` names the `asdf` backends for PostgreSQL and Redis (current `mise` otherwise picks Conda, which has no builds of these versions) and tells `mise` to read `.ruby-version` and `.nvmrc`.  On an older checkout without those settings, `mise install` fails with `No candidates were found`; update your checkout, or run `export MISE_IDIOMATIC_VERSION_FILE_ENABLE_TOOLS=ruby,node` and use `asdf:smashedtoatoms/asdf-postgres` and `asdf:smashedtoatoms/asdf-redis` in `.mise.toml`.
+
+If prompted, respond `y` to the prompts about installing plugins to handle Yarn, PostgreSQL, and Redis (`mise install --yes` answers them for you, for example in a script).  `mise activate` in `~/.bashrc` only works in interactive shells; for scripts or IDE runners also add `eval "$(mise activate bash --shims)"` to `~/.profile`.
+
+**This step can take a few minutes**: PostgreSQL and Redis are built from source (under a minute on a fast machine with `MAKEFLAGS` set). Errors at this point are unlikely, but if they pop up, should be expected to be quite varied: searching for error messages will often lead to helpful solutions, as few to none of these errors are likely to have never been seen (and triaged) before.
+
+### Install pgvector
+
+Forem's schema enables the PostgreSQL `vector` extension, which the `mise` PostgreSQL build does not include.  Without it `bin/setup` stops with a missing `vector.control`.  Build it against the PostgreSQL that `mise` installed (this takes a few seconds; it also needs `postgresql` headers, which the `mise` build provides):
+
+```sh
+git clone --depth 1 --branch v0.8.7 https://github.com/pgvector/pgvector.git /tmp/pgvector
+cd /tmp/pgvector
+export PG_CONFIG="$(mise where asdf:smashedtoatoms/asdf-postgres)/bin/pg_config"
+make && make install
+cd -
+```
 
 ## Last Bits Of Setup
 
@@ -64,7 +93,7 @@ If prompted, respond `y` to the prompts about installing plugins to handle Yarn,
 
 2. Start and configure the database (which requires some tinkering to avoid future errors; copy pasting is fine here!)
 
-  - `pg_ctl start` - do this every time you work on Forem!
+  - `pg_ctl start -l log/postgres.log` - do this every time you work on Forem!  (`-l` keeps the server log out of your terminal.)
   - `createuser -U postgres -s $(whoami)`, which creates a PostgreSQL user by your system username. This only needs done once.
   - Now we need to change the default encoding of the database. These steps are copied nearly verbatim from [the Arch Linux wiki](https://wiki.archlinux.org/title/PostgreSQL#Change_default_encoding_of_new_databases_to_UTF-8). Run them one-by-one.
 
@@ -113,7 +142,7 @@ If prompted, respond `y` to the prompts about installing plugins to handle Yarn,
 
 Presuming no errors here, your Forem should be accessible at `http://localhost:3000`.
 
-To run unit tests, first, prepare the database:
+To run unit tests (PostgreSQL and Redis must be running; the server need not be), first, prepare the database:
 
 ```sh
 ./bin/rails db:test:prepare RAILS_ENV=test
