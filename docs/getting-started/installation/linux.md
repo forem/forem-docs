@@ -12,7 +12,16 @@ _For maintainer sanity reasons, this opinionated and curated instruction set ass
 
 ## Installing Package Managers
 
-To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [mise](https://github.com/jdx/mise). Follow whatever their current instructions are for installation (on a minimal system, `sudo apt install -y curl` first; the full dependency list is in the next section), and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
+To start, we need to install a tools manager that supports more precise version pinning than many/most system-level dependency managers do on Linux; for this, we recommend [mise](https://github.com/jdx/mise). On Debian and Ubuntu that is:
+
+```sh
+sudo apt update && sudo apt install -y curl
+curl https://mise.run | sh
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc   # use zsh instead of bash for zsh
+exec "$SHELL"
+```
+
+For anything else, follow [their current instructions](https://mise.jdx.dev/getting-started.html) (the full dependency list is in the next section), and then come back here. Notably, make sure you've configured the appropriate shell integration (you probably should have seen something about `eval` and a `bashrc` or `zshrc`!).
 
 ## Pulling Forem's Code
 
